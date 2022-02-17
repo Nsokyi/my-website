@@ -1,0 +1,76 @@
+/* ==========================================================================
+   #COLOR-VARIABLES
+   ========================================================================== */
+
+/* Grey Colour Palette 
+*/
+$color-grey-000: #d8d8d8;
+$color-grey-200: #bababa;
+$color-grey-400: #9d9d9d;
+$color-grey-600: #8d8d8d;
+$color-grey-800: #7b7b7b;
+$color-grey-1000: #4a4a4a;
+$color-grey-1200: #616161;
+$color-grey-1400: #535353;
+$color-grey-1600: #4b4b4b;
+$color-grey-1800: #363636;
+$color-grey-2000: #333333;
+
+/* Yellow Colour Palette 
+*/
+$color-yellow-000: #ffdd4f;
+$color-yellow-200: #ffd523;
+$color-yellow-400: #fdce08;
+$color-yellow-600: #f0c307;
+$color-yellow-800: #dbb101;
+
+/* Pink Colour Palette 
+*/
+$color-pink-000: #f10292;
+$color-pink-200: #db0084;
+$color-pink-400: #d50181;
+$color-pink-600: #c80078;
+$color-pink-800: #b0006a;
+
+/* Primary Colour Palette 
+*/
+$color-primary-000: $color-yellow-000;
+$color-primary-200: $color-yellow-200;
+$color-primary: $color-yellow-400; /* Primary Colour */
+$color-primary-600: $color-yellow-600;
+$color-primary-800: $color-yellow-800;
+
+/* Secondary Colour Palette 
+*/
+$color-secondary-000: $color-pink-000;
+$color-secondary--200: $color-pink-200;
+$color-secondary: $color-pink-400; /* Secondary Colour */
+$color-secondary--600: $color-pink-600;
+$color-secondary--800: $color-pink-800;
+
+/* Grey Colour Palette 
+*/
+$color-grey-000: $color-grey-000;
+$color-grey-200: $color-grey-200;
+$color-grey-400: $color-grey-400;
+$color-grey-600: $color-grey-600;
+$color-grey: $color-grey-800; /* Colour Grey */
+$color-grey-1000: $color-grey-1000;
+$color-grey-1200: $color-grey-1200;
+$color-grey-1400: $color-grey-1400;
+$color-grey-1600: $color-grey-1600;
+$color-grey-1800: $color-grey-1800;
+$color-dark: $color-grey-2000;
+/* Colour Grey Alpha */
+
+$color-grey-000-1: rgba($color-grey-000, 0.1);
+$color-grey-000-2: rgba($color-grey-000, 0.2);
+$color-grey-000-3: rgba($color-grey-000, 0.3);
+$color-grey-000-4: rgba($color-grey-000, 0.4);
+$color-grey-000-5: rgba($color-grey-000, 0.5);
+
+/* Alert Colour Palette 
+*/
+$color-body: $color-grey-000;
+$color-danger: $color-pink-800;
+$color-warning: $color-yellow-800;

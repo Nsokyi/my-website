@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #CONTAINER-OBJECT
+   ========================================================================== */
+main {
+	background-color: $color-grey-1800;
+	color: $color-grey-000;
+	margin: 0;
+	position: relative;
+	padding: 2.1em 1.3em 1em;
+	z-index: 1;
+	width: 100%;
+	overflow-x: hidden;
+
+	@include lg {
+		max-width: 80.375vw;
+		overflow-x: visible;
+		border-left: solid 1px $color-grey-800;
+		border-right: solid 1px $color-grey-800;
+		margin: 0 auto;
+		padding: 0;
+	}
+	@include xxl {
+		max-width: 159.375rem;
+		overflow-x: visible;
+	}
+}
