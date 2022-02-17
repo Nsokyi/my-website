@@ -1,0 +1,189 @@
+/* Menu Button */
+
+.bttn_container {
+	position: fixed;
+	top: 5%;
+	right: 2%;
+	height: 50px;
+	width: 2.5em;
+	cursor: pointer;
+	z-index: 100;
+	transition: opacity 0.25s ease;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&.active {
+		.top {
+			transform: translateY(11px) translateX(0) rotate(45deg);
+			background: $color-grey-000;
+		}
+		.middle {
+			opacity: 0;
+			background: $color-grey-000;
+		}
+
+		.bottom {
+			transform: translateY(-11px) translateX(0) rotate(-45deg);
+			background: $color-grey-000;
+		}
+	}
+
+	span {
+		background: $color-grey-000;
+		border: none;
+		height: 5px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all 0.35s ease;
+		cursor: pointer;
+
+		&:nth-of-type(2) {
+			top: 11px;
+		}
+
+		&:nth-of-type(3) {
+			top: 22px;
+		}
+	}
+}
+
+// Ghost Btn
+
+.bttn {
+	color: $color-grey-200;
+	text-decoration: none;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s ease all;
+	&:hover {
+		color: #fff;
+	}
+	&:focus {
+		color: #fff;
+	}
+}
+
+a.bttn-dark {
+	color: $color-primary;
+	text-decoration: none;
+	-webkit-transition: 0.3s all ease;
+	transition: 0.3s ease all;
+	&:hover {
+		color: $color-grey-1200;
+	}
+	&:focus {
+		color: $color-grey-1200;
+	}
+}
+
+.bttn {
+	font-size: 1.8rem;
+	letter-spacing: 0.28rem;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	width: 18em;
+	font-weight: bold;
+	padding: 0.88em 0px;
+	border: 1px solid $color-grey-000;
+	border-radius: 1px;
+	position: relative;
+	&:before {
+		-webkit-transition: 0.5s all ease;
+		transition: 0.5s all ease;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		opacity: 0;
+		content: '';
+		background-color: $color-grey-600;
+		z-index: -2;
+	}
+	&:hover {
+		&:before {
+			-webkit-transition: 0.5s all ease;
+			transition: 0.5s all ease;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		&:before {
+			transition: 0.5s all ease;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
+.bttn-dark {
+	font-size: 1.8rem;
+	letter-spacing: 0.28rem;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	width: 18em;
+	font-weight: bold;
+	padding: 0.88em 0px;
+	border: 1px solid $color-primary;
+	border-radius: 1px;
+	position: relative;
+	// box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+	z-index: 2;
+	&:before {
+		-webkit-transition: 0.5s all ease;
+		transition: 0.5s all ease;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		opacity: 0;
+		content: '';
+		background-color: $color-primary;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			-webkit-transition: 0.5s all ease;
+			transition: 0.5s all ease;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+	&:focus {
+		&:before {
+			-webkit-transition: 0.5s all ease;
+			transition: 0.5s all ease;
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
+// Intro
+.intro {
+	&__bttn {
+		margin: 3em 0;
+	}
+}
+
+// About
+.about {
+	&__bttn {
+		margin: 1em 0;
+	}
+
+	.bttn-dark {
+		margin: 0 0 2em 0;
+	}
+}
