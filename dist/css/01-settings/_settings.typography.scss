@@ -137,6 +137,7 @@ ul > {
 // Article Small headings
 .small__heading,
 .intro > h2 {
+	color: $color-grey-200;
 	font-family: $font-subheadings;
 	font-size: 1.8rem;
 	letter-spacing: 0.48rem;
@@ -149,7 +150,7 @@ ul > {
 	text-align: left;
 	position: relative;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 
 	@include md {
 		--font-size: var(--global-small__heading);
@@ -158,10 +159,10 @@ ul > {
 
 	&::after {
 		content: '';
-		width: 12rem;
-		height: 0.1rem;
+		width: 3em;
+		height: 0.19rem;
 		background: rgba(253, 216, 8, 0.6);
-		margin: 0 0 0 4rem;
+		margin: 0 0.6rem;
 	}
 }
 
@@ -200,3 +201,25 @@ article {
 		}
 	}
 }
+
+/* 
+  ## Contact Font Styles
+--------------------------------------------- */
+.contact {
+	.small__heading {
+		margin-bottom: 0.44em;
+	}
+
+	&__link {
+		margin-bottom: 3.4em;
+		display: block;
+	}
+
+	&__info {
+		font-size: 2.6rem;
+	}
+}
+
+.contact__form > p:nth-child(1) {
+	margin-bottom: 1.8em;
+} // "Tell Me More"
