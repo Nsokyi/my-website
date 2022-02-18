@@ -360,10 +360,14 @@
 				<article class="article contact" id="contact">
 					<h2>Get in touch</h2>
 
-					<p>Tell me more</p>
+					
 
+					<div class="contact__grid gap-top-l">
+					<div class="contact__formwrapper">
 					<div class="contact__form">
+						<p>Tell me more</p>
 						<form id="form" method="POST">
+							
 							<input id="name" name="name" type="text" required />
 							<label for="name">Name &ast;</label>
 
@@ -386,18 +390,22 @@
 							</div>
 						</form>
 
-						<!-- <script>
+						<script>
 							var contactform = document.getElementById('contactform');
 							contactform.setAttribute('action', 'https://formspree.io/' + 'noah' + '@' + 'noahsportfolio' + '.' + 'com');
-						</script> -->
-					</div>
+						</script>
+					
 
 					<a class="contact__link" href="javascript:location='mailto:\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d';void 0"
 						><script type="text/javascript">
 							document.write('\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d');
 						</script></a
 					>
+				</div>
+				</div><!-- end form wrapper -->
 
+
+				<div class="contact__info">
 					<p>Chat on the phone</p>
 					<a class="contact__link" href="tel:+07866437072">&plus;44 &lpar;0&rpar; 786 643 7072</a>
 
@@ -406,6 +414,10 @@
 					<br />
 					Edinburgh <br />
 					EH9 1BN
+
+				</div><!-- end Contact Info -->
+
+			</div><!-- end Contact Grid -->
 				</article>
 				<!--
           End Contact article
