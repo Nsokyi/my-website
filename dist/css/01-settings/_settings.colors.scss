@@ -61,14 +61,22 @@ $color-grey-1400: $color-grey-1400;
 $color-grey-1600: $color-grey-1600;
 $color-grey-1800: $color-grey-1800;
 $color-dark: $color-grey-2000;
-/* Colour Grey Alpha */
 
+/* Colour Grey Alpha */
 $color-grey-000-1: rgba($color-grey-000, 0.1);
 $color-grey-000-2: rgba($color-grey-000, 0.2);
 $color-grey-000-3: rgba($color-grey-000, 0.3);
 $color-grey-000-4: rgba($color-grey-000, 0.4);
 $color-grey-000-5: rgba($color-grey-000, 0.5);
 
+/* Colour Yellow Alpha */
+$color-primary-000-1: rgba($color-primary, 0.1);
+$color-primary-000-2: rgba($color-primary, 0.2);
+$color-primary-000-3: rgba($color-primary, 0.3);
+$color-primary-000-4: rgba($color-primary, 0.4);
+$color-primary-000-5: rgba($color-primary, 0.5);
+$color-primary-000-6: rgba($color-primary, 0.6);
+$color-primary-000-7: rgba($color-primary, 0.7);
 /* Alert Colour Palette 
 */
 $color-body: $color-grey-000;

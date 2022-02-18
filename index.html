@@ -364,7 +364,7 @@
 
 									<div class="contact__field">
 										<input id="email" name="_replyto" type="text" required />
-										<label>Email</label>
+										<label>Email &ast;</label>
 										<span class="inputBar"></span>
 									</div>
 
@@ -378,11 +378,14 @@
 
 									<div class="contact__form--submit">
 										<input type="text" name="_gotcha" style="display: none" />
-										<button id="sendMessage" type="submit" value="Send" class="contactform__submit--button button">
+										<button id="sendMessage" type="submit" value="Send" class="contactform__submit--button effect-8 button">
 											Submit
-											<svg class="contactform__submit--arrow">
+											<!-- <svg class = "button" expanded = "true" height = "100px" width = "100px">
+												<circle class = "innerCircle" cx = "50%" cy = "50%" r = "10px">
+											</svg> -->
+											<!-- <svg class="contactform__submit--arrow">
 												<use xlink:href="/dist/img/sprite.svg#icon-arrow-push"></use>
-											</svg>
+											</svg> -->
 										</button>
 									</div>
 								</form>
@@ -391,16 +394,18 @@
 									var contactform = document.getElementById('contactform');
 									contactform.setAttribute('action', 'https://formspree.io/' + 'noah' + '@' + 'noahsportfolio' + '.' + 'com');
 								</script>
-
-								<a class="contact__link" href="javascript:location='mailto:\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d';void 0"
-									><script type="text/javascript">
-										document.write('\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d');
-									</script></a
-								>
-							</div> </div
-						><!-- end form wrapper -->
+							</div>
+						</div>
+						<!-- end form wrapper -->
 
 						<div class="contact__info">
+							<p>Drop me an email</p>
+							<a class="contact__link" href="javascript:location='mailto:\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d';void 0"
+								><script type="text/javascript">
+									document.write('\u006e\u006f\u0061\u0068\u0040\u006e\u006f\u0061\u0068\u0073\u0070\u006f\u0072\u0074\u0066\u006f\u006c\u0069\u006f\u002e\u0063\u006f\u006d');
+								</script></a
+							>
+
 							<p>Chat on the phone</p>
 							<a class="contact__link" href="tel:+07866437072">&plus;44 &lpar;0&rpar; 786 643 7072</a>
 
@@ -408,13 +413,14 @@
 							52&sol;5 Arden Street
 							<br />
 							Edinburgh <br />
-							EH9 1BN </div
-						><!-- end Contact Info --> </div
-					><!-- end Contact Grid -->
+							EH9 1BN
+						</div>
+						<!-- end Contact Info -->
+					</div>
+					<!-- end Contact Grid -->
 				</article>
-				<!--
-          End Contact article
-        -->
+				<!-- End Contact article -->
+
 				<footer class="footer">
 					<div class="social social--footer">
 						<div class="social--container">
