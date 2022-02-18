@@ -157,6 +157,7 @@ ul > li {
 
 .small__heading,
 .intro > h2 {
+  color: #bababa;
   font-family: "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 0.48rem;
@@ -170,9 +171,9 @@ ul > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -186,10 +187,10 @@ ul > li {
 .small__heading::after,
 .intro > h2::after {
   content: '';
-  width: 12rem;
-  height: 0.1rem;
+  width: 3em;
+  height: 0.19rem;
   background: rgba(253, 216, 8, 0.6);
-  margin: 0 0 0 4rem;
+  margin: 0 0.6rem;
 }
 
 .article__lead {
@@ -222,6 +223,26 @@ article cite::after {
   top: -0.7em;
   left: -0.29em;
   right: unset;
+}
+
+/* 
+  ## Contact Font Styles
+--------------------------------------------- */
+.contact .small__heading {
+  margin-bottom: 0.44em;
+}
+
+.contact__link {
+  margin-bottom: 3.4em;
+  display: block;
+}
+
+.contact__info {
+  font-size: 2.6rem;
+}
+
+.contact__form > p:nth-child(1) {
+  margin-bottom: 1.8em;
 }
 
 /* ==========================================================================
@@ -734,7 +755,7 @@ main {
 }
 
 .contact__form {
-  margin: 3em 0;
+  margin: 3em 0 6em 0;
 }
 
 .contact__field {
