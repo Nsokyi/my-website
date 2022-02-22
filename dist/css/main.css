@@ -206,7 +206,7 @@ article cite {
 article cite::before {
   position: absolute;
   content: '‘';
-  color: #fdce08;
+  color: black;
   font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
   opacity: 20%;
   top: -0.7em;
@@ -217,12 +217,26 @@ article cite::before {
 article cite::after {
   position: absolute;
   content: '‘';
-  color: #dbb101;
+  color: black;
   font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
   opacity: 50%;
   top: -0.7em;
   left: -0.29em;
   right: unset;
+}
+
+article .cite {
+  -webkit-box-align: self-end;
+      -ms-flex-align: self-end;
+          align-items: self-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article .cite::after {
+  top: -1.3em;
+  position: relative;
 }
 
 /* 
@@ -371,9 +385,9 @@ article::after {
   position: absolute;
   padding: 0;
   border-bottom: 1px solid rgba(216, 216, 216, 0.3);
-  width: 120%;
+  width: 200%;
   bottom: 0;
-  right: -10%;
+  right: -22%;
 }
 
 .sidebar {
@@ -599,6 +613,11 @@ main {
   position: relative;
   display: block;
   z-index: 1;
+  margin: -5.6em 0;
+}
+
+.portfolio__item:last-of-type {
+  margin-bottom: 0;
 }
 
 .portfolio__number {
@@ -751,20 +770,109 @@ main {
 }
 
 .blog__container {
-  visibility: hidden;
-  opacity: 0;
-  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: minmax(40rem, max-content);
+      grid-template-rows: minmax(40rem, -webkit-max-content);
+      grid-template-rows: minmax(40rem, max-content);
+}
+
+.blog__controls {
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.blog__controls svg {
+  stroke-width: 16px;
+  stroke-linecap: square;
+  stroke: #616161;
+}
+
+.blog__controls--bttn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left:hover,
+.right:hover {
+  stroke: #fdce08;
+}
+
+.blog__inner {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
   position: relative;
+  max-width: 16em;
 }
 
 .blog__slide {
-  text-align: center;
-  position: fixed;
-  top: 25vh;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: left;
+      align-content: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  float: left;
+}
+
+.blog__slide a:link {
+  --font-size: var(--global-leadin__text);
+  font-size: var(--font-size);
+  font-family: "Novecentowide-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 1em 0 0.4em;
+  max-width: 66rem;
+  line-height: 1.1;
+  color: #bababa;
+}
+
+.blog__slide a:hover {
+  color: #fdce08;
+}
+
+.blog__slide span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #4b4b4b;
+}
+
+.blog__slide p {
+  line-height: 1.4;
+  color: #8d8d8d;
+}
+
+.blog__slide .read-more-link {
+  font-family: 'Novecentowide-bold', sans-serif;
 }
 
 @media (min-width: 992px) {
@@ -1168,7 +1276,7 @@ a.bttn-dark:focus {
 }
 
 .intro__bttn {
-  margin: 3em 0;
+  margin: 3em 0 0 0;
 }
 
 .about__bttn {
@@ -1293,6 +1401,10 @@ a.bttn-dark:focus {
 .contactform__submit--button.effect-8:hover:after {
   -webkit-animation: sonarEffect 1.3s ease-out 75ms;
           animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+.intro__bttn--round {
+  display: none;
 }
 
 /* ==========================================================================

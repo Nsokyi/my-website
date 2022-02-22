@@ -177,11 +177,10 @@ ul > {
 article {
 	cite {
 		position: relative;
-
 		&::before {
 			position: absolute;
 			content: '‘';
-			color: $color-primary;
+			color: black;
 			font: 700 4em/2em $font-serif;
 			opacity: 20%;
 			top: -0.7em;
@@ -192,12 +191,22 @@ article {
 		&::after {
 			position: absolute;
 			content: '‘';
-			color: $color-primary-800;
+			color: black;
 			font: 700 4em/2em $font-serif;
 			opacity: 50%;
 			top: -0.7em;
 			left: -0.29em;
 			right: unset;
+		}
+	}
+
+	.cite {
+		align-items: self-end;
+		display: flex;
+
+		&::after {
+			top: -1.3em;
+			position: relative;
 		}
 	}
 }

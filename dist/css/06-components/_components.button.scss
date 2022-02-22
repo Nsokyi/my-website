@@ -173,7 +173,7 @@ a.bttn-dark {
 // Intro
 .intro {
 	&__bttn {
-		margin: 3em 0;
+		margin: 3em 0 0 0;
 	}
 }
 
@@ -296,5 +296,11 @@ a.bttn-dark {
 		&:after {
 			animation: sonarEffect 1.3s ease-out 75ms;
 		}
+	}
+}
+
+.intro {
+	&__bttn--round {
+		display: none;
 	}
 }
