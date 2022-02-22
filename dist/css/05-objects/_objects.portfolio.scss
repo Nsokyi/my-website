@@ -1,0 +1,36 @@
+.portfolio {
+	&__wrap {
+		margin-top: -6em;
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		z-index: 1;
+	}
+	&__number {
+		-webkit-text-stroke: 1px $color-grey-1600;
+		-webkit-text-fill-color: rgba(255, 255, 255, 0);
+		font-family: $font-serif;
+		font-size: 10rem;
+		font-weight: 700;
+		font-style: italic;
+		position: relative;
+		z-index: -1;
+		display: block;
+		top: 0.88em;
+		left: -0.3em;
+	}
+
+	&__img {
+		max-width: 324px;
+	}
+
+	&__item--meta {
+		text-align: right;
+	}
+
+	&__item--title {
+		font-size: 2rem;
+	}
+}
