@@ -2,21 +2,22 @@
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
-	background-color: $color-grey-1800;
+	background-color: white;
+	// background-color: $color-grey-1800;
 	color: $color-grey-000;
 	margin: 0;
-	position: relative;
-	padding: 2.1em 2.3em 1em 1.3em;
-	z-index: 1;
-	width: 100%;
 	overflow-x: hidden;
+	padding: 2.44em 2.3em 1em 1.3em;
+	position: relative;
+	width: 100%;
+	z-index: 1;
 
 	@include lg {
-		max-width: 80.375vw;
-		overflow-x: visible;
 		border-left: solid 1px $color-grey-800;
 		border-right: solid 1px $color-grey-800;
 		margin: 0 auto;
+		max-width: 80.375vw;
+		overflow-x: visible;
 		padding: 0;
 	}
 	@include xxl {
