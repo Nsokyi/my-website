@@ -82,7 +82,7 @@
 }
 
 :root {
-  --global-h1-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 12.77em);
+  --global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
   --global-h2-size: clamp(1.8em, calc(9 / 119.875 * 100vw), 6em);
   --global-p-size: clamp(0.8em, calc(3 / 119.875 * 100vw), 1.1em);
   --global-small__heading: clamp(1.1em, calc(3 / 119.875 * 100vw), 2.12em);
@@ -99,16 +99,16 @@ h2,
 h3,
 h4,
 h5 {
+  color: #d8d8d8;
   font-family: 'Novecentowide-Bold', sans-serif;
   font-style: normal;
-  color: #d8d8d8;
 }
 
 h1 {
-  line-height: 0.816;
-  font-size: 9.2rem;
   --font-size: var(--global-h1-size);
+  font-size: 9.2rem;
   font-size: var(--font-size);
+  line-height: 0.816;
 }
 
 h1 .noah {
@@ -120,15 +120,15 @@ h1 .breen {
 }
 
 h2 {
-  font-size: 5.6rem;
   --font-size: var(--global-h2-size);
+  font-size: 5.6rem;
   font-size: var(--font-size);
   line-height: 0.9;
 }
 
 .small__heading {
-  color: #d8d8d8;
   --font-size: var(--global-small__heading);
+  color: #d8d8d8;
   font-size: var(--font-size);
   letter-spacing: 0.25rem;
   line-height: 1.3;
@@ -138,8 +138,8 @@ h2 {
 
 p {
   color: #bababa;
-  margin: 0 0 2.2rem 0;
   font-size: 1.96rem;
+  margin: 0 0 0.64em 0;
   orphans: 3;
   widows: 3;
 }
@@ -157,23 +157,23 @@ ul > li {
 
 .small__heading,
 .intro > h2 {
-  color: #bababa;
-  font-family: "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.48rem;
-  line-height: 1.3;
-  font-weight: 100;
-  text-transform: uppercase;
-  margin: 0.8em 0 1.8em;
-  letter-spacing: 0.2rem;
-  text-align: left;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #bababa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  letter-spacing: 0.2rem;
+  letter-spacing: 0.48rem;
+  line-height: 1.3;
+  margin: 1.5em 0 2em;
+  position: relative;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
@@ -186,11 +186,15 @@ ul > li {
 
 .small__heading::after,
 .intro > h2::after {
-  content: '';
-  width: 3em;
-  height: 0.19rem;
   background: rgba(253, 216, 8, 0.6);
-  margin: 0 0.6rem;
+  content: '';
+  height: 0.19rem;
+  margin: 0 1.9rem;
+  width: 3em;
+}
+
+.intro > h2 {
+  margin-top: 0.1em;
 }
 
 .article__lead {
@@ -204,25 +208,25 @@ article cite {
 }
 
 article cite::before {
-  position: absolute;
-  content: '‘';
   color: black;
+  content: '‘';
   font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
-  opacity: 20%;
-  top: -0.7em;
   left: -0.11em;
+  opacity: 20%;
+  position: absolute;
   right: unset;
+  top: -0.7em;
 }
 
 article cite::after {
-  position: absolute;
-  content: '‘';
   color: black;
+  content: '‘';
   font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
-  opacity: 50%;
-  top: -0.7em;
   left: -0.29em;
+  opacity: 50%;
+  position: absolute;
   right: unset;
+  top: -0.7em;
 }
 
 article .cite {
@@ -235,8 +239,8 @@ article .cite {
 }
 
 article .cite::after {
-  top: -1.3em;
   position: relative;
+  top: -1.3em;
 }
 
 /* 
@@ -247,8 +251,8 @@ article .cite::after {
 }
 
 .contact__link {
-  margin-bottom: 3.4em;
   display: block;
+  margin-bottom: 3.4em;
 }
 
 .contact__info {
@@ -261,8 +265,8 @@ article .cite::after {
 
 .copyright-text {
   font-size: 1.4rem;
-  text-align: center;
   margin-top: 1.3em;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -374,8 +378,8 @@ div article.intro {
 }
 
 article {
-  padding-top: 4em;
-  padding-bottom: 6em;
+  padding-top: 2.6em;
+  padding-bottom: 5.2em;
   position: relative;
 }
 
@@ -532,23 +536,23 @@ article::after {
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
-  background-color: #363636;
+  background-color: white;
   color: #d8d8d8;
   margin: 0;
-  position: relative;
-  padding: 2.1em 2.3em 1em 1.3em;
-  z-index: 1;
-  width: 100%;
   overflow-x: hidden;
+  padding: 2.44em 2.3em 1em 1.3em;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
   main {
-    max-width: 80.375vw;
-    overflow-x: visible;
     border-left: solid 1px #7b7b7b;
     border-right: solid 1px #7b7b7b;
     margin: 0 auto;
+    max-width: 80.375vw;
+    overflow-x: visible;
     padding: 0;
   }
 }
@@ -1101,15 +1105,15 @@ circle:hover {
 
 /* Menu Button */
 .bttn_container {
-  position: fixed;
-  top: 5%;
-  right: 2%;
-  height: 50px;
-  width: 2.5em;
   cursor: pointer;
-  z-index: 100;
+  height: 54px;
+  position: fixed;
+  right: 1.2em;
+  top: 1.4em;
   -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
+  width: 2.5em;
+  z-index: 100;
 }
 
 .bttn_container:hover {
@@ -1117,33 +1121,33 @@ circle:hover {
 }
 
 .bttn_container.active .top {
+  background: #d8d8d8;
   -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
           transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #d8d8d8;
 }
 
 .bttn_container.active .middle {
-  opacity: 0;
   background: #d8d8d8;
+  opacity: 0;
 }
 
 .bttn_container.active .bottom {
+  background: #d8d8d8;
   -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
           transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: #d8d8d8;
 }
 
 .bttn_container span {
   background: #d8d8d8;
   border: none;
+  cursor: pointer;
   height: 5px;
-  width: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
-  cursor: pointer;
+  width: 100%;
 }
 
 .bttn_container span:nth-of-type(2) {
@@ -1157,7 +1161,6 @@ circle:hover {
 .bttn {
   color: #bababa;
   text-decoration: none;
-  -webkit-transition: 0.3s all ease;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
@@ -1173,7 +1176,6 @@ circle:hover {
 a.bttn-dark {
   color: #fdce08;
   text-decoration: none;
-  -webkit-transition: 0.3s all ease;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
 }
@@ -1187,96 +1189,98 @@ a.bttn-dark:focus {
 }
 
 .bttn {
-  font-size: 1.8rem;
-  letter-spacing: 0.28rem;
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  width: 18em;
-  font-weight: bold;
-  padding: 0.88em 0px;
-  border: 1px solid #d8d8d8;
   border-radius: 1px;
+  border: 1px solid #d8d8d8;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.28rem;
+  padding: 0.68em 0;
   position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 18em;
 }
 
 .bttn:before {
   -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: '';
   background-color: #8d8d8d;
+  bottom: 0;
+  content: '';
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  transition: 0.5s all ease;
   z-index: -2;
 }
 
 .bttn:hover:before {
   -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
   left: 0;
-  right: 0;
   opacity: 1;
+  right: 0;
+  transition: 0.5s all ease;
 }
 
 .bttn:focus:before {
+  left: 0;
+  opacity: 1;
+  right: 0;
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
 }
 
 .bttn-dark {
-  font-size: 1.8rem;
-  letter-spacing: 0.28rem;
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  width: 18em;
-  font-weight: bold;
-  padding: 0.88em 0px;
-  border: 1px solid #fdce08;
   border-radius: 1px;
+  border: 1px solid #fdce08;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.28rem;
+  padding: 0.88em 0px;
   position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 18em;
   z-index: 2;
 }
 
 .bttn-dark:before {
   -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: '';
   background-color: #fdce08;
+  bottom: 0;
+  content: '';
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  transition: 0.5s all ease;
   z-index: -1;
 }
 
 .bttn-dark:hover:before {
   -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
   left: 0;
-  right: 0;
   opacity: 1;
+  right: 0;
+  transition: 0.5s all ease;
 }
 
 .bttn-dark:focus:before {
   -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
   left: 0;
-  right: 0;
   opacity: 1;
+  right: 0;
+  transition: 0.5s all ease;
 }
 
 .intro__bttn {
-  margin: 3em 0 0 0;
+  margin: 1.88em 0 0 0;
 }
 
 .about__bttn {
@@ -1325,46 +1329,46 @@ a.bttn-dark:focus {
 
 .intro__bttn--round,
 .contactform__submit--button {
+  border-radius: 50%;
+  border: solid 1px rgba(216, 216, 216, 0.5);
+  color: #d8d8d8;
+  cursor: pointer;
   display: block;
   font-size: 2.2rem;
-  line-height: 7em;
-  letter-spacing: 0.18rem;
   font-weight: 800;
-  cursor: pointer;
-  margin: 0 auto;
-  width: 7em;
   height: 7em;
-  border-radius: 50%;
-  text-align: center;
+  letter-spacing: 0.18rem;
+  line-height: 7em;
+  margin: 0 auto;
   position: relative;
+  text-align: center;
   text-decoration: none;
+  width: 7em;
   z-index: 1;
-  color: #d8d8d8;
-  border: solid 1px rgba(216, 216, 216, 0.5);
 }
 
 .intro__bttn--round:after,
 .contactform__submit--button:after {
+  border-radius: 50%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  content: '';
+  height: 100%;
   pointer-events: none;
   position: absolute;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  content: '';
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
 }
 
 .intro__bttn--round:before,
 .contactform__submit--button:before {
-  speak: none;
-  font-size: 48px;
-  line-height: 90px;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
   display: block;
+  font-size: 48px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 90px;
+  speak: none;
+  text-transform: none;
 }
 
 .contactform__submit--button.effect-8 {
@@ -1376,22 +1380,23 @@ a.bttn-dark:focus {
 }
 
 .contactform__submit--button.effect-8:after {
-  top: 0;
-  left: 0;
-  padding: 0;
-  z-index: -1;
   -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
           box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+  left: 0;
   opacity: 0;
+  padding: 0;
+  top: 0;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+  z-index: -1;
 }
 
 .contactform__submit--button.effect-8:hover {
   background-color: rgba(253, 206, 8, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #d8d8d8;
   -webkit-transform: scale(0.93);
           transform: scale(0.93);
-  color: #d8d8d8;
 }
 
 .contactform__submit--button.effect-8:hover i {
