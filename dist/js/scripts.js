@@ -166,7 +166,7 @@ function initSliders() {
   }
 
   // Next Arrow
-  const arrowNext = document.querySelector(".nextButton");
+  const arrowNext = document.querySelector(".nextBttn");
   arrowNext.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -175,7 +175,7 @@ function initSliders() {
   
 
   // Previous Arrow
-  const arrowPrevious = document.querySelector(".prevButton");
+  const arrowPrevious = document.querySelector(".prevBttn");
   arrowPrevious.addEventListener("click", (e) => {
     e.preventDefault();
 

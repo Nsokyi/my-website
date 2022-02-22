@@ -1,84 +1,87 @@
-// /* ## Blog Layout
-// --------------------------------------------- */
-
-// .blog {
-// 	&__container {
-// 		display: block;
-// 		display: grid;
-// 		align-items: center;
-// 		height: 42rem;
-// 		grid-template-columns: 80rem 30rem;
-// 		grid-template-rows: minmax(44rem, max-content) 7rem;
-// 	}
-
-// 	&__inner {
-// 		width: 100%;
-// 		height: 100%;
-// 		overflow: hidden;
-// 		flex: 1;
-// 		position: relative;
-// 	}
-
-// 	&__slide {
-// 		flex: 1;
-// 		display: flex;
-// 		align-content: left;
-// 		flex-direction: column;
-// 		align-items: left;
-
-// 		a:link {
-// 			color: $color-grey-000;
-// 			font-size: 3rem;
-// 			font-family: $font-headings;
-// 			line-height: 1.1;
-// 		}
-// 		a:hover {
-// 			color: $color-primary;
-// 		}
-// 	}
-// }
-
-// // Slide Controls
-// .controls {
-// 	cursor: pointer;
-// 	display: grid;
-// 	grid-template-columns: 1fr 1fr;
-// 	align-self: center;
-
-// 	button {
-// 		display: flex;
-// 		justify-content: center;
-// 	}
-
-// 	svg {
-// 		stroke-width: 10px;
-// 		stroke-linecap: square;
-// 		stroke: $color-primary-800;
-// 	}
-// }
-
-// .left,
-// .right {
-// 	&:hover {
-// 		stroke: $color-grey-000;
-// 	}
-// }
-
 .blog {
 	&__container {
-		visibility: hidden;
-		opacity: 0;
-		height: 100vh;
+		display: grid;
+		align-items: center;
+		grid-template-columns: 100%;
+		grid-template-rows: minmax(40rem, max-content);
+		// height: 42rem;
+		// grid-template-columns: 80rem 30rem;
+		// grid-template-rows: minmax(44rem, max-content) 7rem;
+	}
+
+	&__controls {
+		cursor: pointer;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-self: center;
+
+		svg {
+			stroke-width: 16px;
+			stroke-linecap: square;
+			stroke: $color-grey-1200;
+		}
+	}
+
+	&__controls--bttn {
+		display: flex;
+		justify-content: center;
+	}
+}
+.left,
+.right {
+	&:hover {
+		stroke: $color-primary;
+	}
+}
+
+.blog {
+	&__inner {
+		width: 100%;
+		height: 80%;
+		overflow: hidden;
 		position: relative;
+		max-width: 16em;
 	}
 
 	&__slide {
-		text-align: center;
-		position: fixed;
-		top: 25vh;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: transparent;
+		flex: 1;
+		display: flex;
+		align-content: left;
+		flex-direction: column;
+		align-items: left;
+		justify-content: center;
+		font-weight: 700;
+		position: absolute;
+		width: 100%;
+		height: auto;
+		float: left;
+
+		a:link {
+			--font-size: var(--global-leadin__text);
+			font-size: var(--font-size);
+			font-family: $font-headings;
+			margin: 1em 0 0.4em;
+			max-width: 66rem;
+			line-height: 1.1;
+			color: $color-grey-200;
+		}
+		a:hover {
+			color: $color-primary;
+		}
+
+		span {
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			color: $color-grey-1600;
+		}
+
+		p {
+			line-height: 1.4;
+			color: $color-grey-600;
+		}
+
+		.read-more-link {
+			font-family: 'Novecentowide-bold', sans-serif;
+		}
 	}
 }
