@@ -108,6 +108,8 @@ h1 {
 
 			@include md {
 				height: 1.066em;
+				right: -0.29em;
+				top: 0.268em;
 			}
 		}
 	}
@@ -177,13 +179,6 @@ ul > {
 		height: 0.19rem;
 		margin: 0 1.9rem;
 		width: 3em;
-
-		@include md {
-			height: 1px;
-			position: absolute;
-			top: 0.58em;
-			left: -0.8em;
-		}
 	}
 }
 
@@ -194,6 +189,21 @@ ul > {
 		flex-direction: row-reverse;
 		width: calc(100vw / 2 - -5em);
 		letter-spacing: 0.32rem;
+	}
+
+	&::after {
+		@include md {
+			height: 1px;
+			position: absolute;
+			top: 0.58em;
+			left: -0.8em;
+		}
+	}
+}
+
+.small__heading {
+	&::after {
+		height: 1px;
 	}
 }
 
@@ -212,6 +222,9 @@ ul > {
 article {
 	cite {
 		position: relative;
+		font-style: italic;
+		text-transform: initial;
+		letter-spacing: 0.088rem;
 
 		&::before {
 			color: black;
@@ -239,6 +252,7 @@ article {
 	.cite {
 		align-items: self-end;
 		display: flex;
+		justify-content: space-between;
 
 		&::after {
 			position: relative;
