@@ -81,16 +81,25 @@ a.bttn-dark {
 
 .bttn {
 	border-radius: 1px;
-	border: 1px solid $color-grey-000;
+	border: 1px solid $color-grey-000-5;
 	display: inline-block;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 	letter-spacing: 0.28rem;
 	padding: 0.68em 0;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	width: 18em;
+	width: 100%;
+
+	@include sm {
+		width: 14em;
+	}
+
+	@include lg {
+		font-size: 1.6rem;
+		width: 16em;
+	}
 
 	&:before {
 		-webkit-transition: 0.5s all ease;

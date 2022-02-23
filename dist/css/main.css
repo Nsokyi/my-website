@@ -133,6 +133,8 @@ h1 .breen::after {
 @media (min-width: 768px) {
   h1 .breen::after {
     height: 1.066em;
+    right: -0.29em;
+    top: 0.268em;
   }
 }
 
@@ -210,16 +212,6 @@ ul > li {
   width: 3em;
 }
 
-@media (min-width: 768px) {
-  .small__heading::after,
-  .intro > h2::after {
-    height: 1px;
-    position: absolute;
-    top: 0.58em;
-    left: -0.8em;
-  }
-}
-
 .intro > h2 {
   margin-top: 0.1em;
 }
@@ -233,6 +225,19 @@ ul > li {
     width: calc(100vw / 2 - -5em);
     letter-spacing: 0.32rem;
   }
+}
+
+@media (min-width: 768px) {
+  .intro > h2::after {
+    height: 1px;
+    position: absolute;
+    top: 0.58em;
+    left: -0.8em;
+  }
+}
+
+.small__heading::after {
+  height: 1px;
 }
 
 .article__lead {
@@ -249,6 +254,9 @@ ul > li {
 
 article cite {
   position: relative;
+  font-style: italic;
+  text-transform: initial;
+  letter-spacing: 0.088rem;
 }
 
 article cite::before {
@@ -280,6 +288,9 @@ article .cite {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 article .cite::after {
@@ -655,7 +666,8 @@ main {
 
 @media (min-width: 768px) {
   .intro {
-    max-width: 36em;
+    max-width: 72vw;
+    width: 80%;
   }
 }
 
@@ -1310,16 +1322,29 @@ a.bttn-dark:focus {
 
 .bttn {
   border-radius: 1px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid rgba(216, 216, 216, 0.5);
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
   letter-spacing: 0.28rem;
   padding: 0.68em 0;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  width: 18em;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .bttn {
+    width: 14em;
+  }
+}
+
+@media (min-width: 992px) {
+  .bttn {
+    font-size: 1.6rem;
+    width: 16em;
+  }
 }
 
 .bttn:before {
