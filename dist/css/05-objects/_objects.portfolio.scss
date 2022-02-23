@@ -1,6 +1,62 @@
 .portfolio {
 	&__wrap {
 		margin-top: -6em;
+
+		@include md {
+			column-gap: 2em;
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			grid-template-rows: repeat(2, auto);
+			margin-top: 3em;
+			row-gap: 0;
+		}
+	}
+
+	@include md {
+		&__01 {
+			// background-color: aquamarine;
+			grid-column-start: 1;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+
+		&__03 {
+			// background-color: brown;
+			grid-column-start: 1;
+			grid-row-start: 3;
+			grid-row-end: 4;
+		}
+
+		&__05 {
+			// background-color: yellowgreen;
+			grid-column-start: 1;
+			grid-row-start: 5;
+			grid-row-end: 6;
+		}
+	}
+
+	// Portfolio on the right hand side
+	@include md {
+		&__02 {
+			// background-color: aquamarine;
+			grid-column-start: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
+		&__04 {
+			// background-color: brown;
+			grid-column-start: 2;
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+
+		&__06 {
+			// background-color: yellowgreen;
+			grid-column-start: 2;
+			grid-row-start: 6;
+			grid-row-end: 7;
+		}
 	}
 
 	&__item {
@@ -8,6 +64,11 @@
 		display: block;
 		z-index: 1;
 		margin: -5.6em 0;
+		max-width: 16.2em;
+
+		@include md {
+			margin: -7.3em 0;
+		}
 
 		&:last-of-type {
 			margin-bottom: 0;
