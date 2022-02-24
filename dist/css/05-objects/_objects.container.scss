@@ -12,6 +12,10 @@ main {
 	width: 100%;
 	z-index: 1;
 
+	@include md {
+		padding: 2.44em 1.4em 1em;
+	}
+
 	@include lg {
 		border-left: solid 1px $color-grey-800;
 		border-right: solid 1px $color-grey-800;

@@ -641,6 +641,12 @@ main {
   z-index: 1;
 }
 
+@media (min-width: 768px) {
+  main {
+    padding: 2.44em 1.4em 1em;
+  }
+}
+
 @media (min-width: 992px) {
   main {
     border-left: solid 1px #7b7b7b;
@@ -941,9 +947,9 @@ main {
 .blog__container {
   display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
   -ms-grid-rows: minmax(20em, max-content);
@@ -953,6 +959,8 @@ main {
 
 @media (min-width: 768px) {
   .blog__container {
+    -ms-grid-columns: 74% 26%;
+        grid-template-columns: 74% 26%;
     -ms-grid-rows: minmax(15.2em, max-content);
         grid-template-rows: minmax(15.2em, -webkit-max-content);
         grid-template-rows: minmax(15.2em, max-content);
@@ -969,7 +977,7 @@ main {
 
 @media (min-width: 768px) {
   .blog__inner {
-    max-width: 27em;
+    max-width: 28em;
   }
 }
 
@@ -1009,6 +1017,12 @@ main {
   color: #bababa;
 }
 
+@media (min-width: 768px) {
+  .blog__slide a:link {
+    max-width: 44rem;
+  }
+}
+
 .blog__slide a:hover {
   color: #fdce08;
 }
@@ -1019,9 +1033,30 @@ main {
   color: #4b4b4b;
 }
 
+@media (min-width: 768px) {
+  .blog__slide span {
+    font-size: 11.2rem;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
+    font-style: italic;
+    top: -5px;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.253);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    z-index: -1;
+  }
+}
+
 .blog__slide p {
   line-height: 1.4;
   color: #8d8d8d;
+}
+
+@media (min-width: 768px) {
+  .blog__slide p {
+    padding-right: 4.4em;
+  }
 }
 
 .blog__slide .read-more-link {
@@ -1058,7 +1093,7 @@ main {
 }
 
 .contact__form {
-  margin: 3em 0 6em 0;
+  margin: 3em 0 4.2em 0;
 }
 
 .contact__field {
@@ -1460,6 +1495,12 @@ a.bttn-dark:focus {
   margin: 1.88em 0 0 0;
 }
 
+@media (min-width: 768px) {
+  .intro__bttn {
+    margin: 3.32em 0 1.84em 0;
+  }
+}
+
 .about__bttn {
   margin: 1em 0;
 }
@@ -1482,24 +1523,10 @@ a.bttn-dark:focus {
 
 .blog__controls {
   cursor: pointer;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-row-align: center;
-      align-self: center;
-}
-
-@media (min-width: 768px) {
-  .blog__controls {
-    margin-left: -2.5em;
-  }
 }
 
 .blog__controls svg {
-  stroke-width: 16px;
-  stroke-linecap: square;
-  stroke: #616161;
+  fill: #d8d8d8;
 }
 
 .blog__controls--bttn {
@@ -1509,14 +1536,6 @@ a.bttn-dark:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-height: 5em;
-}
-
-@media (min-width: 768px) {
-  .blog__controls--bttn {
-    max-height: 7em;
-    width: 8em;
-  }
 }
 
 .left:hover,
@@ -1602,6 +1621,13 @@ a.bttn-dark:focus {
   line-height: 90px;
   speak: none;
   text-transform: none;
+}
+
+@media (min-width: 768px) {
+  .intro__bttn--round,
+  .contactform__submit--button {
+    margin: 0;
+  }
 }
 
 .contactform__submit--button.effect-8 {

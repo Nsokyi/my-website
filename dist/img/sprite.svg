@@ -36,11 +36,11 @@
 <!-- 
     Arrow Right
 -->
-<symbol id="icon-arrow-right" viewBox="0 0 165 165">
+<symbol id="icon-arrow-right" viewBox="0 0 193 305">
 <defs>
 <style>.cls-1{fill:none;stroke:#363636;stroke-linecap:square;stroke-miterlimit:10;stroke-width:6px}</style>
 </defs>
-<path class="cls-1" d="M59.4 36.3l46.2 46.2M105.6 82.5l-46.2 46.2"/>
+<path class="cls-1" d="M112.89 152.508L0 39.9406L40.055 0L193 152.508L40.069 305L0.0143577 265.059L112.89 152.508Z"/>
 </symbol>
 
 
