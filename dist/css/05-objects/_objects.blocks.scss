@@ -39,15 +39,22 @@ header {
 	margin-bottom: 1em;
 }
 
-div {
-	article.intro {
-		padding-top: 0;
+.intro {
+	padding-top: 0;
+}
+
+.intro,
+.about,
+.services {
+	@include md {
+		max-width: 72vw;
+		width: 80%;
 	}
 }
 
 article {
 	padding-top: 2.6em;
-	padding-bottom: 5.2em;
+	padding-bottom: 4.42em;
 	position: relative;
 
 	&::after {
@@ -56,9 +63,13 @@ article {
 		position: absolute;
 		padding: 0;
 		border-bottom: 1px solid $color-grey-000-3;
-		width: 200%;
+		width: 1000%;
 		bottom: 0;
-		right: -22%;
+		right: -100%;
+	}
+
+	@include md {
+		padding-bottom: 4.46em;
 	}
 }
 

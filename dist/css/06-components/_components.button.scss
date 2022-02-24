@@ -94,6 +94,7 @@ a.bttn-dark {
 
 	@include sm {
 		width: 14em;
+		display: block;
 	}
 
 	@include lg {
@@ -138,15 +139,25 @@ a.bttn-dark {
 	border: 1px solid $color-primary;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
 	display: inline-block;
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 	letter-spacing: 0.28rem;
-	padding: 0.88em 0px;
+	padding: 0.68em 0;
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	width: 18em;
+	width: 100%;
 	z-index: 2;
+
+	@include sm {
+		width: 14em;
+		display: block;
+	}
+
+	@include lg {
+		font-size: 1.6rem;
+		width: 16em;
+	}
 
 	//
 	&:before {
@@ -193,10 +204,55 @@ a.bttn-dark {
 .about {
 	&__bttn {
 		margin: 1em 0;
+
+		@include md {
+			margin: 3.3em 0 2.14em 0;
+		}
 	}
 
 	.bttn-dark {
 		margin: 0 0 2em 0;
+
+		@include md {
+			margin: 0 0 3.44em 0;
+		}
+	}
+}
+
+// Blog
+.blog {
+	&__controls {
+		cursor: pointer;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-self: center;
+
+		@include md {
+			margin-left: -2.5em;
+		}
+
+		svg {
+			stroke-width: 16px;
+			stroke-linecap: square;
+			stroke: $color-grey-1200;
+		}
+	}
+
+	&__controls--bttn {
+		display: flex;
+		justify-content: center;
+		max-height: 5em;
+
+		@include md {
+			max-height: 7em;
+			width: 8em;
+		}
+	}
+}
+.left,
+.right {
+	&:hover {
+		stroke: $color-primary;
 	}
 }
 
