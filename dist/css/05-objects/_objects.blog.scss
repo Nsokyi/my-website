@@ -1,7 +1,7 @@
 .blog {
 	&__container {
 		display: grid;
-		align-items: center;
+		align-items: baseline;
 		grid-template-columns: 100%;
 		grid-template-rows: minmax(20em, max-content);
 		// height: 42rem;
@@ -9,6 +9,7 @@
 		// grid-template-rows: minmax(44rem, max-content) 7rem;
 
 		@include md {
+			grid-template-columns: 74% 26%;
 			grid-template-rows: minmax(15.2em, max-content);
 		}
 	}
@@ -23,7 +24,7 @@
 		max-width: 16em;
 
 		@include md {
-			max-width: 27em;
+			max-width: 28em;
 		}
 	}
 
@@ -48,6 +49,10 @@
 			max-width: 66rem;
 			line-height: 1.1;
 			color: $color-grey-200;
+
+			@include md {
+				max-width: 44rem;
+			}
 		}
 		a:hover {
 			color: $color-primary;
@@ -57,11 +62,28 @@
 			text-transform: uppercase;
 			font-size: 1.2rem;
 			color: $color-grey-1600;
+
+			@include md {
+				font-size: 11.2rem;
+				position: absolute;
+				white-space: nowrap;
+				overflow: hidden;
+				font-family: $font-serif;
+				font-style: italic;
+				top: -5px;
+				-webkit-text-stroke: 1px rgba(0, 0, 0, 0.253);
+				-webkit-text-fill-color: rgba(255, 255, 255, 0);
+				z-index: -1;
+			}
 		}
 
 		p {
 			line-height: 1.4;
 			color: $color-grey-600;
+
+			@include md {
+				padding-right: 4.4em;
+			}
 		}
 
 		.read-more-link {

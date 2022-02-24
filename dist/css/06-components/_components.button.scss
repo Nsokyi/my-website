@@ -197,6 +197,10 @@ a.bttn-dark {
 .intro {
 	&__bttn {
 		margin: 1.88em 0 0 0;
+
+		@include md {
+			margin: 3.32em 0 1.84em 0;
+		}
 	}
 }
 
@@ -223,29 +227,30 @@ a.bttn-dark {
 .blog {
 	&__controls {
 		cursor: pointer;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-self: center;
+		// display: grid;
+		// grid-template-columns: 1fr 1fr;
+		// align-self: center;
 
 		@include md {
-			margin-left: -2.5em;
+			// margin-left: -2.5em;
 		}
 
 		svg {
-			stroke-width: 16px;
-			stroke-linecap: square;
-			stroke: $color-grey-1200;
+			fill: $color-grey-000;
+			// stroke-width: 16px;
+			// stroke-linecap: square;
+			// stroke: $color-grey-1200;
 		}
 	}
 
 	&__controls--bttn {
 		display: flex;
 		justify-content: center;
-		max-height: 5em;
+		// max-height: 5em;
 
 		@include md {
-			max-height: 7em;
-			width: 8em;
+			// max-height: 7em;
+			// width: 8em;
 		}
 	}
 }
@@ -340,6 +345,10 @@ a.bttn-dark {
 		line-height: 90px;
 		speak: none;
 		text-transform: none;
+	}
+
+	@include md {
+		margin: 0;
 	}
 }
 
