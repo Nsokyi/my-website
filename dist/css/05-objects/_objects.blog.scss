@@ -3,34 +3,14 @@
 		display: grid;
 		align-items: center;
 		grid-template-columns: 100%;
-		grid-template-rows: minmax(40rem, max-content);
+		grid-template-rows: minmax(20em, max-content);
 		// height: 42rem;
 		// grid-template-columns: 80rem 30rem;
 		// grid-template-rows: minmax(44rem, max-content) 7rem;
-	}
 
-	&__controls {
-		cursor: pointer;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-self: center;
-
-		svg {
-			stroke-width: 16px;
-			stroke-linecap: square;
-			stroke: $color-grey-1200;
+		@include md {
+			grid-template-rows: minmax(15.2em, max-content);
 		}
-	}
-
-	&__controls--bttn {
-		display: flex;
-		justify-content: center;
-	}
-}
-.left,
-.right {
-	&:hover {
-		stroke: $color-primary;
 	}
 }
 
@@ -41,6 +21,10 @@
 		overflow: hidden;
 		position: relative;
 		max-width: 16em;
+
+		@include md {
+			max-width: 27em;
+		}
 	}
 
 	&__slide {
