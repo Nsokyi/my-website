@@ -10,7 +10,7 @@
 
 		@include md {
 			grid-template-columns: 74% 26%;
-			grid-template-rows: minmax(15.2em, max-content);
+			grid-template-rows: minmax(13em, max-content);
 		}
 	}
 }
@@ -24,6 +24,7 @@
 		max-width: 16em;
 
 		@include md {
+			height: 100%;
 			max-width: 28em;
 		}
 	}
@@ -43,12 +44,12 @@
 
 		a:link {
 			--font-size: var(--global-leadin__text);
-			font-size: var(--font-size);
+			color: $color-grey-200;
 			font-family: $font-headings;
+			font-size: var(--font-size);
+			line-height: 1.1;
 			margin: 1em 0 0.4em;
 			max-width: 66rem;
-			line-height: 1.1;
-			color: $color-grey-200;
 
 			@include md {
 				max-width: 44rem;

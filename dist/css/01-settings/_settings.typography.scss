@@ -70,6 +70,7 @@ $letter-spacing: 0.098rem;
 	--global-number-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 14em);
 	// clamp(min, viewport-width-unit, max);
 	--margin-main-heading: clamp(0.2em, calc(22 / 119.875 * 100vw), 0.466em);
+	--global-big-number-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
 }
 
 /* 
