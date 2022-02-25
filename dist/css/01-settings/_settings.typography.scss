@@ -82,26 +82,8 @@ h3,
 h4,
 h5 {
 	color: $color-grey-000;
-	font-family: 'Novecentowide-Bold', sans-serif;
+	font-family: $font-headings;
 	font-style: normal;
-}
-
-a {
-	&:link {
-		color: $color-grey-000;
-	}
-
-	&:visited {
-		color: $color-grey-000-3;
-	}
-
-	&:hover {
-		color: $color-primary;
-	}
-
-	&:selected {
-		color: $color-grey-000;
-	}
 }
 
 h1 {
@@ -152,6 +134,13 @@ p {
 	@include md {
 		--font-size: var(--global-p-size);
 		font-size: var(--font-size);
+		max-width: 72vw;
+		width: 80%;
+	}
+
+	@include lg {
+		max-width: 72vw;
+		width: 80%;
 	}
 }
 

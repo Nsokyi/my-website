@@ -4,11 +4,12 @@ a {
 	transition: $transition-duration;
 
 	&:visited {
-		color: $color-grey-200;
+		color: $color-grey-000-3;
 		text-decoration: none;
 		opacity: 0.42;
 	}
 	&:hover {
+		color: $color-primary;
 		opacity: 0.7;
 	}
 	&:active {

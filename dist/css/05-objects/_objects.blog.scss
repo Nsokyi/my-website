@@ -87,10 +87,14 @@
 			@include md {
 				padding-right: 9.5em;
 			}
+
+			@include lg {
+				padding-right: 0;
+			}
 		}
 
 		.read-more-link {
-			font-family: 'Novecentowide-bold', sans-serif;
+			font-family: $font-headings;
 			color: $color-grey-600;
 		}
 	}

@@ -4,7 +4,7 @@
 main {
 	// background-color: white;
 	background-color: $color-grey-1800;
-	color: $color-grey-000;
+	// color: $color-grey-000;
 	margin: 0;
 	overflow-x: hidden;
 	padding: 2.44em 2.3em 1em 1.3em;
@@ -17,15 +17,29 @@ main {
 	}
 
 	@include lg {
-		border-left: solid 1px $color-grey-800;
-		border-right: solid 1px $color-grey-800;
 		margin: 0 auto;
-		max-width: 80.375vw;
+		max-width: 90%;
+		max-width: 87.375vw;
 		overflow-x: visible;
 		padding: 0;
 	}
 	@include xxl {
-		max-width: 159.375rem;
-		overflow-x: visible;
+		// max-width: 159.375rem;
+		// overflow-x: visible;
+	}
+}
+
+.dark,
+.light {
+	background-color: $color-grey-1800;
+	color: $color-grey-000;
+
+	@include lg {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 	}
 }
