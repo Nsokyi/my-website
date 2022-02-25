@@ -236,7 +236,8 @@ a.bttn-dark {
 		}
 
 		svg {
-			fill: $color-grey-000;
+			fill: $color-grey-200;
+			transition: 0.3s;
 			// stroke-width: 16px;
 			// stroke-linecap: square;
 			// stroke: $color-grey-1200;
@@ -257,7 +258,7 @@ a.bttn-dark {
 .left,
 .right {
 	&:hover {
-		stroke: $color-primary;
+		fill: $color-primary;
 	}
 }
 

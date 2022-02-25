@@ -26,6 +26,7 @@
 		@include md {
 			height: 100%;
 			max-width: 28em;
+			padding-top: 1em;
 		}
 	}
 
@@ -47,7 +48,7 @@
 			color: $color-grey-200;
 			font-family: $font-headings;
 			font-size: var(--font-size);
-			line-height: 1.1;
+			line-height: 1.3;
 			margin: 1em 0 0.4em;
 			max-width: 66rem;
 
@@ -65,30 +66,32 @@
 			color: $color-grey-1600;
 
 			@include md {
-				font-size: 11.2rem;
-				position: absolute;
-				white-space: nowrap;
-				overflow: hidden;
-				font-family: $font-serif;
-				font-style: italic;
-				top: -5px;
-				-webkit-text-stroke: 1px rgba(0, 0, 0, 0.253);
 				-webkit-text-fill-color: rgba(255, 255, 255, 0);
+				-webkit-text-stroke: 1px $color-grey-800;
+				font-family: $font-serif;
+				font-size: 13.2rem;
+				font-style: italic;
+				overflow: hidden;
+				position: absolute;
+				right: 0.4em;
+				top: -0.44em;
+				white-space: nowrap;
 				z-index: -1;
 			}
 		}
 
 		p {
 			line-height: 1.4;
-			color: $color-grey-600;
+			color: $color-grey-200;
 
 			@include md {
-				padding-right: 4.4em;
+				padding-right: 9.5em;
 			}
 		}
 
 		.read-more-link {
 			font-family: 'Novecentowide-bold', sans-serif;
+			color: $color-grey-600;
 		}
 	}
 }
