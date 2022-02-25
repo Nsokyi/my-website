@@ -1002,6 +1002,7 @@ main {
   .blog__inner {
     height: 100%;
     max-width: 28em;
+    padding-top: 1em;
   }
 }
 
@@ -1036,7 +1037,7 @@ main {
   color: #bababa;
   font-family: "Novecentowide-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: var(--font-size);
-  line-height: 1.1;
+  line-height: 1.3;
   margin: 1em 0 0.4em;
   max-width: 66rem;
 }
@@ -1059,32 +1060,34 @@ main {
 
 @media (min-width: 768px) {
   .blog__slide span {
-    font-size: 11.2rem;
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
-    font-style: italic;
-    top: -5px;
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.253);
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 1px #7b7b7b;
+    font-family: TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
+    font-size: 13.2rem;
+    font-style: italic;
+    overflow: hidden;
+    position: absolute;
+    right: 0.4em;
+    top: -0.44em;
+    white-space: nowrap;
     z-index: -1;
   }
 }
 
 .blog__slide p {
   line-height: 1.4;
-  color: #8d8d8d;
+  color: #bababa;
 }
 
 @media (min-width: 768px) {
   .blog__slide p {
-    padding-right: 4.4em;
+    padding-right: 9.5em;
   }
 }
 
 .blog__slide .read-more-link {
   font-family: 'Novecentowide-bold', sans-serif;
+  color: #8d8d8d;
 }
 
 @media (min-width: 992px) {
@@ -1224,8 +1227,8 @@ main {
   position: absolute;
   bottom: 0;
   width: 0;
-  background: #d8d8d8;
-  height: 2px;
+  background: rgba(253, 206, 8, 0.4);
+  height: 1px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 50%;
@@ -1237,8 +1240,8 @@ main {
   position: absolute;
   bottom: 0;
   width: 0;
-  background: #d8d8d8;
-  height: 2px;
+  background: rgba(253, 206, 8, 0.4);
+  height: 1px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   right: 50%;
@@ -1550,7 +1553,9 @@ a.bttn-dark:focus {
 }
 
 .blog__controls svg {
-  fill: #d8d8d8;
+  fill: #bababa;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .blog__controls--bttn {
@@ -1564,7 +1569,7 @@ a.bttn-dark:focus {
 
 .left:hover,
 .right:hover {
-  stroke: #fdce08;
+  fill: #fdce08;
 }
 
 /* Effect 8 */
