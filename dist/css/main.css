@@ -90,6 +90,7 @@
   --global-letter-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 9em);
   --global-number-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 14em);
   --margin-main-heading: clamp(0.2em, calc(22 / 119.875 * 100vw), 0.466em);
+  --global-big-number-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
 }
 
 /* 
@@ -716,8 +717,8 @@ main {
 
 @media (min-width: 768px) {
   .portfolio__wrap {
-    -webkit-column-gap: 2em;
-            column-gap: 2em;
+    -webkit-column-gap: 3.6em;
+            column-gap: 3.6em;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (auto)[2];
@@ -782,12 +783,14 @@ main {
   display: block;
   z-index: 1;
   margin: -5.6em 0;
-  max-width: 16.2em;
+  max-width: 36.2em;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .portfolio__item {
-    margin: -7.3em 0;
+    margin: -8em 0;
+    max-width: 24.2em;
   }
 }
 
@@ -809,8 +812,28 @@ main {
   left: -0.3em;
 }
 
+@media (min-width: 768px) {
+  .portfolio__number {
+    --font-size: var(--global-h1-size);
+    font-size: var(--font-size);
+  }
+}
+
 .portfolio__img {
-  max-width: 324px;
+  max-width: 36.2em;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .portfolio__img {
+    max-width: 24.2em;
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio__img {
+    max-width: 19em;
+  }
 }
 
 .portfolio__item--meta {
@@ -961,9 +984,9 @@ main {
   .blog__container {
     -ms-grid-columns: 74% 26%;
         grid-template-columns: 74% 26%;
-    -ms-grid-rows: minmax(15.2em, max-content);
-        grid-template-rows: minmax(15.2em, -webkit-max-content);
-        grid-template-rows: minmax(15.2em, max-content);
+    -ms-grid-rows: minmax(13em, max-content);
+        grid-template-rows: minmax(13em, -webkit-max-content);
+        grid-template-rows: minmax(13em, max-content);
   }
 }
 
@@ -977,6 +1000,7 @@ main {
 
 @media (min-width: 768px) {
   .blog__inner {
+    height: 100%;
     max-width: 28em;
   }
 }
@@ -1009,12 +1033,12 @@ main {
 
 .blog__slide a:link {
   --font-size: var(--global-leadin__text);
-  font-size: var(--font-size);
+  color: #bababa;
   font-family: "Novecentowide-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.1;
   margin: 1em 0 0.4em;
   max-width: 66rem;
-  line-height: 1.1;
-  color: #bababa;
 }
 
 @media (min-width: 768px) {
