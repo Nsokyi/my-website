@@ -83,6 +83,19 @@ article {
 		padding-bottom: 4.46em;
 	}
 
+	// @include lg {
+	// 	max-width: 87.375vw;
+	// 	width: 100%;
+	// 	width: 100%;
+	// 	margin: 0 auto;
+	// 	border-left: solid 1px $color-grey-800;
+	// 	border-right: solid 1px $color-grey-800;
+	// 	padding: 2.44em 1.4em 1em;
+	// }
+}
+
+header,
+article {
 	@include lg {
 		max-width: 87.375vw;
 		width: 100%;
@@ -96,15 +109,27 @@ article {
 
 .sidebar {
 	display: none;
+
 	@include lg {
+		// border: solid 4px rgba(243, 0, 231, 0.24);
+		// display: block;
+		// height: 100vh;
+		// left: 0;
+		// max-width: 108px;
+		// position: fixed;
+		// top: 0;
+		// width: 100%;
+		// z-index: 9;
 		display: block;
-		position: absolute;
-		left: -5em;
-		z-index: 999999;
-		border: solid 1px rgba(243, 0, 231, 0.24);
-		width: 100px;
-		height: 100%;
+		position: fixed;
+		left: 0;
+		z-index: 9;
+		// border: solid 10px rgba(243, 0, 231, 0.24);
+		max-width: 108px;
+		height: 100vh;
 		top: 0;
+		width: calc(14% - 100px);
+		text-align: center;
 	}
 }
 
