@@ -7,8 +7,12 @@
 	right: 1.2em;
 	top: 1.4em;
 	transition: opacity 0.25s ease;
-	width: 2.5em;
+	width: 2em;
 	z-index: 100;
+
+	@include lg {
+		right: 1.3vw;
+	}
 
 	&:hover {
 		opacity: 0.7;
@@ -34,7 +38,7 @@
 		background: $color-grey-000;
 		border: none;
 		cursor: pointer;
-		height: 5px;
+		height: 3px;
 		left: 0;
 		position: absolute;
 		top: 0;
@@ -42,11 +46,11 @@
 		width: 100%;
 
 		&:nth-of-type(2) {
-			top: 11px;
+			top: 10px;
 		}
 
 		&:nth-of-type(3) {
-			top: 22px;
+			top: 20px;
 		}
 	}
 }
