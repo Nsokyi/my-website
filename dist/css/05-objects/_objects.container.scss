@@ -17,10 +17,10 @@ main {
 	}
 
 	@include lg {
-		margin: 0 auto;
-		max-width: 90%;
-		max-width: 87.375vw;
-		overflow-x: visible;
+		// margin: 0 auto;
+		// max-width: 90%;
+		// max-width: 87.375vw;
+		// overflow-x: visible;
 		padding: 0;
 	}
 	@include xxl {
