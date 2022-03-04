@@ -94,8 +94,14 @@ article {
 	// }
 }
 
+footer {
+	margin: 3rem 0;
+	text-align: center;
+}
+
 header,
-article {
+article,
+footer {
 	@include lg {
 		max-width: 87.375vw;
 		width: 100%;
@@ -104,6 +110,12 @@ article {
 		border-left: solid 1px $color-grey-800;
 		border-right: solid 1px $color-grey-800;
 		padding: 3.66em 2.6em 4.25em;
+	}
+}
+
+footer {
+	@include lg {
+		padding: 1em 0 0.93em;
 	}
 }
 

@@ -364,6 +364,13 @@ article .cite::after {
   font-size: 1.4rem;
   margin-top: 1.3em;
   text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .copyright-text {
+    margin: 0 auto;
+  }
 }
 
 /* ==========================================================================
@@ -505,9 +512,15 @@ article::after {
   }
 }
 
+footer {
+  margin: 3rem 0;
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
   header,
-  article {
+  article,
+  footer {
     max-width: 87.375vw;
     width: 100%;
     width: 100%;
@@ -515,6 +528,12 @@ article::after {
     border-left: solid 1px #7b7b7b;
     border-right: solid 1px #7b7b7b;
     padding: 3.66em 2.6em 4.25em;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 1em 0 0.93em;
   }
 }
 
@@ -1392,11 +1411,6 @@ circle:hover {
   stroke-width: 0;
   -webkit-transform: scale(2);
           transform: scale(2);
-}
-
-.footer {
-  margin: 3rem 0;
-  text-align: center;
 }
 
 .footer__icons li {
