@@ -244,3 +244,9 @@ footer {
 		left: 0;
 	}
 }
+
+html body main.main div.dark:first-of-type {
+	background-image: linear-gradient(rgba(63, 63, 63, 0.658) 0%, rgba(31, 30, 30, 0));
+	background-size: cover;
+	background-repeat: no-repeat;
+}

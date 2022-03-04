@@ -148,7 +148,7 @@ h1 .breen::after {
 
 @media (min-width: 1024px) {
   h1 .breen::after {
-    height: 1.012em;
+    height: 1.42em;
     overflow: visible;
     z-index: 1;
   }
@@ -676,10 +676,18 @@ footer {
   }
 }
 
+html body main.main div.dark:first-of-type {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(63, 63, 63, 0.658)), to(rgba(31, 30, 30, 0)));
+  background-image: linear-gradient(rgba(63, 63, 63, 0.658) 0%, rgba(31, 30, 30, 0));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* ==========================================================================
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
+  background: url("../img/bg-lines.svg") no-repeat center -51px;
   background-color: #363636;
   margin: 0;
   overflow-x: hidden;
@@ -1041,7 +1049,7 @@ main {
     max-width: 44px;
     width: 100%;
     margin: 0 auto;
-    fill: #bababa;
+    fill: #8d8d8d;
   }
 }
 
@@ -1065,9 +1073,9 @@ main {
   height: 1.9em;
   width: 1.9em;
   border-radius: 100%;
-  color: #bababa;
-  -webkit-box-shadow: inset 0 0 0 1px #bababa;
-          box-shadow: inset 0 0 0 1px #bababa;
+  color: #8d8d8d;
+  -webkit-box-shadow: inset 0 0 0 1px #8d8d8d;
+          box-shadow: inset 0 0 0 1px #8d8d8d;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-out;
@@ -1097,8 +1105,8 @@ main {
   position: relative;
   margin: 8px 0 0 0;
   text-align: center;
-  fill: #bababa;
-  stroke: #bababa;
+  fill: #8d8d8d;
+  stroke: #8d8d8d;
 }
 
 @media (min-width: 1024px) {
