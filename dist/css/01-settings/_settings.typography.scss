@@ -249,27 +249,38 @@ article {
 		margin-right: 2em;
 		--font-size: var(--global-small__cite);
 		font-size: var(--font-size);
+		line-height: 1;
 
 		&::before {
-			color: black;
+			color: $color-primary;
 			content: '‘';
-			font: 700 4em/2em $font-serif;
+			font: 700 3em/2em $font-subheadings;
 			left: -0.11em;
 			opacity: 20%;
 			position: absolute;
 			right: unset;
-			top: -0.7em;
+			top: -0.69em;
+			z-index: -1;
+
+			@include lg {
+				left: -0.22em;
+			}
 		}
 
 		&::after {
-			color: black;
+			color: $color-primary;
 			content: '‘';
-			font: 700 4em/2em $font-serif;
+			font: 700 3em/2em $font-subheadings;
 			left: -0.29em;
 			opacity: 50%;
 			position: absolute;
 			right: unset;
-			top: -0.7em;
+			top: -0.69em;
+			z-index: -1;
+
+			@include lg {
+				left: -0.41em;
+			}
 		}
 	}
 
@@ -277,6 +288,7 @@ article {
 		align-items: self-end;
 		display: flex;
 		font-size: 1.6rem;
+		z-index: 1;
 
 		&::after {
 			position: relative;

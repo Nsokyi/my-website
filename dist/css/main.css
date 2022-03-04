@@ -293,28 +293,43 @@ article cite {
   margin-right: 2em;
   --font-size: var(--global-small__cite);
   font-size: var(--font-size);
+  line-height: 1;
 }
 
 article cite::before {
-  color: black;
+  color: #fdce08;
   content: '‘';
-  font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
+  font: 700 3em/2em "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   left: -0.11em;
   opacity: 20%;
   position: absolute;
   right: unset;
-  top: -0.7em;
+  top: -0.69em;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  article cite::before {
+    left: -0.22em;
+  }
 }
 
 article cite::after {
-  color: black;
+  color: #fdce08;
   content: '‘';
-  font: 700 4em/2em TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
+  font: 700 3em/2em "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   left: -0.29em;
   opacity: 50%;
   position: absolute;
   right: unset;
-  top: -0.7em;
+  top: -0.69em;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  article cite::after {
+    left: -0.41em;
+  }
 }
 
 article .cite {
@@ -325,6 +340,7 @@ article .cite {
   display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
+  z-index: 1;
 }
 
 article .cite::after {
@@ -676,13 +692,6 @@ footer {
   }
 }
 
-html body main.main div.dark:first-of-type {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(63, 63, 63, 0.658)), to(rgba(31, 30, 30, 0)));
-  background-image: linear-gradient(rgba(63, 63, 63, 0.658) 0%, rgba(31, 30, 30, 0));
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 /* ==========================================================================
    #CONTAINER-OBJECT
    ========================================================================== */
@@ -857,6 +866,10 @@ main {
 
 .portfolio__item:last-of-type {
   margin-bottom: 0;
+}
+
+.portfolio__item:first-of-type {
+  margin: -11em 0;
 }
 
 .portfolio__number {
