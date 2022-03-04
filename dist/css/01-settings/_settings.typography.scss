@@ -319,4 +319,9 @@ article {
 	font-size: 1.4rem;
 	margin-top: 1.3em;
 	text-align: center;
+	width: 100%;
+
+	@include lg {
+		margin: 0 auto;
+	}
 }
