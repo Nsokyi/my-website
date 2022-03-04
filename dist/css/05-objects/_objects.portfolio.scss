@@ -72,10 +72,19 @@
 			max-width: 24.2em;
 		}
 
+		@include lg {
+			// margin: -11em 0;
+		}
+
 		&:last-of-type {
 			margin-bottom: 0;
 		}
 	}
+
+	&__item:first-of-type {
+		margin: -11em 0;
+	}
+
 	&__number {
 		-webkit-text-stroke: 1px $color-grey-1600;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0);
