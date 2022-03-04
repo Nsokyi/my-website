@@ -85,7 +85,7 @@
   --global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
   --global-h2-size: clamp(1.8em, calc(9 / 119.875 * 100vw), 5.6em);
   --global-p-size: clamp(0.8em, calc(3 / 119.875 * 100vw), 1.1em);
-  --global-small__heading: clamp(1.1em, calc(3 / 119.875 * 100vw), 1.7em);
+  --global-small__heading: clamp(1em, calc(3 / 119.875 * 100vw), 1.1em);
   --global-small__cite: clamp(1.3em, calc(3 / 119.875 * 100vw), 2.12em);
   --global-letter-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 9em);
   --global-number-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 14em);
@@ -237,7 +237,7 @@ ul > li {
             flex-direction: row-reverse;
     width: calc(100vw / 2 - -5em);
     letter-spacing: 0.32rem;
-    margin-top: -6px;
+    margin-top: 0;
   }
 }
 
@@ -378,15 +378,9 @@ article .cite::after {
 
 .copyright-text {
   font-size: 1.4rem;
-  margin-top: 1.3em;
+  margin: 1.3em auto;
   text-align: center;
   width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .copyright-text {
-    margin: 0 auto;
-  }
 }
 
 /* ==========================================================================
@@ -560,14 +554,14 @@ footer {
 @media (min-width: 1024px) {
   .sidebar {
     display: block;
-    position: fixed;
-    left: 0;
-    z-index: 9;
-    max-width: 108px;
     height: 100vh;
+    left: 0;
+    max-width: 108px;
+    position: fixed;
+    text-align: center;
     top: 0;
     width: calc(16% - 100px);
-    text-align: center;
+    z-index: 9;
   }
 }
 
@@ -696,7 +690,6 @@ footer {
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
-  background: url("../img/bg-lines.svg") no-repeat center -51px;
   background-color: #363636;
   margin: 0;
   overflow-x: hidden;
@@ -708,6 +701,9 @@ main {
 
 @media (min-width: 768px) {
   main {
+    background: url("../img/bg-lines.svg") no-repeat center -51px;
+    background-blend-mode: multiply;
+    background-color: #363636;
     padding: 2.44em 1.4em 1em;
   }
 }
@@ -724,9 +720,17 @@ main {
   color: #d8d8d8;
 }
 
+@media (min-width: 768px) {
+  .dark,
+  .light {
+    background-color: rgba(54, 54, 54, 0.8);
+  }
+}
+
 @media (min-width: 1024px) {
   .dark,
   .light {
+    background-color: rgba(54, 54, 54, 0.8);
     width: 100vw;
     position: relative;
     left: 50%;
@@ -1279,6 +1283,12 @@ main {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__info {
+    padding-top: 1.63em;
   }
 }
 
@@ -1855,10 +1865,11 @@ a.bttn-dark:focus {
 
 .contactform__submit--button.effect-8:hover {
   background-color: rgba(253, 206, 8, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  color: #d8d8d8;
+  background: rgba(253, 206, 8, 0.7);
+  color: #363636;
   -webkit-transform: scale(0.93);
           transform: scale(0.93);
+  border: solid 1px #333333;
 }
 
 .contactform__submit--button.effect-8:hover i {

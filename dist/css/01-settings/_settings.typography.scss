@@ -64,7 +64,7 @@ $letter-spacing: 0.098rem;
 	--global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
 	--global-h2-size: clamp(1.8em, calc(9 / 119.875 * 100vw), 5.6em);
 	--global-p-size: clamp(0.8em, calc(3 / 119.875 * 100vw), 1.1em);
-	--global-small__heading: clamp(1.1em, calc(3 / 119.875 * 100vw), 1.7em);
+	--global-small__heading: clamp(1em, calc(3 / 119.875 * 100vw), 1.1em);
 	--global-small__cite: clamp(1.3em, calc(3 / 119.875 * 100vw), 2.12em);
 	--global-letter-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 9em);
 	--global-number-size: clamp(3.4em, calc(19 / 119.875 * 100vw), 14em);
@@ -196,7 +196,7 @@ ul > {
 		flex-direction: row-reverse;
 		width: calc(100vw / 2 - -5em);
 		letter-spacing: 0.32rem;
-		margin-top: -6px;
+		margin-top: 0;
 	}
 
 	&::after {
@@ -329,11 +329,12 @@ article {
 
 .copyright-text {
 	font-size: 1.4rem;
-	margin-top: 1.3em;
+	margin: 1.3em auto;
 	text-align: center;
 	width: 100%;
 
-	@include lg {
-		margin: 0 auto;
-	}
+	// @include lg {
+	// 	background-color: yellowgreen;
+	// 	margin: 0 auto;
+	// }
 }

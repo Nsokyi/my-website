@@ -2,14 +2,14 @@
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
-	background: url('../img/bg-lines.svg') no-repeat center -51px;
+	// background: url('../img/bg-lines.svg') no-repeat center -51px;
 	// background-image: url('../img/bg-lines.svg');
 	// background-position: top center, 50%, 50%;
 	// background-repeat: no-repeat;
 	// background-size: cover;
 	// background-color: white;
+	// background-blend-mode: multiply;
 	background-color: $color-grey-1800;
-	// color: $color-grey-000;
 	margin: 0;
 	overflow-x: hidden;
 	padding: 2.44em 2.3em 1em 1.3em;
@@ -18,14 +18,13 @@ main {
 	z-index: 1;
 
 	@include md {
+		background: url('../img/bg-lines.svg') no-repeat center -51px;
+		background-blend-mode: multiply;
+		background-color: $color-grey-1800;
 		padding: 2.44em 1.4em 1em;
 	}
 
 	@include lg {
-		// margin: 0 auto;
-		// max-width: 90%;
-		// max-width: 87.375vw;
-		// overflow-x: visible;
 		padding: 0;
 	}
 	@include xxl {
@@ -39,7 +38,12 @@ main {
 	background-color: $color-grey-1800;
 	color: $color-grey-000;
 
+	@include md {
+		background-color: $color-grey-1800-8;
+	}
+
 	@include lg {
+		background-color: $color-grey-1800-8;
 		width: 100vw;
 		position: relative;
 		left: 50%;

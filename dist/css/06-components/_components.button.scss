@@ -372,9 +372,10 @@ a.bttn-dark {
 	}
 	&:hover {
 		background-color: $color-primary-000-1;
-		background: rgba(255, 255, 255, 0.05);
-		color: $color-grey-000;
+		background: $color-primary-000-7;
+		color: $color-grey-1800;
 		transform: scale(0.93);
+		border: solid 1px $color-grey-2000;
 		//
 		i {
 			color: $color-grey-000;
