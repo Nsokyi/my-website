@@ -2,6 +2,11 @@
    #CONTAINER-OBJECT
    ========================================================================== */
 main {
+	background: url('../img/bg-lines.svg') no-repeat center -51px;
+	// background-image: url('../img/bg-lines.svg');
+	// background-position: top center, 50%, 50%;
+	// background-repeat: no-repeat;
+	// background-size: cover;
 	// background-color: white;
 	background-color: $color-grey-1800;
 	// color: $color-grey-000;
