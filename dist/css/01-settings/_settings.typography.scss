@@ -152,6 +152,11 @@ p {
 		max-width: 72vw;
 		width: 80%;
 	}
+
+	@include xl {
+		max-width: 35em;
+		width: 100%;
+	}
 }
 
 ul > {
@@ -237,6 +242,14 @@ ul > {
 		@include md {
 			max-width: 24em;
 		}
+	}
+}
+
+// Portfolio Section
+p.portfolio__item--subtitle {
+	@include md {
+		max-width: 72vw;
+		width: 100%;
 	}
 }
 

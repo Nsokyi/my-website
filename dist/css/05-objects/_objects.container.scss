@@ -18,13 +18,13 @@ main {
 	z-index: 1;
 
 	@include md {
-		background: url('../img/bg-lines.svg') no-repeat center -51px;
-		background-blend-mode: multiply;
-		background-color: $color-grey-1800;
 		padding: 2.44em 1.4em 1em;
 	}
 
 	@include lg {
+		background: url('../img/bg-lines.svg') no-repeat center -51px;
+		background-blend-mode: multiply;
+		background-color: $color-grey-1800;
 		padding: 0;
 	}
 	@include xxl {
