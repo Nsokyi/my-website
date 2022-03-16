@@ -1,34 +1,16 @@
-// .accordion dl {
-// 	&:after {
-// 		content: '';
-// 		display: block;
-// 		height: 1em;
-// 		width: 100%;
-// 		background-color: darken(#e25310, 10%);
-// 	}
-// }
+.services {
+	@include md {
+		.article__lead {
+			max-width: 35em;
+		}
+	}
+}
 
-// .accordion dd,
-// .accordion__panel {
-// 	background-color: #eee;
-// 	font-size: 1em;
-// 	line-height: 1.5em;
-// }
-
-// .accordion p {
-// 	padding: 3em 2em 1em 2em;
-// }
-
-// .accordion {
-// 	position: relative;
-// 	background-color: #eee;
-// }
-
-// .container {
-// 	max-width: 960px;
-// 	margin: 0 auto;
-// 	padding: 2em 0 2em 0;
-// }
+.accordian {
+	@include xl {
+		max-width: 40em;
+	}
+}
 
 .accordionTitle,
 .accordion__Heading {
