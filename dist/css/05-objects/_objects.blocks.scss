@@ -102,12 +102,16 @@ footer {
 		display: block;
 		height: 100vh;
 		left: 0;
-		max-width: 108px;
+		max-width: 6.4vw;
 		position: fixed;
 		text-align: center;
 		top: 0;
 		width: calc(16% - 100px);
 		z-index: 9;
+	}
+
+	@include xl {
+		// max-width: 3.8em;
 	}
 }
 

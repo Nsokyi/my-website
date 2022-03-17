@@ -115,6 +115,10 @@
 		@include lg {
 			max-width: 19em;
 		}
+
+		@include xl {
+			max-width: 23em;
+		}
 	}
 
 	&__item--meta {
