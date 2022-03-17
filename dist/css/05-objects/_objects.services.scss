@@ -7,8 +7,36 @@
 }
 
 .accordian {
+	@include lg {
+		max-width: 38em;
+	}
+
 	@include xl {
-		max-width: 40em;
+		max-width: 44em;
+	}
+
+	@include xxl {
+		max-width: 50em;
+	}
+
+	@include xxxl {
+		max-width: 58em;
+	}
+
+	.accordionTitle,
+	.accordion__Heading {
+		@include lg {
+			display: flex;
+
+			&:before {
+				display: flex;
+				justify-content: end;
+				align-self: center;
+				margin-left: auto;
+				order: 2;
+				font-size: 1.33em;
+			}
+		}
 	}
 }
 
