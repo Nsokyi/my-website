@@ -61,7 +61,7 @@ $letter-spacing: 0.098rem;
 }
 
 :root {
-	--global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 12.77em);
+	--global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 11.83em);
 	--global-h2-size: clamp(1.8em, calc(9 / 119.875 * 100vw), 5.6em);
 	--global-p-size: clamp(0.8em, calc(3 / 119.875 * 100vw), 1.1em);
 	--global-small__heading: clamp(1em, calc(3 / 119.875 * 100vw), 1.1em);
@@ -99,7 +99,7 @@ h1 {
 	}
 
 	@include lg {
-		margin-left: -5px;
+		margin-left: -0.054em;
 	}
 
 	.noah {
@@ -275,6 +275,10 @@ ul > {
 				left: -0.558em;
 				width: 4.2em;
 			}
+
+			@include xl {
+				left: -0.19em;
+			}
 		}
 	}
 }
@@ -360,7 +364,7 @@ article {
 		}
 
 		@include lg {
-			max-width: 46em;
+			max-width: 100%;
 		}
 	}
 }

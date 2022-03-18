@@ -10,6 +10,11 @@
 			margin-top: 3em;
 			row-gap: 0;
 		}
+
+		@include xxxl {
+			max-width: 52.59em;
+			column-gap: 5.44em;
+		}
 	}
 
 	@include md {
@@ -76,6 +81,11 @@
 			// margin: -11em 0;
 		}
 
+		@include xxxl {
+			max-width: 27em;
+			margin: -11em 0;
+		}
+
 		&:last-of-type {
 			margin-bottom: 0;
 		}
@@ -113,11 +123,11 @@
 		}
 
 		@include lg {
-			max-width: 19em;
+			max-width: 22em;
 		}
 
 		@include xl {
-			max-width: 23em;
+			max-width: 40em;
 		}
 	}
 

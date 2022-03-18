@@ -1,0 +1,20 @@
+.about {
+	@include xxxl {
+		&__col-1 {
+			grid-area: main;
+		}
+
+		&__co-2 {
+			grid-area: right;
+			max-width: 31.18em;
+		}
+
+		&__grid {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-template-areas: 'main right';
+			gap: 6vw;
+			max-width: 82em;
+		}
+	}
+}
