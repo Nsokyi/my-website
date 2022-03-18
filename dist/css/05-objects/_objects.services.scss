@@ -2,7 +2,25 @@
 	@include md {
 		.article__lead {
 			max-width: 35em;
+
+			@include lg {
+				margin-bottom: 2.88em;
+			}
 		}
+	}
+}
+
+.services {
+	@include md {
+		padding-bottom: 5em;
+	}
+
+	@include lg {
+		padding-bottom: 3.18em;
+	}
+
+	@include xl {
+		padding-bottom: 2.28em;
 	}
 }
 
@@ -51,7 +69,6 @@
 	text-decoration: none;
 	color: $color-grey-000;
 	transition: background-color 0.5s ease-in-out;
-	// border-bottom: 1px solid darken(#38cc70, 5%);
 
 	&:before {
 		content: '+';
@@ -62,10 +79,6 @@
 		transition: transform 0.3s ease-in-out;
 		padding: 6px 0 0;
 	}
-
-	// &:hover {
-	// 	background-color: darken($color-grey-1800, 10%);
-	// }
 }
 .accordionTitleActive,
 .accordionTitle.is-expanded {
@@ -82,9 +95,13 @@
 	max-height: 50em;
 	transition: max-height 1s;
 
-	@media screen and (min-width: 48em) {
+	@include md {
 		max-height: 15em;
 		transition: max-height 0.5s;
+	}
+
+	@include lg {
+		margin-bottom: 2em;
 	}
 }
 

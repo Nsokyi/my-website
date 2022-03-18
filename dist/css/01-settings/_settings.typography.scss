@@ -61,7 +61,7 @@ $letter-spacing: 0.098rem;
 }
 
 :root {
-	--global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 11.83em);
+	--global-h1-size: clamp(3.7em, calc(19 / 119.875 * 100vw), 9.83em);
 	--global-h2-size: clamp(1.8em, calc(9 / 119.875 * 100vw), 5.6em);
 	--global-p-size: clamp(0.8em, calc(3 / 119.875 * 100vw), 1.1em);
 	--global-small__heading: clamp(1em, calc(3 / 119.875 * 100vw), 1.1em);
@@ -102,6 +102,10 @@ h1 {
 		margin-left: -0.054em;
 	}
 
+	@include xl {
+		// margin-left: 0.04em ;
+	}
+
 	.noah {
 		margin-left: -5px;
 	}
@@ -119,7 +123,7 @@ h1 {
 			background-color: $color-grey-000-4;
 
 			@include md {
-				height: 1.12em;
+				height: 1.13em;
 				right: -0.29em;
 				top: 0.04em;
 			}
@@ -302,6 +306,25 @@ p.portfolio__item--subtitle {
 		max-width: 72vw;
 		width: 100%;
 	}
+
+	@include xl {
+		&:last-of-type {
+			margin-bottom: 0.9em;
+		}
+	}
+}
+
+/* 
+  ## About Font Styles
+--------------------------------------------- */
+.about {
+	p {
+		&:last-child {
+			@include xl {
+				margin-bottom: 0.7em;
+			}
+		}
+	}
 }
 
 article {
@@ -378,7 +401,7 @@ article {
 			--font-size: var(--global-accordian-size);
 			// font-size: 3.2rem;
 			font-size: var(--font-size);
-			padding: 0em 0.01em 1em;
+			padding: 0em 0.01em 0.5em;
 		}
 	}
 }

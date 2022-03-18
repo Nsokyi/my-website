@@ -45,7 +45,7 @@ header {
 
 article {
 	padding-top: 2.6em;
-	padding-bottom: 4.42em;
+	padding-bottom: 4.2em;
 	position: relative;
 	// border-bottom: 1px solid $color-grey-000-3;
 
@@ -79,17 +79,26 @@ header,
 article,
 footer {
 	@include lg {
-		max-width: 87.375vw;
+		max-width: 90vw;
 		width: 100%;
 		width: 100%;
 		margin: 0 auto;
 		border-left: solid 1px $color-grey-800;
 		border-right: solid 1px $color-grey-800;
-		padding: 3.66em 2.6em 4.25em;
+		padding: 3.66em 2.6em 4.2em;
+	}
+
+	@include lg {
+		padding: 3.66em 2.6em 4.05em;
+	}
+
+	@include xl {
+		width: 90vw;
+		max-width: 62em;
 	}
 
 	@include xxxl {
-		padding: 7.5em 6.78em 4em;
+		padding: 7.5em 6.78em 6.68em;
 	}
 }
 
@@ -109,19 +118,23 @@ footer {
 	display: none;
 
 	@include lg {
-		display: block;
+		display: flex;
 		height: 100vh;
-		left: 0;
-		max-width: 6.4vw;
+		left: 50%;
+		left: 4%;
+		margin-left: 20px;
 		position: fixed;
-		text-align: center;
 		top: 0;
-		width: calc(16% - 100px);
+		width: 80px;
 		z-index: 9;
+		justify-content: center;
+		transform: translate(-900%);
+		transform: translate(-98%);
 	}
 
-	@include xl {
-		// max-width: 3.8em;
+	@include xxl {
+		left: 50%;
+		transform: translate(-900%);
 	}
 }
 
