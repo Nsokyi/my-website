@@ -358,7 +358,7 @@ a.bttn-dark {
 }
 
 .contactform__submit--button.effect-8 {
-	background: rgba(255, 255, 255, 0.1);
+	background: none;
 	transition: transform ease-out 0.1s, background 0.2s;
 
 	&:after {
@@ -410,6 +410,12 @@ a.bttn-dark {
 	transition: all 0.6s;
 	border: solid 1px $color-grey-000-2;
 	max-width: 18.1em;
+
+	@include xxxl {
+		width: 17vw;
+		height: 17vw;
+		max-width: 24em;
+	}
 
 	&__icon {
 		position: absolute;

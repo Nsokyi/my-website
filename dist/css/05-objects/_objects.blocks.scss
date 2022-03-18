@@ -87,6 +87,16 @@ footer {
 		border-right: solid 1px $color-grey-800;
 		padding: 3.66em 2.6em 4.25em;
 	}
+
+	@include xxxl {
+		padding: 7.5em 6.78em 4em;
+	}
+}
+
+header {
+	@include xxxl {
+		padding: 7.5em 6.78em 1.13em;
+	}
 }
 
 footer {
