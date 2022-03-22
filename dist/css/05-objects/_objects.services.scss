@@ -1,4 +1,10 @@
 .services {
+	padding-bottom: 2.77em;
+
+	.small__heading {
+		margin-bottom: 1.56em;
+	}
+
 	@include md {
 		.article__lead {
 			max-width: 35em;
@@ -63,8 +69,7 @@
 	background-color: none;
 	text-align: left;
 	font-family: $font-headings;
-	// font-weight: 700;
-	padding: 2em 0.01em 1em;
+	padding: 1em 0.01em 1em;
 	display: block;
 	text-decoration: none;
 	color: $color-grey-000;
