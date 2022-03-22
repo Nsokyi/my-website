@@ -2,16 +2,33 @@
 
 .bttn_container {
 	cursor: pointer;
+	display: flex;
 	height: 54px;
-	position: fixed;
-	right: 1.2em;
-	top: 1.4em;
+	justify-content: end;
+	left: 0;
+	max-width: 46px;
+	margin-left: auto;
+	position: relative;
+	top: 4px;
 	transition: opacity 0.25s ease;
-	width: 2em;
+	width: 4em;
 	z-index: 100;
 
-	@include lg {
-		right: 1.3vw;
+	@include md {
+		justify-content: end;
+		display: flex;
+		margin-left: auto;
+		left: 5em;
+		top: -2.1em;
+	}
+
+	@include xl {
+		left: 5.3em;
+	}
+
+	@include xxl {
+		left: 10em;
+		top: -4.78em;
 	}
 
 	&:hover {
@@ -211,7 +228,7 @@ a.bttn-dark {
 // About
 .about {
 	&__bttn {
-		margin: 1em 0;
+		margin: 0.66em 0 27px;
 
 		@include md {
 			margin: 3.3em 0 2.14em 0;
@@ -251,7 +268,7 @@ a.bttn-dark {
 	&__controls--bttn {
 		display: flex;
 		justify-content: center;
-		// max-height: 5em;
+		max-height: 5em;
 
 		@include md {
 			// max-height: 7em;
