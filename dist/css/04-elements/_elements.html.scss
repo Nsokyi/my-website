@@ -1,3 +1,14 @@
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html html {
+		scroll-behavior: auto;
+	}
 }

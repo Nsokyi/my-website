@@ -152,3 +152,27 @@
 		position: absolute;
 	}
 }
+
+.portfolio {
+	min-height: 3006.23;
+
+	@include sm {
+		min-height: 3354.75px;
+	}
+
+	@include md {
+		min-height: 2396.88px;
+	}
+
+	@include xl {
+		min-height: 3251.31px;
+	}
+
+	@include xxl {
+		min-height: 3207.6px;
+	}
+
+	@include xxxl {
+		min-height: 3210.3px;
+	}
+}

@@ -30,42 +30,44 @@
 	}
 }
 
-.accordian {
-	@include lg {
-		max-width: 38em;
-	}
-
-	@include xl {
-		max-width: 44em;
-	}
-
-	@include xxl {
-		max-width: 50em;
-	}
-
-	@include xxxl {
-		max-width: 58em;
-	}
-
-	.accordionTitle,
-	.accordion__Heading {
+.services {
+	&__accordian {
 		@include lg {
-			display: flex;
+			max-width: 38em;
+		}
 
-			&:before {
+		@include xl {
+			max-width: 44em;
+		}
+
+		@include xxl {
+			max-width: 50em;
+		}
+
+		@include xxxl {
+			max-width: 58em;
+		}
+
+		.accordion--title,
+		.accordion--heading {
+			@include lg {
 				display: flex;
-				justify-content: end;
-				align-self: center;
-				margin-left: auto;
-				order: 2;
-				font-size: 1.33em;
+
+				&:before {
+					display: flex;
+					justify-content: end;
+					align-self: center;
+					margin-left: auto;
+					order: 2;
+					font-size: 1.33em;
+				}
 			}
 		}
 	}
 }
 
-.accordionTitle,
-.accordion__Heading {
+.accordion--title,
+.accordion--heading {
 	background-color: none;
 	text-align: left;
 	font-family: $font-headings;
@@ -85,14 +87,13 @@
 		padding: 6px 0 0;
 	}
 }
-.accordionTitleActive,
-.accordionTitle.is-expanded {
-	// background-color: darken($color-grey-1800, 10%);
+.accordion--titleActive,
+.accordion--title.is-expanded {
 	&:before {
 		transform: rotate(-225deg);
 	}
 }
-.accordionItem {
+.accordion--item {
 	height: auto;
 	overflow: hidden;
 	//SHAME: magic number to allow the accordion to animate
@@ -110,10 +111,10 @@
 	}
 }
 
-.accordionItem.is-collapsed {
+.accordion--item.is-collapsed {
 	max-height: 0;
 }
-.no-js .accordionItem.is-collapsed {
+.no-js .accordion--item.is-collapsed {
 	max-height: auto;
 }
 .animateIn {
@@ -142,5 +143,17 @@
 	100% {
 		opacity: 0;
 		transform: scale(0.9) rotateX(-60deg);
+	}
+}
+
+// /* ## Big Highlight Effect Colours
+// --------------------------------------------- */
+
+.highlight-wrap {
+	.services {
+		.accordion--title,
+		.accordion--heading {
+			color: $color-grey-2000-9;
+		}
 	}
 }

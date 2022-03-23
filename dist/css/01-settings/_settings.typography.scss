@@ -400,17 +400,18 @@ article {
 /* 
   ## Services Accordian Font Styles
 --------------------------------------------- */
-.accordian {
-	a.accordionTitle {
-		@include lg {
-			--font-size: var(--global-accordian-size);
-			// font-size: 3.2rem;
-			font-size: var(--font-size);
-			padding: 0em 0.01em 0.5em;
+.services {
+	&__accordian {
+		a.accordion--title {
+			@include lg {
+				--font-size: var(--global-accordian-size);
+				// font-size: 3.2rem;
+				font-size: var(--font-size);
+				padding: 0em 0.01em 0.5em;
+			}
 		}
 	}
 }
-
 /* 
   ## Contact Font Styles
 --------------------------------------------- */
@@ -451,4 +452,27 @@ article {
 	// 	background-color: yellowgreen;
 	// 	margin: 0 auto;
 	// }
+}
+
+// /* ## Big Highlight Effect Colours
+// --------------------------------------------- */
+
+.highlight-wrap {
+	/* 
+			## Font Styles
+		--------------------------------------------- */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	p,
+	a {
+		color: $color-grey-2000-9;
+	}
+
+	.postal-address,
+	.small__heading {
+		color: $color-grey-2000-9;
+	}
 }
