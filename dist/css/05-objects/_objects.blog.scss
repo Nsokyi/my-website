@@ -101,3 +101,38 @@
 		}
 	}
 }
+
+// /* ## Big Highlight Effect Colours
+// --------------------------------------------- */
+
+.highlight-wrap {
+	.blog {
+		&__slide {
+			a:link {
+				color: $color-grey-2000-9;
+			}
+			a:hover {
+				color: $color-grey-000-3;
+			}
+
+			span {
+				color: $color-grey-2000-4;
+
+				-webkit-text-fill-color: rgba(27, 27, 27, 0);
+				-webkit-text-stroke: 1px $color-grey-2000-9;
+
+				@include md {
+					-webkit-text-stroke: 1px $color-grey-2000-5;
+				}
+			}
+
+			p {
+				color: $color-grey-2000-9;
+			}
+
+			.read-more-link {
+				color: $color-grey-2000-9;
+			}
+		}
+	}
+}

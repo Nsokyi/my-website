@@ -1,4 +1,5 @@
-// Hamburger menu
+/* ## Hamburger Menu
+--------------------------------------------- */
 const article = document.querySelector("#overlay");
 const hamburger = document.querySelector("#toggle");
 
@@ -16,7 +17,9 @@ function readMore() {
 }
 
 
-// JS for Accordion info structure in the Services section 
+
+/* ## Add JS for Accordion info structure (Services section)
+--------------------------------------------- */
 (function(){
 	var d = document,
 	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
@@ -80,8 +83,10 @@ switchAccordion = function(e) {
 
 
 
-// Add Slider to the Blog section 
  
+/* ## Add Slider to the Blog section
+--------------------------------------------- */
+
 console.clear();
 
 
@@ -186,4 +191,48 @@ function initSliders() {
 // Window onLoad
 window.addEventListener("load", () => {
   initSliders();
+});
+
+// END BLOG CODE
+
+
+/* ## Pin the Light block
+--------------------------------------------- */
+
+
+
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-300px top",
+  toggleClass: {
+    targets: '.light',
+    className: 'highlight-wrap'
+  },
+  scrub: true,
+  pin: ".bg--lines",
+  pinSpacing: false,
+  markers: true
+});
+
+// LOGO
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-40px top",
+  toggleClass: {
+    targets: '.logo',
+    className: 'logo--highlight'
+  },
+  pinSpacing: false,
+  scrub: true,
+});
+
+// Add class to Highlight Social Icons
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-300px top",
+  toggleClass: {
+    targets: '.sidebar__icons',
+    className: 'icons--highlight'
+  },
+  scrub: true,
 });

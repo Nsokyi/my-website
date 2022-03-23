@@ -26,9 +26,9 @@ main {
 	}
 
 	@include lg {
-		background: url('../img/bg-lines.svg') no-repeat center -51px;
-		background-blend-mode: multiply;
-		background-color: $color-grey-1800;
+		// background: url('../img/bg-lines.svg') no-repeat center -51px;
+		// background-blend-mode: multiply;
+		background-color: transparent;
 		padding: 0;
 	}
 	@include xxl {
@@ -39,15 +39,17 @@ main {
 
 .dark,
 .light {
-	background-color: $color-grey-1800;
+	// background-color: rgba(31, 31, 31, 0.93);
 	color: $color-grey-000;
+	transition: background-color 0.3s ease-in-out;
 
-	@include md {
-		background-color: $color-grey-1800-8;
-	}
+	// @include md {
+	// 	background-color: $color-grey-2000-9;
+	// }
 
 	@include lg {
-		background-color: $color-grey-1800-8;
+		// background-blend-mode: multiply;
+		background-color: rgba(34, 34, 34, 0.9);
 		width: 100vw;
 		position: relative;
 		left: 50%;
@@ -56,3 +58,31 @@ main {
 		margin-right: -50vw;
 	}
 }
+
+.highlight-wrap {
+	background-color: #fdd808;
+	background-color: rgba(253, 206, 8, 0.801);
+	background-color: linear-gradient(to bottom right, rgba(255, 211, 6, 0.801), rgba(255, 182, 6, 0.801));
+}
+
+.bg--lines {
+	// border: solid 1px orangered;
+	left: 21.2%;
+	max-width: 99em;
+	position: absolute;
+	z-index: 0;
+	top: -7rem;
+}
+
+.bg--lines svg {
+	fill: none;
+	stroke-linecap: round;
+	stroke: #363636;
+	stroke-miterlimit: 10;
+	stroke-width: 41px;
+	top: -12rem;
+	max-width: 973px;
+	max-height: 7525px;
+}
+
+// 0 0 973 7525
