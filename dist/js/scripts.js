@@ -196,10 +196,284 @@ window.addEventListener("load", () => {
 // END BLOG CODE
 
 
+
+
+// /* ## Anime
+// --------------------------------------------- */
+
+
+/* Start Portfolio Anime
+// -------------------------- */
+gsap.registerPlugin(ScrollTrigger);
+
+// Portfolio Item One
+gsap.set(".portfolio--01", { yPercent: 15});
+gsap.set(".number--01", { yPercent: -6});
+gsap.set(".img--01", { yPercent: -15});
+gsap.set(".meta--01", { yPercent: -60});
+
+gsap.to(".portfolio--01", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--01",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--01", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--01",
+    scrub: 1,
+    // markers: true
+  }, 
+});
+
+gsap.to(".img--01", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--01",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--01", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--01",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item One
+
+
+// Start Portfolio Item Two
+gsap.set(".portfolio--02", { yPercent: 15});
+gsap.set(".number--02", { yPercent: -6});
+gsap.set(".img--02", { yPercent: -15});
+gsap.set(".meta--02", { yPercent: -60});
+
+gsap.to(".portfolio--02", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--02",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--02", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--02",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".img--02", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--02",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--02", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--02",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item Two
+
+// Start Portfolio Item Three
+gsap.set(".portfolio--03", { yPercent: 15});
+gsap.set(".number--03", { yPercent: -6});
+gsap.set(".img--03", { yPercent: -15});
+gsap.set(".meta--03", { yPercent: -60});
+
+gsap.to(".portfolio--03", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--03",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--03", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--03",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".img--03", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--03",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--03", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--03",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item Three
+
+// Start Portfolio Item Four
+gsap.set(".portfolio--04", { yPercent: 15});
+gsap.set(".number--04", { yPercent: -6});
+gsap.set(".img--04", { yPercent: -15});
+gsap.set(".meta--04", { yPercent: -60});
+
+gsap.to(".portfolio--04", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--04",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--04", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--04",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".img--04", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--04",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--04", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--04",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item Four
+
+// Start Portfolio Item Five
+gsap.set(".portfolio--05", { yPercent: 15});
+gsap.set(".number--05", { yPercent: -6});
+gsap.set(".img--05", { yPercent: -15});
+gsap.set(".meta--05", { yPercent: -60});
+
+gsap.to(".portfolio--05", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--05",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--05", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--05",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".img--05", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--05",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--05", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--05",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item Five
+
+// Start Portfolio Item Six
+gsap.set(".portfolio--06", { yPercent: 15});
+gsap.set(".number--06", { yPercent: -6});
+gsap.set(".img--06", { yPercent: -15});
+gsap.set(".meta--06", { yPercent: -60});
+
+gsap.to(".portfolio--06", {
+  yPercent: -5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--06",
+    end: "bottom center",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".number--06", {
+  yPercent: 5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--06",
+    scrub: 1,
+  }, 
+});
+
+gsap.to(".img--06", {
+  yPercent: 20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--06",
+    scrub: 1
+  }, 
+});
+
+gsap.to(".meta--06", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".portfolio--06",
+    scrub: 1
+  }, 
+});
+// End Portfolio Item Six
+
 /* ## Pin the Light block
 --------------------------------------------- */
-
-
 
 ScrollTrigger.create({
   trigger: ".light",
@@ -211,7 +485,7 @@ ScrollTrigger.create({
   scrub: true,
   pin: ".bg--lines",
   pinSpacing: false,
-  markers: true
+  // markers: true
 });
 
 // LOGO
@@ -223,7 +497,7 @@ ScrollTrigger.create({
     className: 'logo--highlight'
   },
   pinSpacing: false,
-  scrub: true,
+  scrub: true
 });
 
 // Add class to Highlight Social Icons
@@ -234,5 +508,5 @@ ScrollTrigger.create({
     targets: '.sidebar__icons',
     className: 'icons--highlight'
   },
-  scrub: true,
+  scrub: true
 });

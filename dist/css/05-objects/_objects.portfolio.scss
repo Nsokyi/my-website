@@ -5,7 +5,7 @@
 		@include md {
 			column-gap: 3.6em;
 			display: grid;
-			grid-template-columns: repeat(2, auto);
+			grid-template-columns: 1fr 1fr;
 			grid-template-rows: repeat(2, auto);
 			margin-top: 3em;
 			row-gap: 0;
@@ -18,21 +18,21 @@
 	}
 
 	@include md {
-		&__01 {
+		&--01 {
 			// background-color: aquamarine;
 			grid-column-start: 1;
 			grid-row-start: 1;
 			grid-row-end: 2;
 		}
 
-		&__03 {
+		&--03 {
 			// background-color: brown;
 			grid-column-start: 1;
 			grid-row-start: 3;
 			grid-row-end: 4;
 		}
 
-		&__05 {
+		&--05 {
 			// background-color: yellowgreen;
 			grid-column-start: 1;
 			grid-row-start: 5;
@@ -42,22 +42,19 @@
 
 	// Portfolio on the right hand side
 	@include md {
-		&__02 {
-			// background-color: aquamarine;
+		&--02 {
 			grid-column-start: 2;
 			grid-row-start: 2;
 			grid-row-end: 3;
 		}
 
-		&__04 {
-			// background-color: brown;
+		&--04 {
 			grid-column-start: 2;
 			grid-row-start: 4;
 			grid-row-end: 5;
 		}
 
-		&__06 {
-			// background-color: yellowgreen;
+		&--06 {
 			grid-column-start: 2;
 			grid-row-start: 6;
 			grid-row-end: 7;
@@ -78,13 +75,8 @@
 			max-width: 24.2em;
 		}
 
-		@include lg {
-			// margin: -11em 0;
-		}
-
 		@include xxxl {
 			max-width: 27em;
-			// margin: -11em 0;
 		}
 
 		&:last-of-type {
@@ -92,22 +84,18 @@
 		}
 	}
 
-	&__item:first-of-type {
-		// margin: -11em 0;
-	}
-
 	&__number {
-		-webkit-text-stroke: 1px $color-grey-1600;
 		-webkit-text-fill-color: rgba(255, 255, 255, 0);
+		-webkit-text-stroke: 1px $color-grey-1600;
+		display: block;
 		font-family: $font-serif;
 		font-size: 10rem;
-		font-weight: 700;
 		font-style: italic;
-		position: relative;
-		z-index: -1;
-		display: block;
-		top: -0.48em;
+		font-weight: 700;
 		left: -0.22em;
+		position: relative;
+		top: -0.48em;
+		z-index: -1;
 
 		@include md {
 			--font-size: var(--global-h1-size);
@@ -139,6 +127,18 @@
 	&__item--title {
 		font-size: 2rem;
 	}
+}
+
+li a > .portfolio__number {
+	transition: all 0.3s;
+}
+
+li a:hover > .portfolio__number {
+	-webkit-text-stroke: 1px $color-primary-000-5;
+}
+
+a:hover .portfolio__item--meta h3 {
+	color: $color-primary;
 }
 
 .portfolio {
@@ -174,5 +174,11 @@
 
 	@include xxxl {
 		min-height: 3210.3px;
+	}
+}
+
+.portfolio {
+	figure {
+		overflow-y: hidden;
 	}
 }

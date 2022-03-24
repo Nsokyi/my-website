@@ -18,7 +18,12 @@
 		justify-content: end;
 		display: flex;
 		margin-left: auto;
-		left: 5em;
+		left: -0.01em;
+		top: -1.15em;
+	}
+
+	@include lg {
+		left: 5.2em;
 		top: -2.1em;
 	}
 

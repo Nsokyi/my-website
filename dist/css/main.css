@@ -1089,8 +1089,8 @@ main {
             column-gap: 3.6em;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
     margin-top: 3em;
@@ -1107,21 +1107,21 @@ main {
 }
 
 @media (min-width: 768px) {
-  .portfolio__01 {
+  .portfolio--01 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-row: 1;
         grid-row-start: 1;
     grid-row-end: 2;
   }
-  .portfolio__03 {
+  .portfolio--03 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-row: 3;
         grid-row-start: 3;
     grid-row-end: 4;
   }
-  .portfolio__05 {
+  .portfolio--05 {
     -ms-grid-column: 1;
         grid-column-start: 1;
     -ms-grid-row: 5;
@@ -1131,21 +1131,21 @@ main {
 }
 
 @media (min-width: 768px) {
-  .portfolio__02 {
+  .portfolio--02 {
     -ms-grid-column: 2;
         grid-column-start: 2;
     -ms-grid-row: 2;
         grid-row-start: 2;
     grid-row-end: 3;
   }
-  .portfolio__04 {
+  .portfolio--04 {
     -ms-grid-column: 2;
         grid-column-start: 2;
     -ms-grid-row: 4;
         grid-row-start: 4;
     grid-row-end: 5;
   }
-  .portfolio__06 {
+  .portfolio--06 {
     -ms-grid-column: 2;
         grid-column-start: 2;
     -ms-grid-row: 6;
@@ -1182,17 +1182,17 @@ main {
 }
 
 .portfolio__number {
-  -webkit-text-stroke: 1px #4b4b4b;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 1px #4b4b4b;
+  display: block;
   font-family: TimesNewRoman, Times New Roman, Times, Garamond, Baskerville, Baskerville Old Face, Hoefler Text, serif;
   font-size: 10rem;
-  font-weight: 700;
   font-style: italic;
-  position: relative;
-  z-index: -1;
-  display: block;
-  top: -0.48em;
+  font-weight: 700;
   left: -0.22em;
+  position: relative;
+  top: -0.48em;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
@@ -1231,6 +1231,19 @@ main {
 
 .portfolio__item--title {
   font-size: 2rem;
+}
+
+li a > .portfolio__number {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+li a:hover > .portfolio__number {
+  -webkit-text-stroke: 1px rgba(253, 206, 8, 0.5);
+}
+
+a:hover .portfolio__item--meta h3 {
+  color: #fdce08;
 }
 
 .portfolio {
@@ -1277,6 +1290,10 @@ main {
   .portfolio {
     min-height: 3210.3px;
   }
+}
+
+.portfolio figure {
+  overflow-y: hidden;
 }
 
 .services {
@@ -2065,7 +2082,14 @@ circle:hover {
     display: -ms-flexbox;
     display: flex;
     margin-left: auto;
-    left: 5em;
+    left: -0.01em;
+    top: -1.15em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bttn_container {
+    left: 5.2em;
     top: -2.1em;
   }
 }
