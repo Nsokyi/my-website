@@ -472,6 +472,9 @@ gsap.to(".meta--06", {
 });
 // End Portfolio Item Six
 
+
+
+
 /* ## Pin the Light block
 --------------------------------------------- */
 
@@ -510,3 +513,17 @@ ScrollTrigger.create({
   },
   scrub: true
 });
+
+
+
+/* ## Big scroll to btn
+--------------------------------------------- */
+const btt = document.querySelector(".arrow-down");
+
+btt.addEventListener("click", () => gsap.to(window, {scrollTo:"#portfolio",  ease:Power1. easeInOut}));
+gsap.set(btt, {y: 50});
+gsap.to(btt, {
+  y: 0,
+});
+
+
