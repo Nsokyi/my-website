@@ -516,6 +516,47 @@ ScrollTrigger.create({
 
 
 
+
+
+/* ## Hide Secondary menu on scroll
+--------------------------------------------- */
+
+var actionNav = gsap.to('.secondary--menu', {y:'-=60', duration:0.5, ease:'power2.in', paused:true});
+  
+ScrollTrigger.create({
+  trigger: ".secondary--menu",
+  start: "5px top",
+  onEnter: () => actionNav.play(),
+  onLeaveBack: () => actionNav.reverse(),
+});
+
+
+
+
+var actionBurger = gsap.to('.burger', {y:'+=60', duration:0.5, ease:'power2.in', paused:true});
+  
+ScrollTrigger.create({
+  trigger: ".header",
+  start: "5px top",
+  onEnter: () => actionBurger.play(),
+  onLeaveBack: () => actionBurger.reverse(),
+});
+
+
+// const anim = gsap.fromTo('nav', {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
+
+// ScrollTrigger.create({
+//   trigger: "nav",
+//   animation: anim,
+//   toggleActions: 'play none none none',
+//   once: true,
+// });
+
+
+
+
+
+
 /* ## Big scroll to btn
 --------------------------------------------- */
 const btt = document.querySelector(".arrow-down");
