@@ -103,6 +103,10 @@ footer {
 }
 
 header {
+	@include lg {
+		padding-top: 5.62em;
+	}
+
 	@include xxxl {
 		padding: 7.5em 6.78em 1.13em;
 	}
@@ -235,6 +239,36 @@ footer {
 	100% {
 		opacity: 1;
 		left: 0;
+	}
+}
+
+.secondary--menu {
+	display: none;
+
+	@include lg {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: absolute;
+		right: 4em;
+		top: 2.21em;
+		width: 56%;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-direction: row;
+			justify-content: flex-end;
+			position: relative;
+		}
+
+		li {
+			align-items: center;
+			display: inline-flex;
+			justify-content: center;
+			padding: 0px 2em;
+			width: 7.8vw;
+		}
 	}
 }
 

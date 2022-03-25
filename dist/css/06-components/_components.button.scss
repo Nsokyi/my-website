@@ -24,7 +24,8 @@
 
 	@include lg {
 		left: 5.2em;
-		top: -2.1em;
+		top: -3.1em;
+		position: relative;
 	}
 
 	@include xl {
@@ -32,8 +33,12 @@
 	}
 
 	@include xxl {
-		left: 10em;
-		top: -4.78em;
+		// left: 10em;
+		// top: -4.78em;
+		left: 0;
+		top: -1.78em;
+		right: 55px;
+		position: fixed;
 	}
 
 	&:hover {

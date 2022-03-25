@@ -124,7 +124,7 @@ h1 {
 			background-color: $color-grey-000-4;
 
 			@include md {
-				height: 1.13em;
+				height: 1.03em;
 				right: -0.29em;
 				top: 0.04em;
 			}
@@ -259,6 +259,7 @@ ul > {
 			display: inline-block;
 			text-align: right;
 			padding-right: 0.46em;
+			margin: 0.75em 0 0.19em;
 		}
 
 		&::after {
@@ -275,6 +276,7 @@ ul > {
 				position: absolute;
 				top: 0.58em;
 				left: -0.8em;
+				max-width: 2.3em;
 			}
 
 			@include lg {
