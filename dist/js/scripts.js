@@ -533,7 +533,7 @@ ScrollTrigger.create({
 
 
 
-var actionBurger = gsap.to('.burger', {y:'+=60', duration:0.5, ease:'power2.in', paused:true});
+var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0, y: 0}, {y:'+=60', duration:0.5, autoAlpha: 1, ease:'power2.in', paused:true});
   
 ScrollTrigger.create({
   trigger: ".header",

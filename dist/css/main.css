@@ -717,7 +717,7 @@ footer {
   header,
   article,
   footer {
-    max-width: 90vw;
+    max-width: 89.95vw;
     width: 100%;
     width: 100%;
     margin: 0 auto;
@@ -942,10 +942,12 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    position: absolute;
-    right: 4em;
-    top: 2.21em;
+    position: relative;
+    right: 14em;
+    top: -4.79em;
     width: 56%;
+    max-width: 36em;
+    max-height: 2em;
   }
   .secondary--menu ul {
     display: -webkit-box;
@@ -971,8 +973,14 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0px 2em;
-    width: 7.8vw;
+    padding: 0px 1em;
+    width: 8.8vw;
+  }
+}
+
+@media (min-width: 1024px) and (min-width: 1400px) {
+  .secondary--menu li {
+    width: 7.8em;
   }
 }
 
@@ -2152,20 +2160,6 @@ circle:hover {
 }
 
 @media (min-width: 1024px) {
-  .bttn_container {
-    left: 5.2em;
-    top: -3.1em;
-    position: relative;
-  }
-}
-
-@media (min-width: 1200px) {
-  .bttn_container {
-    left: 5.3em;
-  }
-}
-
-@media (min-width: 1400px) {
   .bttn_container {
     left: 0;
     top: -1.78em;

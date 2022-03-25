@@ -79,7 +79,7 @@ header,
 article,
 footer {
 	@include lg {
-		max-width: 90vw;
+		max-width: 89.95vw;
 		width: 100%;
 		width: 100%;
 		margin: 0 auto;
@@ -249,10 +249,12 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		position: absolute;
-		right: 4em;
-		top: 2.21em;
+		position: relative;
+		right: 14em;
+		top: -4.79em;
 		width: 56%;
+		max-width: 36em;
+		max-height: 2em;
 
 		ul {
 			display: flex;
@@ -266,8 +268,12 @@ footer {
 			align-items: center;
 			display: inline-flex;
 			justify-content: center;
-			padding: 0px 2em;
-			width: 7.8vw;
+			padding: 0px 1em;
+			width: 8.8vw;
+
+			@include xxl {
+				width: 7.8em;
+			}
 		}
 	}
 }
