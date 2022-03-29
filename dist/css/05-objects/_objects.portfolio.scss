@@ -144,6 +144,14 @@ a:hover .portfolio__item--meta h3 {
 .portfolio {
 	padding-bottom: 2.44em;
 
+	@include md {
+		padding-bottom: 1.01em;
+	}
+
+	@include lg {
+		padding-bottom: 0.8em;
+	}
+
 	&__item--link {
 		position: relative;
 	}

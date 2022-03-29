@@ -66,7 +66,7 @@ article {
 	}
 
 	@include md {
-		padding-bottom: 4.46em;
+		padding-bottom: 4.07em;
 	}
 }
 
@@ -104,7 +104,7 @@ footer {
 
 header {
 	@include lg {
-		padding-top: 5.62em;
+		padding: 5.62em 2.6em 3.48em;
 	}
 
 	@include xxxl {
@@ -249,9 +249,9 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		position: relative;
-		right: 14em;
-		top: -4.79em;
+		position: fixed;
+		right: 3em;
+		top: 2.21em;
 		width: 56%;
 		max-width: 36em;
 		max-height: 2em;

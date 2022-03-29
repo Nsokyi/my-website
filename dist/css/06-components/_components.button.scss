@@ -24,8 +24,8 @@
 
 	@include lg {
 		left: 0;
-		top: -1.78em;
-		right: 55px;
+		top: 2.7em;
+		right: -7px;
 		position: fixed;
 	}
 
@@ -61,7 +61,7 @@
 		position: absolute;
 		top: 0;
 		transition: all 0.35s ease;
-		width: 100%;
+		width: 70%;
 
 		&:nth-of-type(2) {
 			top: 10px;
@@ -223,6 +223,10 @@ a.bttn-dark {
 		@include md {
 			margin: 3.32em 0 1.84em 0;
 		}
+
+		@include lg {
+			margin: 4.42em 0 1.84em 0;
+		}
 	}
 }
 
@@ -232,7 +236,11 @@ a.bttn-dark {
 		margin: 0.66em 0 27px;
 
 		@include md {
-			margin: 3.3em 0 2.14em 0;
+			margin: 3.3em 0 1.88em 0;
+		}
+
+		@include lg {
+			margin: 2.83em 0 1.66em 0;
 		}
 	}
 
@@ -240,7 +248,11 @@ a.bttn-dark {
 		margin: 0 0 2em 0;
 
 		@include md {
-			margin: 0 0 3.44em 0;
+			margin: 0 0 2.88em 0;
+		}
+
+		@include lg {
+			margin: 0 0 2.44em 0;
 		}
 	}
 }
@@ -481,6 +493,12 @@ a.bttn-dark {
 
 // /* ## Big Highlight Effect Colours
 // --------------------------------------------- */
+
+.burger--highlight {
+	span {
+		background: $color-grey-2000;
+	}
+}
 
 .highlight-wrap {
 	//

@@ -1,6 +1,10 @@
 .about {
 	padding-bottom: 2.58em;
 
+	@include lg {
+		padding-bottom: 2.28em;
+	}
+
 	@include xxxl {
 		&__col-1 {
 			grid-area: main;

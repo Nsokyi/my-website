@@ -86,3 +86,23 @@ main {
 }
 
 // 0 0 973 7525
+
+.light {
+	width: 120%;
+	margin-left: -10%;
+
+	article {
+		width: 82%;
+		margin: 0 auto;
+
+		@include lg {
+			width: 90vw;
+			max-width: 62em;
+		}
+	}
+
+	@include lg {
+		width: 100vw;
+		margin-left: -50vw;
+	}
+}
