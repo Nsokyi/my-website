@@ -503,6 +503,18 @@ ScrollTrigger.create({
   scrub: true
 });
 
+// Hamburger Menu
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-65px top",
+  toggleClass: {
+    targets: '.burger',
+    className: 'burger--highlight'
+  },
+  pinSpacing: false,
+  scrub: true
+});
+
 // Add class to Highlight Social Icons
 ScrollTrigger.create({
   trigger: ".light",
@@ -516,16 +528,14 @@ ScrollTrigger.create({
 
 
 
-
-
 /* ## Hide Secondary menu on scroll
 --------------------------------------------- */
 
-var actionNav = gsap.to('.secondary--menu', {y:'-=60', duration:0.5, ease:'power2.in', paused:true});
+var actionNav = gsap.fromTo('.menu--item', {autoAlpha: 1, x:'+=0'}, {x:'+=360', stagger:0.1, autoAlpha: 0, duration:0.4, ease:'power4.in', paused:true});
   
 ScrollTrigger.create({
-  trigger: ".secondary--menu",
-  start: "5px top",
+  trigger: ".header",
+  start: "6px top",
   onEnter: () => actionNav.play(),
   onLeaveBack: () => actionNav.reverse(),
 });
@@ -533,26 +543,14 @@ ScrollTrigger.create({
 
 
 
-var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0, y: 0}, {y:'+=60', duration:0.5, autoAlpha: 1, ease:'power2.in', paused:true});
+var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0, x:'-=60'}, {x:'=0', duration:0.3, autoAlpha: 1, ease:'power2.out', paused:true});
   
 ScrollTrigger.create({
   trigger: ".header",
-  start: "5px top",
+  start: "6px top",
   onEnter: () => actionBurger.play(),
   onLeaveBack: () => actionBurger.reverse(),
 });
-
-
-// const anim = gsap.fromTo('nav', {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
-
-// ScrollTrigger.create({
-//   trigger: "nav",
-//   animation: anim,
-//   toggleActions: 'play none none none',
-//   once: true,
-// });
-
-
 
 
 
