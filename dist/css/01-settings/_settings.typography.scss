@@ -432,6 +432,10 @@ article {
 			@include md {
 				margin-bottom: -0.2em;
 			}
+
+			@include lg {
+				margin-bottom: 0.18em;
+			}
 		}
 	}
 	@include md {
@@ -472,7 +476,20 @@ article {
 	@include md {
 		margin-bottom: 1.8em;
 	}
+
+	@include lg {
+		// font-size: 0.9em;
+		margin: 1.64em 0 2.7em;
+	}
 } // "Tell Me More"
+
+.contact {
+	.small__heading {
+		@include lg {
+			font-size: 0.9em;
+		}
+	}
+}
 
 .copyright-text {
 	font-size: 1.4rem;
@@ -503,12 +520,22 @@ article {
 		color: $color-grey-2000-9;
 	}
 
+	a {
+		&:hover {
+			color: $color-grey-2000-7;
+		}
+	}
+
 	.postal-address,
 	.small__heading {
-		color: $color-grey-2000-9;
+		color: $color-grey-2000-7;
 
 		&:after {
 			background-color: $color-grey-1800-3;
 		}
+	}
+
+	.contact__form > p:nth-child(1) {
+		color: $color-grey-2000-7;
 	}
 }
