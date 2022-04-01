@@ -25,11 +25,16 @@
 	@include lg {
 		left: 0;
 		top: 2.7em;
-		right: -7px;
+		right: -0.57em;
 		position: fixed;
 	}
 
+	@include xl {
+		right: 0vw;
+	}
+
 	@include xxl {
+		right: 1em;
 	}
 
 	&:hover {
@@ -56,19 +61,30 @@
 		background: $color-grey-000;
 		border: none;
 		cursor: pointer;
-		height: 3px;
+		height: 2px;
 		left: 0;
 		position: absolute;
 		top: 0;
 		transition: all 0.35s ease;
-		width: 70%;
+		width: 52%;
+
+		@include xxl {
+			height: 3px;
+			width: 100%;
+		}
 
 		&:nth-of-type(2) {
-			top: 10px;
+			top: 8px;
+			@include xxl {
+				top: 10px;
+			}
 		}
 
 		&:nth-of-type(3) {
-			top: 20px;
+			top: 16px;
+			@include xxl {
+				top: 20px;
+			}
 		}
 	}
 }
@@ -272,6 +288,10 @@ a.bttn-dark {
 		display: flex;
 		justify-content: center;
 		max-height: 5em;
+
+		@include lg {
+			max-height: 10em;
+		}
 	}
 }
 .left,
@@ -415,8 +435,8 @@ a.bttn-dark {
 	justify-content: center;
 	text-align: center;
 	padding: 1.88em;
-	width: 15vw;
-	height: 15vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 100%;
 	position: relative;
 	display: none;
@@ -431,10 +451,16 @@ a.bttn-dark {
 		display: flex;
 	}
 
+	@include xl {
+		width: 11vw;
+		height: 11vw;
+		right: -28%;
+	}
+
 	@include xxxl {
+		right: -16%;
 		width: 10vw;
 		height: 10vw;
-		max-width: 13em;
 	}
 
 	&__icon {

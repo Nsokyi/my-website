@@ -3,6 +3,10 @@
 
 	.small__heading {
 		margin-bottom: 1.56em;
+
+		@include lg {
+			margin-bottom: 0.52em;
+		}
 	}
 
 	@include md {
@@ -10,7 +14,7 @@
 			max-width: 35em;
 
 			@include lg {
-				margin-bottom: 2.88em;
+				margin-bottom: 1.55em;
 			}
 		}
 	}
@@ -22,7 +26,7 @@
 	}
 
 	@include lg {
-		padding-bottom: 3.18em;
+		padding-bottom: 1.14em;
 	}
 
 	@include xl {

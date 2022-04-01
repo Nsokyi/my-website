@@ -13,6 +13,10 @@
 			grid-template-rows: minmax(13em, max-content);
 		}
 	}
+
+	@include lg {
+		padding-bottom: 3.12em;
+	}
 }
 
 .blog {
