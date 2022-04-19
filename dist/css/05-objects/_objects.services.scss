@@ -16,6 +16,10 @@
 			@include lg {
 				margin-bottom: 1.55em;
 			}
+
+			@include xxl {
+				margin-bottom: 2.4em;
+			}
 		}
 	}
 }
@@ -31,6 +35,10 @@
 
 	@include xl {
 		padding-bottom: 2.28em;
+	}
+
+	@include xxl {
+		padding-bottom: 4.15em;
 	}
 }
 

@@ -542,15 +542,37 @@ ScrollTrigger.create({
 
 
 
+/* ## Show Hamburger menu on scroll - only over 1024px
+--------------------------------------------- */
+ScrollTrigger.matchMedia({
 
-var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0, x:'-=60'}, {x:'=0', duration:0.3, autoAlpha: 1, ease:'power2.out', paused:true});
+  "(min-width: 1024px)": function() {
+    var actionBurger = gsap.fromTo('.burger', {
+      autoAlpha:0},
+      {duration:0.3,
+      autoAlpha:1,
+      ease:'power2.out',
+      paused:true});
+      ScrollTrigger.create({
+        trigger: ".header",
+        start: "6px top",
+        onEnter: () => actionBurger.play(),
+        onLeaveBack: () => actionBurger.reverse(),
+      });
+    }
+ 
+  });
+
+
+// var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0,}, {duration:0.3, autoAlpha: 1, ease:'power2.out', paused:true});
   
-ScrollTrigger.create({
-  trigger: ".header",
-  start: "6px top",
-  onEnter: () => actionBurger.play(),
-  onLeaveBack: () => actionBurger.reverse(),
-});
+// ScrollTrigger.create({
+//   trigger: ".header",
+//   start: "6px top",
+//   onEnter: () => actionBurger.play(),
+//   onLeaveBack: () => actionBurger.reverse(),
+// });
+
 
 
 
@@ -564,5 +586,9 @@ gsap.set(btt, {y: 50});
 gsap.to(btt, {
   y: 0,
 });
+
+
+
+
 
 

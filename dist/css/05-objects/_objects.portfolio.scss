@@ -152,6 +152,11 @@ a:hover .portfolio__item--meta h3 {
 		padding-bottom: 0.8em;
 	}
 
+	@include xxl {
+		padding-bottom: 4.88em;
+	}
+
+
 	&__item--link {
 		position: relative;
 	}
