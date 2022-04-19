@@ -74,6 +74,7 @@ $letter-spacing: 0.098rem;
 	--global-tag-line: clamp(0.01em, calc(2 / 19 * 100vw), 0.14em);
 	--global-accordian-size: clamp(0.5em, calc(3 / 119.875 * 100vw), 2.6em);
 	--global-social-size: clamp(0.00099em, calc(2 / 108 * 100vw), 1.1em);
+	--global-porfolio-btn-size: clamp(.04em, calc(2 / 119.875 * 100vw), 1.1em);
 }
 
 /* 
@@ -132,14 +133,15 @@ h1 {
 			@include lg {
 				// height: 1.42em;
 				overflow: visible;
-				right: -0.42em;
+				right: -40px;
 				z-index: 1;
 			}
 
 			@include xl {
 				// height: 100%;
 				// max-height: 280px;
-				background-color: $color-grey-000-2;
+				// background-color: $color-grey-000-2;
+				display: none;
 			}
 		}
 	}
@@ -150,6 +152,33 @@ h2 {
 	font-size: 5.6rem;
 	font-size: var(--font-size);
 	line-height: 0.9;
+}
+
+
+h2:not(.intro h2, .about h2)
+ {
+	@include lg {
+		
+		margin-left: -5px;
+	}
+
+	@include xl {
+		margin-left: -8px;
+	}
+}
+
+.intro h2,
+.about h2 {
+	@include lg {
+		
+		margin-left: 2px;
+	}
+}
+
+article {
+	&:first-of-type {
+		
+	}
 }
 
 p {
@@ -237,6 +266,10 @@ ul > {
 	@include lg {
 		margin: 0.62em 0 2em;
 	}
+
+	@include xxl {
+		margin: 1em 0 2em;
+	}
 }
 
 .header {
@@ -271,6 +304,10 @@ ul > {
 			margin: 0.36em 0 0.2em;
 		}
 
+		@include xxl {
+			margin: 0.71em 0 0.2em;
+		}
+
 		&::after {
 			background: rgba(253, 216, 8, 0.6);
 			content: '';
@@ -290,13 +327,13 @@ ul > {
 
 			@include lg {
 				top: 0.4;
-				left: -0.558em;
+				left: 0.442em;
 				width: 5.6em;
 				margin: 0.36em 0 0.19em;
 			}
 
 			@include xl {
-				left: -0.19em;
+				left: .49em;
 			}
 		}
 	}

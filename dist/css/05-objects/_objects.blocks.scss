@@ -97,8 +97,8 @@ footer {
 		max-width: 62em;
 	}
 
-	@include xxxl {
-		padding: 7.5em 6.78em 6.68em;
+	@include xxl {
+		padding: 5.55em 6.15em 6.68em;
 	}
 }
 
@@ -107,9 +107,13 @@ header {
 		padding: 5.62em 2.6em 1.48em;
 	}
 
-	@include xxxl {
-		padding: 7.5em 6.78em 1.13em;
+	@include xxl {
+		padding: 7.5em 6.18em 3.22em;
 	}
+
+	// @include xxxl {
+	// 	padding: 7.5em 6.78em 1.13em;
+	// }
 }
 
 footer {
@@ -250,8 +254,9 @@ footer {
 		flex-direction: column;
 		justify-content: flex-end;
 		position: fixed;
-		right: 3em;
+		// right: 3em;
 		top: 2.21em;
+		transform: translateX(14.77em);
 		width: 56%;
 		max-width: 36em;
 		max-height: 2em;
@@ -274,6 +279,13 @@ footer {
 			@include xxl {
 				width: 7.8em;
 			}
+		}
+
+		@include xxl {
+			position: fixed;
+			top: 3.79em;
+			// right: 12em;
+			transform: translateX(18.77em);
 		}
 	}
 }

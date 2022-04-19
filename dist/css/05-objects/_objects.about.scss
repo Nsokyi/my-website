@@ -5,6 +5,10 @@
 		padding-bottom: 2.28em;
 	}
 
+	@include xl {
+		padding-bottom: 6.87em;
+	}
+
 	@include xxxl {
 		&__col-1 {
 			grid-area: main;

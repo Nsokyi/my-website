@@ -5,7 +5,7 @@
 	display: flex;
 	height: 54px;
 	justify-content: end;
-	left: 0;
+	// left: 0;
 	max-width: 46px;
 	margin-left: auto;
 	position: relative;
@@ -15,26 +15,49 @@
 	z-index: 100;
 
 	@include md {
+		transition: ease all .8s;
 		justify-content: end;
 		display: flex;
 		margin-left: auto;
-		left: -0.01em;
-		top: -1.15em;
+		// left: -0.01em;
+		top: -0.22em;
+		// transform: translateX(-4em);
 	}
 
 	@include lg {
-		left: 0;
-		top: 2.7em;
-		right: -0.57em;
+		top: -3em;
+		// position: fixed;
+		// top: 2.7em;
+		// transform: translateX(45.19em); 
 		position: fixed;
+		top: 2.7em;
+		transform: translateX(85.9vw);
+	
 	}
 
-	@include xl {
-		right: 0vw;
+	// 1066
+	@media screen and (min-width: 1066px) {
+		transform: translateX(86.6vw);
+	}
+
+	// 1170
+	@media screen and (min-width: 1170px) {
+		transform: translateX(86.7vw);
+	}
+
+	// 1250
+	@media screen and (min-width: 1250px) {
+		transform: translateX(87.1vw);
 	}
 
 	@include xxl {
-		right: 1em;
+		position: fixed;
+		top: 2.7em;
+		transform: translateX(56.6em);
+	}
+
+	@include xxxl {
+		transform: translateX(57em);
 	}
 
 	&:hover {
@@ -435,8 +458,8 @@ a.bttn-dark {
 	justify-content: center;
 	text-align: center;
 	padding: 1.88em;
-	width: 10vw;
-	height: 10vw;
+	width: 20vw;
+	height: 20vw;
 	border-radius: 100%;
 	position: relative;
 	display: none;
@@ -446,22 +469,23 @@ a.bttn-dark {
 	transition: all 0.6s;
 	border: solid 1px $color-grey-000-2;
 	max-width: 18.1em;
+	min-width: 6em;
+	min-height: 6em;
 
 	@include md {
 		display: flex;
 	}
 
 	@include xl {
-		width: 11vw;
-		height: 11vw;
-		right: -28%;
+			height: 17vw;
+			max-height: 13.59em;
+			max-width: 13.59em;
+			right: 1%;
+			top: -3em;
+			width: 17vw;
 	}
 
-	@include xxxl {
-		right: -16%;
-		width: 10vw;
-		height: 10vw;
-	}
+
 
 	&__icon {
 		position: absolute;
@@ -491,24 +515,30 @@ a.bttn-dark {
 
 	&__text {
 		color: $color-primary;
-		--font-size: var(--small__heading);
-		font-size: 9.2rem;
+		--font-size: var(--global-porfolio-btn-size);
+		font-size: 1.2rem;
 		font-size: var(--font-size);
 		font-weight: 600;
 		left: 50%;
 		opacity: 0;
 		position: absolute;
-		top: 50%;
+		top: 51%;
 		transform: translate(-50%, -50px);
 		visibility: hidden;
 		white-space: nowrap;
+
+		@include xl {
+				--font-size: var(--small__heading);
+		font-size: 1.2rem;
+		font-size: var(--font-size);
+		} 
 	}
 
 	&:hover &__text {
 		transform: translate(-50%, -50%);
 		opacity: 1;
 		visibility: visible;
-		color: $color-grey-1400;
+		color: $color-grey-2000;
 	}
 
 	&:hover {
