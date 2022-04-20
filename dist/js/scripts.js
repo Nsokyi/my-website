@@ -87,7 +87,7 @@ switchAccordion = function(e) {
 /* ## Add Slider to the Blog section
 --------------------------------------------- */
 
-console.clear();
+// console.clear();
 
 
 // Main Slider Animation
@@ -180,12 +180,12 @@ function initSliders() {
   
 
   // Previous Arrow
-  const arrowPrevious = document.querySelector(".prevBttn");
-  arrowPrevious.addEventListener("click", (e) => {
-    e.preventDefault();
+  // const arrowPrevious = document.querySelector(".prevBttn");
+  // arrowPrevious.addEventListener("click", (e) => {
+  //   e.preventDefault();
 
-    !isTweening() && transition("previous", currentStep);
-  });
+  //   !isTweening() && transition("previous", currentStep);
+  // });
 }
 
 // Window onLoad
@@ -564,19 +564,6 @@ ScrollTrigger.matchMedia({
   });
 
 
-// var actionBurger = gsap.fromTo('.burger', {autoAlpha: 0,}, {duration:0.3, autoAlpha: 1, ease:'power2.out', paused:true});
-  
-// ScrollTrigger.create({
-//   trigger: ".header",
-//   start: "6px top",
-//   onEnter: () => actionBurger.play(),
-//   onLeaveBack: () => actionBurger.reverse(),
-// });
-
-
-
-
-
 /* ## Big scroll to btn
 --------------------------------------------- */
 const btt = document.querySelector(".arrow-down");
@@ -592,3 +579,32 @@ gsap.to(btt, {
 
 
 
+// Menu 
+// console.clear();
+
+// const app = (() => {
+// 	let body;
+// 	let menu;
+// 	let menuItems;
+	
+// 	const init = () => {
+// 		body = document.querySelector('body');
+// 		menu = document.querySelector('.burger');
+// 		menuItems = document.querySelectorAll('.nav__list-item');
+
+// 		applyListeners();
+// 	}
+	
+// 	const applyListeners = () => {
+// 		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
+// 	}
+	
+// 	const toggleClass = (element, stringClass) => {
+// 		if(element.classList.contains(stringClass))
+// 			element.classList.remove(stringClass);
+// 		else
+// 			element.classList.add(stringClass);
+// 	}
+	
+// 	init();
+// })();

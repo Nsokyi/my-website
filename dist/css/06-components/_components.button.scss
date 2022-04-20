@@ -1,6 +1,7 @@
 /* Menu Button */
 
 .bttn_container {
+	$size: 30px;
 	cursor: pointer;
 	display: flex;
 	height: 54px;
@@ -66,16 +67,19 @@
 
 	&.active {
 		.top {
-			background: $color-grey-000;
-			transform: translateY(11px) translateX(0) rotate(45deg);
+			background: rgba($color-grey-2000, .8);
+			transform: translateY(5px) translateX(0) rotate(45deg);
+			@include xxl {
+				transform: translateY(9px) translateX(0) rotate(45deg);
+			}
 		}
 		.middle {
-			background: $color-grey-000;
+			background: rgba($color-grey-2000, .8);
 			opacity: 0;
 		}
 
 		.bottom {
-			background: $color-grey-000;
+			background: rgba($color-grey-2000, .8);
 			transform: translateY(-11px) translateX(0) rotate(-45deg);
 		}
 	}
