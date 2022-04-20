@@ -1,5 +1,4 @@
 body {
-	scroll-behavior: smooth;
 	background-color: #d8d8d8;
 	color: #363636;
 	margin: 0;
@@ -7,4 +6,6 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

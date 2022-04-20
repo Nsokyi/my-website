@@ -147,104 +147,154 @@ footer {
 }
 
 /* Menu Overlay */
+// $transition--length: .8;
 
-.overlay {
-	position: fixed;
-	background: $color-grey-2000;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0%;
-	opacity: 0;
-	visibility: hidden;
-	transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-	overflow: hidden;
+// .overlay {
+// 	$width: 100vw;
+// 	$height: 100vh;
+// 	$font--size--calc: calc(2vw + 10px);
+// 	$transition--easing: cubic-bezier(.77,0,.175,1);
+// 	position: fixed;
+// 	z-index:1;
 
-	&.open {
-		opacity: 0.95;
-		visibility: visible;
-		height: 100%;
-		z-index: 3;
+	// position: fixed;
+	// background: rgba($color-grey-2000, .9);
+	// top: 0;
+	// left: 0;
+	// width:$width;
+	// height:$height;
+	// // opacity: 0;
+	// visibility: hidden;
+	// transition: visibility .3s;
+	// transition-delay: .3s;
+	// transition: transform $transition--easing $transition--length + s;
+	// overflow: hidden;
+	// z-index: 1;
 
-		li {
-			animation: fadeInRight 0.5s ease forwards;
-			animation-delay: 0.35s;
+	// &:before,&:after{
+	// 	content: "";
+	// 	position: fixed;
+	// 	width:$width;
+	// 	height:$height;
+	// 	background: rgba($color-pink-200, 1);
+	// 	z-index: -1;
+	// 	transition: transform $transition--easing $transition--length + s;
+	// }
+	// &:after{
+	// 	height: $height;
+	// 	background: rgba($color-grey-600, 1);
+	// 	transform: translateX(0%) translateY(-219%);
+	// 	z-index: -2;
+	// 	transition-delay: 0s;
+	// }
+	// &:before{
+	// 	transform: translateX(0%) translateY(-122%);
+	// 	transition-delay: .0s;
+	// }
 
-			&:nth-of-type(2) {
-				animation-delay: 0.4s;
-			}
-			&:nth-of-type(3) {
-				animation-delay: 0.45s;
-			}
-			&:nth-of-type(4) {
-				animation-delay: 0.5s;
-			}
-		}
-	}
-	nav {
-		position: relative;
-		height: 70%;
-		top: 50%;
-		transform: translateY(-50%);
-		font-size: 3rem;
-		font-weight: 100;
-		text-align: center;
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 auto;
-		display: inline-block;
-		position: relative;
-		height: 100%;
+	// &.open {
+		// opacity: 0.95;
+		// visibility: visible;
+		// height: 100vh;
+		// width: 100vw;
+		// transition-delay: .2s;
+		// z-index: 3;
 
-		li {
-			display: block;
-			height: 25%;
-			height: calc(100% / 6);
-			min-height: 50px;
-			position: relative;
-			opacity: 0;
+		// &:before,&:after{
+		// 	transform: translateX(0%) translateY(-18%);
+		// }
+		// &:after{
+		// 	transition-delay: .1s;
+		// }
+		// &:before{
+		// 	transition-delay: 0s;
+		// }
 
-			a {
-				display: block;
-				position: relative;
-				color: $color-primary;
-				text-decoration: none;
-				overflow: hidden;
+	// 	li {
+	// 		animation: fadeInRight 0.5s ease forwards;
+	// 		animation-delay: 0.35s;
 
-				&:hover:after,
-				&:focus:after,
-				&:active:after {
-					width: 100%;
-				}
+	// 		&:nth-of-type(2) {
+	// 			animation-delay: 0.4s;
+	// 		}
+	// 		&:nth-of-type(3) {
+	// 			animation-delay: 0.45s;
+	// 		}
+	// 		&:nth-of-type(4) {
+	// 			animation-delay: 0.5s;
+	// 		}
+	// 	}
+	// }
 
-				&:after {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					left: 50%;
-					width: 0%;
-					transform: translateX(-50%);
-					height: 3px;
-					background: $color-primary;
-					transition: 0.35s;
-				}
-			}
-		}
-	}
-}
+	// nav {
+	// 	$width: 100vw;
+	// 	$height: 100vh;
+	// 	position: relative;
+	// 	height: $height;
+	// 	top: 10%;
+		// transform: translateY(-50%);
+	// 	$transition--easing: cubic-bezier(.77,0,.175,1);
+	// 	font-size: 3rem;
+	// 	font-weight: 100;
+	// 	text-align: center;
+	// }
+	// ul {
+	// 	list-style: none;
+	// 	padding: 0;
+	// 	margin: 0 auto;
+	// 	display: inline-block;
+	// 	position: relative;
+// 		height: $height;
 
-@keyframes fadeInRight {
-	0% {
-		opacity: 0;
-		left: 20%;
-	}
-	100% {
-		opacity: 1;
-		left: 0;
-	}
-}
+// 		li {
+// 			display: block;
+// 			height: 25%;
+// 			height: calc(100% / 6);
+// 			min-height: 50px;
+// 			position: relative;
+// 			opacity: 0;
+
+// 			a {
+// 				display: block;
+// 				position: relative;
+// 				color: $color-primary;
+// 				text-decoration: none;
+// 				overflow: hidden;
+
+// 				&:hover:after,
+// 				&:focus:after,
+// 				&:active:after {
+// 					width: 100%;
+// 				}
+
+// 				&:after {
+// 					content: '';
+// 					position: absolute;
+// 					bottom: 0;
+// 					left: 50%;
+// 					width: 0%;
+// 					transform: translateX(-50%);
+// 					height: 3px;
+// 					background: $color-primary;
+// 					transition: 0.35s;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// @keyframes fadeInRight {
+// 	0% {
+// 		opacity: 0;
+// 		left: 20%;
+// 	}
+// 	100% {
+// 		opacity: 1;
+// 		left: 0;
+// 	}
+// }
+
+// Secondary menu goes across the top on big desktop screen 
 
 .secondary--menu {
 	display: none;
