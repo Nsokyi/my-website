@@ -26,7 +26,7 @@ summary {
 		height: 100vh;
 		content: '';
 		opacity: 0.02;
-		z-index: 1000;
+		z-index: 3;
 		pointer-events: none;
 		background-image: url('/dist/img/noise.gif');
 		@include md {

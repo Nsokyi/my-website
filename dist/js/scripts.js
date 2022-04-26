@@ -2,8 +2,15 @@
 --------------------------------------------- */
 const article = document.querySelector("#overlay");
 const hamburger = document.querySelector("#toggle");
+const navLinks = document.getElementsByClassName("nav__list-item");
 
-hamburger.addEventListener("click", readMore);
+Array.from(navLinks).forEach(element => {
+  element.addEventListener('click', () => {
+    document.getElementById("toggle").click();
+  });
+});
+
+hamburger.addEventListener("click", readMore)
 
 function readMore() {
     if (article.className == "overlay open") {
@@ -15,6 +22,9 @@ function readMore() {
     hamburger. className = ('bttn_container active');
   }
 }
+
+
+
 
 
 
