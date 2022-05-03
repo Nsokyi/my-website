@@ -906,7 +906,7 @@ footer {
     position: fixed;
     top: 0;
     width: 80px;
-    z-index: 9;
+    z-index: 2;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1157,7 +1157,7 @@ main {
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .nav:before, .nav:after {
@@ -1187,10 +1187,21 @@ main {
 }
 
 .nav__content {
+  --font-size: var(--global-accordian-size);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
-  font-size: calc(2vw + 10px);
-  font-weight: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Novecentowide-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 5.6rem;
+  font-size: var(--font-size);
   height: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   text-align: left;
   top: 50%;
@@ -1204,7 +1215,6 @@ main {
 }
 
 .nav__list-wrap {
-  margin: 0 auto;
   width: 10%;
 }
 
@@ -1312,6 +1322,18 @@ main {
 .open .nav__list-item:nth-child(6) {
   -webkit-transition-delay: 1.1s;
           transition-delay: 1.1s;
+}
+
+.nav.nav--highlight::after {
+  background: #333333;
+}
+
+.nav.nav--highlight a {
+  color: #d8d8d8;
+}
+
+.nav.nav--highlight .nav__list-item::before {
+  background-color: #d8d8d8;
 }
 
 @media (min-width: 1200px) {
@@ -2438,6 +2460,10 @@ circle:hover {
 }
 
 /* Menu Button */
+.burger {
+  position: absolute;
+}
+
 .bttn_container {
   cursor: pointer;
   display: -webkit-box;
@@ -3058,8 +3084,13 @@ a.bttn-dark:focus {
   border-color: #535353;
 }
 
-.burger--highlight span {
+.burger.burger--highlight > .bttn_container span {
   background: #333333;
+}
+
+.burger.burger--highlight > .bttn_container.active .bottom,
+.burger.burger--highlight > .bttn_container.active .top {
+  background: #bababa;
 }
 
 .highlight-wrap {

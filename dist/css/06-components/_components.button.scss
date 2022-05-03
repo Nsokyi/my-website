@@ -1,5 +1,9 @@
 /* Menu Button */
 
+.burger {
+	position: absolute;
+}
+
 .bttn_container {
 	$size: 30px;
 	cursor: pointer;
@@ -554,9 +558,15 @@ a.bttn-dark {
 // /* ## Big Highlight Effect Colours
 // --------------------------------------------- */
 
-.burger--highlight {
-	span {
+.burger.burger--highlight > {
+
+	.bttn_container	span {
 		background: $color-grey-2000;
+	}
+
+	.bttn_container.active .bottom,
+	.bttn_container.active .top {
+		background: $color-grey-200;
 	}
 }
 
