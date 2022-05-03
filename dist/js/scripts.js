@@ -187,15 +187,6 @@ function initSliders() {
 
     !isTweening() && transition("next", currentStep);
   });
-  
-
-  // Previous Arrow
-  // const arrowPrevious = document.querySelector(".prevBttn");
-  // arrowPrevious.addEventListener("click", (e) => {
-  //   e.preventDefault();
-
-  //   !isTweening() && transition("previous", currentStep);
-  // });
 }
 
 // Window onLoad
@@ -525,6 +516,18 @@ ScrollTrigger.create({
   scrub: true
 });
 
+// Menu Overlay
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-65px top",
+  toggleClass: {
+    targets: '.nav',
+    className: 'nav--highlight'
+  },
+  pinSpacing: false,
+  scrub: true
+});
+
 // Add class to Highlight Social Icons
 ScrollTrigger.create({
   trigger: ".light",
@@ -541,8 +544,8 @@ ScrollTrigger.create({
 /* ## Hide Secondary menu on scroll
 --------------------------------------------- */
 
-var actionNav = gsap.fromTo('.menu--item', {autoAlpha: 1, x:'+=0'}, {x:'+=360', stagger:0.1, autoAlpha: 0, duration:0.4, ease:'power4.in', paused:true});
-  
+var actionNav = gsap.fromTo('.menu--item', { autoAlpha: 1, x:'+=0' }, { x:'+=360', stagger:0.1, autoAlpha: 0, duration:0.4, ease:'power3.in', paused:true });
+
 ScrollTrigger.create({
   trigger: ".header",
   start: "6px top",
@@ -557,15 +560,11 @@ ScrollTrigger.create({
 ScrollTrigger.matchMedia({
 
   "(min-width: 1024px)": function() {
-    var actionBurger = gsap.fromTo('.burger', {
-      autoAlpha:0},
-      {duration:0.3,
-      autoAlpha:1,
-      ease:'power2.out',
-      paused:true});
-      ScrollTrigger.create({
+    var actionBurger = gsap.fromTo('.bttn_container', { autoAlpha:0, x:'-=105' }, { x:'+=100',duration:0.3, autoAlpha:1, ease:'power3.out', paused:true });
+ 
+    ScrollTrigger.create({
         trigger: ".header",
-        start: "6px top",
+        start: "7px top",
         onEnter: () => actionBurger.play(),
         onLeaveBack: () => actionBurger.reverse(),
       });
@@ -583,38 +582,3 @@ gsap.set(btt, {y: 50});
 gsap.to(btt, {
   y: 0,
 });
-
-
-
-
-
-
-// Menu 
-// console.clear();
-
-// const app = (() => {
-// 	let body;
-// 	let menu;
-// 	let menuItems;
-	
-// 	const init = () => {
-// 		body = document.querySelector('body');
-// 		menu = document.querySelector('.burger');
-// 		menuItems = document.querySelectorAll('.nav__list-item');
-
-// 		applyListeners();
-// 	}
-	
-// 	const applyListeners = () => {
-// 		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-// 	}
-	
-// 	const toggleClass = (element, stringClass) => {
-// 		if(element.classList.contains(stringClass))
-// 			element.classList.remove(stringClass);
-// 		else
-// 			element.classList.add(stringClass);
-// 	}
-	
-// 	init();
-// })();
