@@ -543,7 +543,8 @@ a.bttn-dark {
 	}
 
 	&:hover {
-		background-color: $color-primary-000-6;
+		// rgba(255, 194, 24, 0.78)
+		background-color: $color-primary-000-7;
 		border-color: $color-grey-1400;
 	}
 }
