@@ -331,9 +331,13 @@ footer {
 			}
 		}
 
+@media screen and (min-width: 1277px) {
+	transform: translateX(19.77em);
+}
+
 		@include xxl {
 			position: fixed;
-			top: 3.79em;
+			// top: 3.79em;
 			// right: 12em;
 			transform: translateX(18.77em);
 		}

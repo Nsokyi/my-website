@@ -1,16 +1,6 @@
 /* Menu Button */
 
 .burger {
-	position: absolute;
-}
-
-.bttn_container {
-	$size: 30px;
-	cursor: pointer;
-	display: flex;
-	height: 54px;
-	justify-content: end;
-	// left: 0;
 	max-width: 46px;
 	margin-left: auto;
 	position: relative;
@@ -19,25 +9,13 @@
 	width: 4em;
 	z-index: 100;
 
-	@include md {
-		transition: ease all .8s;
-		justify-content: end;
-		display: flex;
-		margin-left: auto;
-		// left: -0.01em;
-		top: -0.22em;
-		// transform: translateX(-4em);
-	}
+	@include lg {
+	// position: absolute;
+	position: fixed;
+	top: 2.7em;
 
 	@include lg {
-		top: -3em;
-		// position: fixed;
-		// top: 2.7em;
-		// transform: translateX(45.19em); 
-		position: fixed;
-		top: 2.7em;
-		transform: translateX(85.9vw);
-	
+		transform: translateX(85.9vw);	
 	}
 
 	// 1066
@@ -56,13 +34,28 @@
 	}
 
 	@include xxl {
-		position: fixed;
-		top: 2.7em;
 		transform: translateX(56.6em);
 	}
 
 	@include xxxl {
 		transform: translateX(57em);
+	}
+}
+}
+
+.bttn_container {
+	$size: 30px;
+	cursor: pointer;
+	display: flex;
+	height: 54px;
+	justify-content: end;
+
+	@include md {
+		transition: ease all .8s;
+		justify-content: end;
+		display: flex;
+		margin-left: auto;
+		top: -0.22em;
 	}
 
 	&:hover {

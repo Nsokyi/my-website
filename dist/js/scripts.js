@@ -544,7 +544,7 @@ ScrollTrigger.create({
 /* ## Hide Secondary menu on scroll
 --------------------------------------------- */
 
-var actionNav = gsap.fromTo('.menu--item', { autoAlpha: 1, x:'+=0' }, { x:'+=360', stagger:0.1, autoAlpha: 0, duration:0.4, ease:'power3.in', paused:true });
+var actionNav = gsap.fromTo('.menu--item', { autoAlpha: 1, x:'+=0' }, { x:'+=360', stagger:0.1, autoAlpha: 0, duration:0.4, ease:'back.in(1.7)', paused:true });
 
 ScrollTrigger.create({
   trigger: ".header",
@@ -560,17 +560,22 @@ ScrollTrigger.create({
 ScrollTrigger.matchMedia({
 
   "(min-width: 1024px)": function() {
-    var actionBurger = gsap.fromTo('.bttn_container', { autoAlpha:0, x:'-=105' }, { x:'+=100',duration:0.3, autoAlpha:1, ease:'power3.out', paused:true });
+    var actionBurger = gsap.fromTo('.bttn_container', { autoAlpha:0, x:'-=10' }, { x:'+=10', duration:0.1, autoAlpha:1, ease:'back.in(1.7)', paused:true });
  
     ScrollTrigger.create({
         trigger: ".header",
-        start: "7px top",
+        start: "6px top",
         onEnter: () => actionBurger.play(),
         onLeaveBack: () => actionBurger.reverse(),
       });
     }
  
   });
+
+
+  
+
+
 
 
 /* ## Big scroll to btn
