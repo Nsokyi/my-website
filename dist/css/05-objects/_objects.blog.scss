@@ -120,7 +120,11 @@
 				color: $color-grey-2000-9;
 			}
 			a:hover {
-				color: $color-grey-000-3;
+				color: $color-grey-1800-9;
+			}
+			// a:active,
+			a:visited {
+				color: $color-grey-1800-9;
 			}
 
 			span {
