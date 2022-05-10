@@ -242,6 +242,9 @@ ul > li {
   .intro h2 {
     --font-size: var(--global-small__heading);
     font-size: var(--font-size);
+    font-family: "Noah-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1.54em;
+    font-weight: 600;
   }
 }
 
@@ -384,14 +387,15 @@ ul > li {
 
 .article__lead {
   color: #c2c1c9;
-  font-size: 2.2rem;
+  font-size: 2.33rem;
   line-height: 1.4;
   margin-bottom: 1.2em;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
   .article__lead {
-    max-width: 24em;
+    max-width: 27em;
   }
 }
 
@@ -809,7 +813,7 @@ article::after {
   content: '';
   position: absolute;
   padding: 0;
-  border-bottom: 1px solid rgba(194, 193, 201, 0.3);
+  border-bottom: 1px solid rgba(194, 193, 201, 0.2);
   width: 1000%;
   bottom: 0;
   right: -100%;
@@ -841,8 +845,8 @@ footer {
     width: 100%;
     width: 100%;
     margin: 0 auto;
-    border-left: solid 1px #76757b;
-    border-right: solid 1px #76757b;
+    border-left: solid 1px #5c5b62;
+    border-right: solid 1px #5c5b62;
     padding: 3.66em 2.6em 4.2em;
   }
 }
@@ -1048,8 +1052,8 @@ main {
 .dark,
 .light {
   color: #c2c1c9;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in;
+  transition: background-color 0.4s ease-in;
 }
 
 @media (min-width: 1024px) {
