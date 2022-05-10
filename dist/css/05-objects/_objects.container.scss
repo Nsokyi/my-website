@@ -26,30 +26,19 @@ main {
 	}
 
 	@include lg {
-		// background: url('../img/bg-lines.svg') no-repeat center -51px;
-		// background-blend-mode: multiply;
 		background-color: transparent;
 		padding: 0;
 	}
-	@include xxl {
-		// max-width: 159.375rem;
-		// overflow-x: visible;
-	}
+
 }
 
 .dark,
 .light {
-	// background-color: rgba(31, 31, 31, 0.93);
 	color: $color-grey-000;
-	transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.4s ease-in;
 
-	// @include md {
-	// 	background-color: $color-grey-2000-9;
-	// }
 
 	@include lg {
-		// background-blend-mode: multiply;
-		// background-color: rgba(34, 34, 34, 0.9);
 		background-color: rgba(33, 33, 36, 0.9);
 		width: 100vw;
 		position: relative;
