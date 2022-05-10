@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en-gb" dir="ltr" class="no-js" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Build a Custom Hero Section Using Advanced Custom Fields</title>
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Freelance Web Designer in Edinburgh, providing user-friendly websites. Professional web design services making it easy for you to get your business online">
+	<meta name="abstract" content="Web Design Edinburgh for professional, bespoke websites" />
+	<meta name="distribution" content="GLOBAL" />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="3 days" />
+	<meta name="resource-type" content="document" />
+	<meta name="rating" content="Safe For Kids" />
+	<meta name="geo.position" content="55.939889;-3.214152" />
+	<meta name="ICBM" content="55.939889, -3.214152" />
+	<meta name="document-classification" content="Internet" />
+	<meta name="document-type" content="Public" />
+	<meta name="author" content="Noah Breen Web Design www.noahsportfolio.com" />
+	<meta name="page-topic" content="Freelance Web site Designer Edinburgh" />
+	<meta name="document-rights" content="Copywritten Work" />
+	<meta name="copyright" content="Noah Breen - Web Designer Scotland - 2020" />
+	<meta name="rating" content="General" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Build a Custom Hero Section Using Advanced Custom Fields" />
+	<meta property="og:description" content="In this post I explian how I made a hero section for a Wordpress theme using the Advanced Custom Fields plugin.">
+	<meta property="og:site_name" content="Freelance Web Designer Edinburgh • Noah Breen">
+	<meta property="og:url" content="https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields/" />
+	<meta property="og:image" content="/assets/img/og-image.png" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@noahbreen" />
+	<meta name="twitter:creator" content="@noahbreen" />
+	<meta name="twitter:title" content="Build a Custom Hero Section Using Advanced Custom Fields" />
+	<meta name="twitter:description" content="In this post I explian how I made a hero section for a Wordpress theme using the Advanced Custom Fields plugin.">
+	<meta name="twitter:url" content="https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields/" />
+	<meta name="google-site-verification" content="mKp-e8nT5h_Nkwww7BVJ-YQsRj6aqGJtj6k0fWdXzMo" />
+	<meta name="p:domain_verify" content="3315f2fea4728791591c7c932b3926be" />
+	<link rel="canonical" href="https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields/">
+	<link rel="publisher" href="https://plus.google.com/u/0/+NoahBreen" />
+	<meta name="theme-color" content="#383838">
+
+	<!-- Stylesheets -->
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg">
+	<meta name="theme-color" content="#eeeeee">
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script>
+		document.createElement("picture");
+
+	</script>
+	<!-- <script>
+		window.lazySizesConfig = window.lazySizesConfig || {};
+		window.lazySizesConfig.expand = 1.5;
+
+	</script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.4/lazysizes.min.js"></script>
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-2369309-2', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<style>
+		body {
+			min-font-size: 16px;
+		}
+
+	</style>
+</head>
+
+
+<body class="page">
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	
+
+<div class="main-wrapper">
+	<div class="page-wrap">
+	<header class="header">
+		<div class="logo">
+			<a href="/#Intro" title="Noah's Portfolio" rel="home">Home</a>
+		</div>
+
+		<nav role="navigation">
+			<ul class="primary-nav">
+				<li><a href="/#Intro">Intro</a></li>
+				<li><a href="/#slide01">Portfolio</a></li>
+				<li><a href="/#slide02">About</a></li>
+				<li><a href="/#slide03">Services</a></li>
+				<li><a href="/#slide04">Blog</a></li>
+				<li><a href="/#slide05">Contact</a></li>
+			</ul>
+		</nav>
+
+		<a class="primary-nav-trigger" href="#"><span class="menu-icon"></span></a>
+	</header>
+
+
+	<div class="site-container light-bg">
+		<div class="wrapper">
+			<div class="post-page-content">
+
+  <div class="post-wrapper">
+
+    <div class="post">
+
+      <header class="post-header">
+        <h1 class="post-title">Build a Custom Hero Section Using Advanced Custom Fields</h1>
+        <p class="post-meta">20 September, 2019</p>
+      </header>
+
+      <article class="post-content">
+        <h2 id="intro">Intro</h2>
+
+<p>When developing custom Wordpress websites I like to build customisable areas where the user can place specific content and functionality that Wordpress can not otherwise provide. To apply these customisable areas I like to use either <a href="https://github.com/CMB2/CMB2" target="_blank">CMB2</a> or the <a href="https://www.advancedcustomfields.com/" target="_blank">Advanced Custom Fields Plugin</a></p>
+
+<p>When using ACF, or CMB2 you can setup customisable sections within the Wordpress theme that  will assist the client with future changes to these areas, such as image sliders, custom sidebars, headers and footers.</p>
+
+<p>Recently, I built a customisable hero section using the Advanced Custom Fields Plugin and using the <a href="https://bulma.io/" target="_blank">Bulma</a> CSS framework to quickly setup the style and layout for the hero section and the Wordpress theme. Below are the development steps that I took.</p>
+
+<h3 id="step-one">Step One</h3>
+
+<p>Install and activate the Advanced Custom Fields Plugin.</p>
+
+<figure>
+    <img src="/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-01.jpg" alt="Advanced Custom Fields plugin install" />
+</figure>
+
+<h3 id="step-two">Step Two</h3>
+
+<p>Go to the Custom Field Groups and click ‘Add New’. From there set up the new fields.</p>
+<figure>
+    <img src="/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-02.jpg" alt="Edit Fields screenshot" />
+</figure>
+
+<p>When it comes to setting up a call to action button in ACF make a new field, and make it a ‘Field Group’. Then add as many ’Sub Fields’ as you need. In my example, I have one for the button title and another for the button link.</p>
+<figure>
+    <img src="/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-03.jpg" alt="Edit call to action button fields" />
+</figure>
+
+<p>You can <a href="https://github.com/Nsokyi/ACF-Hero/blob/master/acf-export-2019-09-20.json" target="_blank" title="Download from GitHub">download</a> the AFC Jason file that I made in order to build the same Hero unit that I have, to use it just import the file through ACF tools.</p>
+
+<h3 id="step-three">Step Three</h3>
+
+<p>Call the following code in your functions file. If you’re not using the Bulma CSS framework then your code will look different.<br />
+<script src="https://gist-it.appspot.com/github/Nsokyi/ACF-Hero/blob/master/hero.php"></script></p>
+
+<p>In this case I’m using Bulma to give me a basic layout, colours, button styles etc. I have also added some custom CSS to allow for a background image to be positioned absolutely in the hero unit.<br />
+<script src="https://gist-it.appspot.com/github/Nsokyi/ACF-Hero/blob/master/hero.scss"></script></p>
+
+<p>Of course there are many ways to set this up and you could use ACF with Wordpress (Gutenberg) Blocks as well. I chose not to do this as I’d rather the end user stayed as far away from making design decisions as possible. Using ACF in this way you can give the client an uncluttered interface that allows you the designer/developer to set the different aspects such as image width, button type, heading type and so forth. At the same time it still allows the end user can make the desired changes without affecting the overall design vision.</p>
+
+      </article>
+
+    </div>
+
+  </div><!-- post-wrapper -->
+
+<nav class="post-nav contact-target" role="navigation">
+    <ul class="post-nav-lst">
+        <li class="post-nav-prev"><a href="/music-to-code-to/" rel="prev"><span class="arrow-left"></span><span class="post-prev-desc">Previous post</span><span class="post-prev-title">Music to code to</span></a></li>
+        <li class="post-nav-next"></li>
+    </ul>
+</nav>
+
+</div><!-- post-page-content -->
+
+		</div>
+	</div><!-- site-container -->
+
+	</div><!-- page-wrap -->
+
+
+	<footer id="footer" class="site-footer">
+    <div class="footer-paralax">
+        <h2>Let's make something awesome</h2>
+        <!-- <p>Like my work, and interested in working together? Get in touch so we can discuss your requirements.</p> -->
+        <p>
+            <strong>Like what you've seen then get in touch and we can discuss your next project.</strong>
+        </p>
+        <a href="/#slide05" class="button button-footer">Contact Me</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="block copyright">
+            &copy; 2022 Noah Breen &CenterDot; Freelance Web Designer &CenterDot; <a href="/privacy-policy">Privacy Policy</a>
+        </div>
+        <div class="block footer-links">
+            <a href="/#intro">Web Designer Edinburgh</a>
+        </div>
+    </div>
+
+</footer>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" defer></script>
+<script>
+	window.jQuery || document.write(unescape(
+		'%3Cscript src="/assets/js/vendor/jquery-2.0.3.min.js">%3C/script>'))
+
+</script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/DrawSVGPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.7/fontfaceobserver.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.2/picturefill.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.pkgd.min.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+
+	</div><!-- main-wrapper -->
+</body>
+
+</html>

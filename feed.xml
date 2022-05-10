@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://www.noahsportfolio.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.noahsportfolio.com/" rel="alternate" type="text/html" /><updated>2022-05-10T11:46:47+01:00</updated><id>https://www.noahsportfolio.com/feed.xml</id><title type="html">Freelance Web Designer Edinburgh • Noah Breen</title><subtitle>Freelance Web Designer in Edinburgh, providing user-friendly websites. Professional web design services making it easy for you to get your business online</subtitle><entry><title type="html">Build a Custom Hero Section Using Advanced Custom Fields</title><link href="https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields/" rel="alternate" type="text/html" title="Build a Custom Hero Section Using Advanced Custom Fields" /><published>2019-09-20T11:57:00+01:00</published><updated>2019-09-20T11:57:00+01:00</updated><id>https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields</id><content type="html" xml:base="https://www.noahsportfolio.com/build-a-custom-hero-section-using-advanced-custom-fields/">&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;When developing custom Wordpress websites I like to build customisable areas where the user can place specific content and functionality that Wordpress can not otherwise provide. To apply these customisable areas I like to use either &lt;a href=&quot;https://github.com/CMB2/CMB2&quot; target=&quot;_blank&quot;&gt;CMB2&lt;/a&gt; or the &lt;a href=&quot;https://www.advancedcustomfields.com/&quot; target=&quot;_blank&quot;&gt;Advanced Custom Fields Plugin&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When using ACF, or CMB2 you can setup customisable sections within the Wordpress theme that  will assist the client with future changes to these areas, such as image sliders, custom sidebars, headers and footers.&lt;/p&gt;
+
+&lt;p&gt;Recently, I built a customisable hero section using the Advanced Custom Fields Plugin and using the &lt;a href=&quot;https://bulma.io/&quot; target=&quot;_blank&quot;&gt;Bulma&lt;/a&gt; CSS framework to quickly setup the style and layout for the hero section and the Wordpress theme. Below are the development steps that I took.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-one&quot;&gt;Step One&lt;/h3&gt;
+
+&lt;p&gt;Install and activate the Advanced Custom Fields Plugin.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-01.jpg&quot; alt=&quot;Advanced Custom Fields plugin install&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-two&quot;&gt;Step Two&lt;/h3&gt;
+
+&lt;p&gt;Go to the Custom Field Groups and click ‘Add New’. From there set up the new fields.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-02.jpg&quot; alt=&quot;Edit Fields screenshot&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;When it comes to setting up a call to action button in ACF make a new field, and make it a ‘Field Group’. Then add as many ’Sub Fields’ as you need. In my example, I have one for the button title and another for the button link.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2019-09-16-build-a-custom-hero-section-using-advanced-custom-fields/acf-screenshot-03.jpg&quot; alt=&quot;Edit call to action button fields&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;https://github.com/Nsokyi/ACF-Hero/blob/master/acf-export-2019-09-20.json&quot; target=&quot;_blank&quot; title=&quot;Download from GitHub&quot;&gt;download&lt;/a&gt; the AFC Jason file that I made in order to build the same Hero unit that I have, to use it just import the file through ACF tools.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-three&quot;&gt;Step Three&lt;/h3&gt;
+
+&lt;p&gt;Call the following code in your functions file. If you’re not using the Bulma CSS framework then your code will look different.&lt;br /&gt;
+&lt;script src=&quot;https://gist-it.appspot.com/github/Nsokyi/ACF-Hero/blob/master/hero.php&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case I’m using Bulma to give me a basic layout, colours, button styles etc. I have also added some custom CSS to allow for a background image to be positioned absolutely in the hero unit.&lt;br /&gt;
+&lt;script src=&quot;https://gist-it.appspot.com/github/Nsokyi/ACF-Hero/blob/master/hero.scss&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course there are many ways to set this up and you could use ACF with Wordpress (Gutenberg) Blocks as well. I chose not to do this as I’d rather the end user stayed as far away from making design decisions as possible. Using ACF in this way you can give the client an uncluttered interface that allows you the designer/developer to set the different aspects such as image width, button type, heading type and so forth. At the same time it still allows the end user can make the desired changes without affecting the overall design vision.&lt;/p&gt;</content><author><name></name></author><summary type="html">In this post I explian how I made a hero section for a Wordpress theme using the Advanced Custom Fields plugin.</summary></entry><entry><title type="html">Music to code to</title><link href="https://www.noahsportfolio.com/music-to-code-to/" rel="alternate" type="text/html" title="Music to code to" /><published>2017-12-04T12:00:00+00:00</published><updated>2017-12-04T12:00:00+00:00</updated><id>https://www.noahsportfolio.com/music-to-code-to</id><content type="html" xml:base="https://www.noahsportfolio.com/music-to-code-to/">&lt;h2 id=&quot;best-background-music-to-listen-to-at-work&quot;&gt;Best background music to listen to at work&lt;/h2&gt;
+
+&lt;p&gt;There are time when I don’t want any distractions at all and for those times nothing can beat silence, but in resent times there has been a lot of building work going on outside my windows so on occasions where the axel grinder is grinding my nerves as well as the concrete I like to block as much out as possible with music that helps me stay focused.&lt;/p&gt;
+
+&lt;p&gt;The music I work to can vary depending on the task I am undertaking. The more technical the task the more I veer towards some for of minimal electronic music and when it’s more design focused I lean towards a funkier feel.&lt;/p&gt;
+
+&lt;p&gt;When engaging the left side of the brain (supposedly the logic side) I prefer beat oriented music as opposed to vocal based music as this puts me into a more computational mind frame. In the same way that Buddhist chanting can put people into a meditative state, the repetitive nature of electronic music puts me into a focused machine like state.&lt;/p&gt;
+
+&lt;p&gt;Some albums work but the album form is generally to short in length to work to. I’ve tried them in the past and find I spend too much time having to flick between albums or I end up putting them on a loop and get bored of hearing the same songs over and over again.&lt;/p&gt;
+
+&lt;p&gt;Playlists of songs can be fun to make up though I do find this to be somewhat time consuming and distracting.&lt;/p&gt;
+
+&lt;p&gt;The perfect alternative to albums and playlists are podcasts. Find one that has music you can listen whilst programming or coding then you can in theory listen to music uninterrupted all day.&lt;/p&gt;
+
+&lt;p&gt;In no particular order, these are some of my favourite podcasts to listen to:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2017-12-04-music-to-code-to/podcast-logo-1.png&quot; alt=&quot;Resident Advisor logo&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;-solid-steel-podcast-&quot;&gt;&lt;a href=&quot;https://itunes.apple.com/gb/podcast/solid-steel/id88395834?mt=2&quot;&gt; Solid Steel Podcast &lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;span class=&quot;small&quot;&gt;Recent favourites are ‘Tony Allen’ and ‘Metronomy’.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This is released monthly and comprises of tracks with fantastic beats, playing across a wide spectrum of musical genres. I mainly listen these when undertaking design tasks as sometimes they include a lot of vocal tracks.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2017-12-04-music-to-code-to/podcast-logo-2.png&quot; alt=&quot;Resident Advisor logo&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;-resident-advisor-podcast-&quot;&gt;&lt;a href=&quot;https://www.residentadvisor.net/podcast.aspx&quot;&gt; Resident Advisor Podcast &lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class=&quot;small&quot;&gt;Recent favourites are ‘Neel’ and ‘Anastasia Kristensen’.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This is released weekly and they feature a mix of electronic music from musicians and DJs. I like to listen to these podcasts when I am coding because it is more house based.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2017-12-04-music-to-code-to/podcast-logo-3.png&quot; alt=&quot;Boiler Rooms Sessions logo&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;-boiler-rooms-sessions-youtube-&quot;&gt;&lt;a href=&quot;https://www.youtube.com/user/brtvofficial&quot;&gt; Boiler Rooms Sessions (YouTube) &lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;This is a collection of underground music with a wide variety of styles ranging from hip hop to dubstep. This makes it a great place to look at for music for a multitude of tasks.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2017-12-04-music-to-code-to/podcast-logo-4.png&quot; alt=&quot;Low End Theory logo&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;-low-end-theory&quot;&gt;&lt;a href=&quot;https://itunes.apple.com/gb/podcast/low-end-theory-podcast/id307221046?mt=2&quot;&gt; Low End Theory&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class=&quot;small&quot;&gt;Recent favourit Nobody and Tsuruda.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;High quality and quite an eclectic mix of Hip Hop, Techno, Soul, funk, and much more.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2017-12-04-music-to-code-to/podcast-logo-5.png&quot; alt=&quot;ShopTalk Show logo&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;-shoptalk-show-&quot;&gt;&lt;a href=&quot;https://itunes.apple.com/gb/podcast/shoptalk/id493890455?mt=2&quot;&gt; ShopTalk Show &lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;OK so this one isn’t music. Sometimes if I’m doing more creative work then I can listen to people talk as well as work and on some occasions I like to listen to the ShopTalk Show, which is a fun show about all things internet, web development and web design.&lt;/p&gt;</content><author><name></name></author><summary type="html">Sometimes it's good to block out the outside world and build a wall of sound to protect your self from distraction. Make code great again by diving into music that's great to code to.</summary></entry><entry><title type="html">Nine Facts About WordPress in 2017 Infographic</title><link href="https://www.noahsportfolio.com/nine-facts-about-wordpress-in-2017-infographic/" rel="alternate" type="text/html" title="Nine Facts About WordPress in 2017 Infographic" /><published>2017-04-12T16:56:21+01:00</published><updated>2017-04-12T16:56:21+01:00</updated><id>https://www.noahsportfolio.com/nine-facts-about-wordpress-in-2017-infographic</id><content type="html" xml:base="https://www.noahsportfolio.com/nine-facts-about-wordpress-in-2017-infographic/">&lt;p&gt;It’s been a great start to 2017 for WordPress. With over fifty-six million downloads and powering 27% of the internet Wordpress continues to look unstoppable in 2017.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/img/posts/2017-04-12-nine-facts-about-wordpress-in-2017-infographic/nine-facts-about-wordpress-in-2017.png&quot;&gt;
+&lt;img border=&quot;0&quot; alt=&quot;WordPress Infographic 2017&quot; src=&quot;/assets/img/posts/2017-04-12-nine-facts-about-wordpress-in-2017-infographic/nine-facts-about-wordpress-in-2017.png&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Embed this Infographic on your site by copying code below:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;
+  &lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div style=&quot;clear:both&quot;&amp;gt;
+ &amp;lt;a href=&quot;https://www.noahsportfolio.com/nine-facts-about-wordpress-in-2017/&quot;&amp;gt;
+ &amp;lt;img src=&quot;https://www.noahsportfolio.com/assets/img/posts/2017-04-12-nine-facts-about-wordpress-in-2017-infographic/nine-facts-about-wordpress-in-2017.png&quot; title=&quot;Infographic: Nine Facts About WordPress in 2017&quot; alt=&quot;Infographic: Nine Facts About WordPress in 2017&quot; border=&quot;0&quot; /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;Courtesy of: &amp;lt;a href=&quot;https://www.noahsportfolio.com/nine-facts-about-wordpress-in-2017-infographic/&quot;&amp;gt;Noah Breen&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;</content><author><name></name></author><summary type="html">It's been a great start of 2017 for WordPress. With over fifty six million downloads and powering 27% of the internet Wordpress continues to look unstoppable in 2017.</summary></entry><entry><title type="html">A slight Re-Design And a Blog</title><link href="https://www.noahsportfolio.com/a-slight-re-design-and-a-blog/" rel="alternate" type="text/html" title="A slight Re-Design And a Blog" /><published>2015-03-05T10:27:00+00:00</published><updated>2015-03-05T10:27:00+00:00</updated><id>https://www.noahsportfolio.com/a-slight-re-design-and-a-blog</id><content type="html" xml:base="https://www.noahsportfolio.com/a-slight-re-design-and-a-blog/">&lt;p&gt;As any freelance Web Designer knows it’s not just enough to have a website, online portfolio, social media. These days in order to stand out and improve your Google stats, you have to have a blog too. Time for a slight re-design.&lt;/p&gt;
+
+&lt;p&gt;The first step in the process was to really focus on having a cup of tea and starring out of the window. Then I decided I needed to come up with a plan, everything is easier when you have a plan. Just recently I was reading various short interviews with designers and what tools they could not live without, a lot of them were the obvious ones like Photoshop or GitHub, and then one mentioned &lt;a href=&quot;https://trello.com/&quot;&gt;Trello&lt;/a&gt;. Trello is an online app for organising your workload into dynamic lists that either your team or clients can view and contribute to and allows you to see where everyone is at, at a glance. It’s very fast to learn and very fast to make up numerous to do lists that have labels and notes and sub-lists, a great way to free your mind from all the stuff you’ve tasked yourself with when doing a project.&lt;/p&gt;
+
+&lt;p&gt;With my workload organised I began the redesign process by roughly sketching up what I wanted the single post page to look like and what I wanted to have on it. To keep in with the front page of the site I decided it should be simple and easy to read, with an off white background the same as the &lt;a title=&quot;Link to the About Me section on the Home Page&quot; href=&quot;http://www.noahsportfolio.com/#about&quot;&gt;About Me&lt;/a&gt; section on the front page and very dark blue (which matches the colour of the main menu) for the text colour. This combination gives the page less contrast and makes it less dazzling to the reader’s eyes on any monitor. At first I thought I should go with the featured image always at the top of the page but then I thought about load times. If I always had a big image at the top and then included more images on top of that it could have a detrimental effect unload times (no-one likes slow loading pages) and sometimes there just might be no need to have any images whatsoever, gasp!&lt;/p&gt;
+
+&lt;p&gt;On the &lt;a title=&quot;Link back to the Home Page&quot; href=&quot;http://www.noahsportfolio.com/&quot;&gt;Home Page&lt;/a&gt; I decided to add a recent posts section. As an afterthought the first post, this post, is going to look a little lonesome standing there for a while until I find something else to talk about but when others are added then the grooviness will automatically kick in. On large desktop screens a previous and next button will appear and users will be able to cycle left and right through posts on a carousel, on mobile devises the carousel will automatically cycle through posts and only show 3, 2 or 1 posts depending on screen size.&lt;/p&gt;
+
+&lt;p&gt;I know it’s trendy to use Owl Slider but it’s infinite option is still a bit flaky so went for &lt;a href=&quot;https://kenwheeler.github.io/slick/&quot;&gt;Slick Slider&lt;/a&gt; instead. Another reason for using Slick was the fact that &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;Zurb Foundation&lt;/a&gt; (the framework I choose to build most sites in) no longer supports Orbit slider which I had previously used in the modal windows in the &lt;a href=&quot;http://www.noahsportfolio.com/#projects&quot;&gt;Projects&lt;/a&gt; section. Also in the portfolio modal windows I added a little more graphic detail to draw the eye inwards.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2015-03-05-a-slight-re-design-and-a-blog/screen-shot-before-after.png&quot; alt=&quot;modal windows&quot; width=&quot;752&quot; /&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I knew that using Wordpress would add a bit more in terms of loading time to the site so this time around I’m minifying all my script files and using a bit of SASS to pre-compile my CSS and then spit it out all into one line. I also used “&lt;a href=&quot;https://github.com/svg/svgo&quot;&gt;SVGO&lt;/a&gt;” a Nodejs based tool for optimising SVGs files (the big wavy lines in the background), you can use it as a &lt;a href=&quot;https://jakearchibald.github.io/svgomg/&quot;&gt;web app&lt;/a&gt; or in the terminal.&lt;/p&gt;
+
+&lt;p&gt;The main menu once had the little Asterisk/Star logo in the middle of the menu but due to the addition of the &lt;a href=&quot;http://www.noahsportfolio.com/#posts&quot;&gt;Posts&lt;/a&gt; menu item it no longer looked right in the centre and therefore I moved it over to the left where it serves as a handy way to get to the top of the page when scrolling down. I also changed it from a PNG to SVG so no matter how big or small it will always retain it’s image quality.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;/assets/img/posts/2015-03-05-a-slight-re-design-and-a-blog/screen-shot-before-after2.png&quot; alt=&quot;navigation menus&quot; width=&quot;752&quot; /&gt;
+    &lt;figcaption&gt;Main Menu Before and after&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;So looking up at this post and realising I’ve probably written to much for my first post this may bode well for future posts where I will be talking about being a Freelance Web Designer, and the work that I do including logo design and maybe even photography and animation. Stay tuned… Or even better &lt;a href=&quot;http://www.noahsportfolio.com/#contact&quot;&gt;get in touch&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">This post describes how I went about making slight changes and update to an old version of my website.</summary></entry></feed>

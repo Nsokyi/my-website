@@ -1268,6 +1268,10 @@ main {
   color: rgba(44, 43, 48, 0.8);
 }
 
+.close .nav {
+  visibility: hidden;
+}
+
 .open .nav {
   visibility: visible;
 }
