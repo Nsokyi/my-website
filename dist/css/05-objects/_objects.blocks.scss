@@ -146,155 +146,7 @@ footer {
 	}
 }
 
-/* Menu Overlay */
-// $transition--length: .8;
-
-// .overlay {
-// 	$width: 100vw;
-// 	$height: 100vh;
-// 	$font--size--calc: calc(2vw + 10px);
-// 	$transition--easing: cubic-bezier(.77,0,.175,1);
-// 	position: fixed;
-// 	z-index:1;
-
-	// position: fixed;
-	// background: rgba($color-grey-2000, .9);
-	// top: 0;
-	// left: 0;
-	// width:$width;
-	// height:$height;
-	// // opacity: 0;
-	// visibility: hidden;
-	// transition: visibility .3s;
-	// transition-delay: .3s;
-	// transition: transform $transition--easing $transition--length + s;
-	// overflow: hidden;
-	// z-index: 1;
-
-	// &:before,&:after{
-	// 	content: "";
-	// 	position: fixed;
-	// 	width:$width;
-	// 	height:$height;
-	// 	background: rgba($color-pink-200, 1);
-	// 	z-index: -1;
-	// 	transition: transform $transition--easing $transition--length + s;
-	// }
-	// &:after{
-	// 	height: $height;
-	// 	background: rgba($color-grey-600, 1);
-	// 	transform: translateX(0%) translateY(-219%);
-	// 	z-index: -2;
-	// 	transition-delay: 0s;
-	// }
-	// &:before{
-	// 	transform: translateX(0%) translateY(-122%);
-	// 	transition-delay: .0s;
-	// }
-
-	// &.open {
-		// opacity: 0.95;
-		// visibility: visible;
-		// height: 100vh;
-		// width: 100vw;
-		// transition-delay: .2s;
-		// z-index: 3;
-
-		// &:before,&:after{
-		// 	transform: translateX(0%) translateY(-18%);
-		// }
-		// &:after{
-		// 	transition-delay: .1s;
-		// }
-		// &:before{
-		// 	transition-delay: 0s;
-		// }
-
-	// 	li {
-	// 		animation: fadeInRight 0.5s ease forwards;
-	// 		animation-delay: 0.35s;
-
-	// 		&:nth-of-type(2) {
-	// 			animation-delay: 0.4s;
-	// 		}
-	// 		&:nth-of-type(3) {
-	// 			animation-delay: 0.45s;
-	// 		}
-	// 		&:nth-of-type(4) {
-	// 			animation-delay: 0.5s;
-	// 		}
-	// 	}
-	// }
-
-	// nav {
-	// 	$width: 100vw;
-	// 	$height: 100vh;
-	// 	position: relative;
-	// 	height: $height;
-	// 	top: 10%;
-		// transform: translateY(-50%);
-	// 	$transition--easing: cubic-bezier(.77,0,.175,1);
-	// 	font-size: 3rem;
-	// 	font-weight: 100;
-	// 	text-align: center;
-	// }
-	// ul {
-	// 	list-style: none;
-	// 	padding: 0;
-	// 	margin: 0 auto;
-	// 	display: inline-block;
-	// 	position: relative;
-// 		height: $height;
-
-// 		li {
-// 			display: block;
-// 			height: 25%;
-// 			height: calc(100% / 6);
-// 			min-height: 50px;
-// 			position: relative;
-// 			opacity: 0;
-
-// 			a {
-// 				display: block;
-// 				position: relative;
-// 				color: $color-primary;
-// 				text-decoration: none;
-// 				overflow: hidden;
-
-// 				&:hover:after,
-// 				&:focus:after,
-// 				&:active:after {
-// 					width: 100%;
-// 				}
-
-// 				&:after {
-// 					content: '';
-// 					position: absolute;
-// 					bottom: 0;
-// 					left: 50%;
-// 					width: 0%;
-// 					transform: translateX(-50%);
-// 					height: 3px;
-// 					background: $color-primary;
-// 					transition: 0.35s;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-// @keyframes fadeInRight {
-// 	0% {
-// 		opacity: 0;
-// 		left: 20%;
-// 	}
-// 	100% {
-// 		opacity: 1;
-// 		left: 0;
-// 	}
-// }
-
-// Secondary menu goes across the top on big desktop screen 
+// Secondary menu goes across the top on big desktop screen
 
 .secondary--menu {
 	display: none;
@@ -331,9 +183,9 @@ footer {
 			}
 		}
 
-@media screen and (min-width: 1277px) {
-	transform: translateX(19.77em);
-}
+		@media screen and (min-width: 1277px) {
+			transform: translateX(19.77em);
+		}
 
 		@include xxl {
 			position: fixed;
