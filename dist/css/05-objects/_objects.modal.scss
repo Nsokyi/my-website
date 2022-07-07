@@ -1,35 +1,106 @@
 /* ==========================================================================
    #MODAL-OBJECT
    ========================================================================== */
+$transition--length: 0.8;
 
-.o-modal {
-	@include basic-transition(transform, $duration: 0.5s);
+.overlay.close {
+	.overlay--info {
+		opacity: 0;
+	}
+}
 
-	position: fixed;
-	z-index: map-get($z-layers, modal);
-	left: 50%;
-	top: 50%;
-	display: none;
-	width: 600px;
-	max-width: 90%;
-	max-width: calc(100% - #{$spacing-lg});
-	max-height: 90%;
-	max-height: calc(100% - #{$spacing-lg});
-	overflow-x: hidden;
-	overflow-y: auto;
-	transform: translate(-50%, -200vh);
-	transform: translate(-50%, calc(-100vh - 105%));
-	will-change: transform;
-	pointer-events: none;
-	-webkit-overflow-scrolling: touch;
+.overlay.open {
+	.overlay--info {
+		color: black;
+		font-family: $font-body;
+		font-size: var(--font-size);
+		opacity: 1;
+		position: fixed;
+		transform: translateX(0%);
+		transition: all 2s ease;
+		z-index: 4;
 
-	@supports (pointer-events: auto) {
-		display: block;
-		pointer-events: none;
+		a {
+			color: black;
+		}
+	}
+}
+
+// Overlay on highlight mode
+.overlay.open {
+	.overlay--info.overlay--highlight {
+		color: $color-grey;
+
+		a {
+			color: $color-grey;
+		}
+	}
+}
+
+.sidebar.down {
+	z-index: 1;
+}
+
+.sidebar.up {
+	z-index: 9;
+
+	.logo__toplink {
+		fill: $color-grey-2000-9;
 	}
 
-	&.is-active {
-		transform: translate(-50%, -50%);
-		pointer-events: auto;
+	.logo__toplink.logo--highlight {
+		fill: $color-grey;
+	}
+
+	li {
+		a {
+			color: $color-grey-2000-9;
+			box-shadow: inset 0 0 0 1px $color-grey-2000-9;
+
+			&:hover {
+				color: $color-grey-2000-9;
+				background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+				fill: $color-grey-2000-9;
+				stroke: $color-grey-2000-9;
+
+				svg {
+					fill: $color-grey-2000-9;
+					stroke: $color-grey-2000-9;
+				}
+			}
+		}
+
+		svg {
+			fill: $color-grey-2000-9;
+			stroke: $color-grey-2000-9;
+		}
+	}
+}
+
+.sidebar.up {
+	ul.icons--highlight {
+		li {
+			a {
+				color: $color-grey;
+				box-shadow: inset 0 0 0 1px $color-grey;
+
+				&:hover {
+					color: $color-grey;
+					background-image: linear-gradient(to right, rgba(107, 105, 105, 0) 0%, rgba(124, 123, 123, 0) 100%);
+					fill: $color-grey;
+					stroke: $color-grey;
+
+					svg {
+						fill: $color-grey;
+						stroke: $color-grey;
+					}
+				}
+			}
+
+			svg {
+				fill: $color-grey;
+				stroke: $color-grey;
+			}
+		}
 	}
 }

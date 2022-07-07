@@ -1,6 +1,7 @@
 /* ## Hamburger Menu
 --------------------------------------------- */
 const article = document.querySelector("#overlay");
+const aside = document.querySelector("#sidebar");
 const hamburger = document.querySelector("#toggle");
 const navLinks = document.getElementsByClassName("nav__list-item");
 
@@ -17,9 +18,11 @@ function readMore() {
       // Read less
     article.className = "overlay close";
     hamburger. className = ('bttn_container off');
+    aside. className = ('sidebar down');
   } else {
     article.className = "overlay open";
     hamburger. className = ('bttn_container active');
+    aside. className = ('sidebar up');
   }
 }
 
@@ -539,6 +542,40 @@ ScrollTrigger.create({
   scrub: true
 });
 
+// Add class to Highlight Logo
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-300px top",
+  toggleClass: {
+    targets: '.logo__toplink',
+    className: 'logo--highlight'
+  },
+  scrub: true
+});
+
+// Add class to Overlay
+ScrollTrigger.create({
+  trigger: ".light",
+  start: "-300px top",
+  toggleClass: {
+    targets: '.overlay--info',
+    className: 'overlay--highlight'
+  },
+  scrub: true
+});
+
+
+// Get in touch Button Fade In
+gsap.to(".anime-btn", {
+  scrollTrigger: {
+    trigger: "#intro",
+    start: "top 10%",
+    end: "bottom -300%",
+    ease:Power1. easeInOut
+  },
+ opacity: 1
+});
+
 
 
 /* ## Hide Secondary menu on scroll
@@ -573,17 +610,83 @@ ScrollTrigger.matchMedia({
   });
 
 
-  
-
-
-
 
 /* ## Big scroll to btn
 --------------------------------------------- */
 const btt = document.querySelector(".arrow-down");
 
-btt.addEventListener("click", () => gsap.to(window, {scrollTo:"#portfolio",  ease:Power1. easeInOut}));
+btt.addEventListener("click", () => gsap.to(window, {scrollTo:"#portfolio",}));
 gsap.set(btt, {y: 50});
-gsap.to(btt, {
-  y: 0,
+gsap.to(btt, {  ease:Power1. easeInOut }
+);
+
+
+
+
+/* ## Start animation for the header intro.
+--------------------------------------------- */
+
+// Noah Heading
+var rule = CSSRulePlugin.getRule(".noah:after");
+gsap.fromTo(rule, {cssRule: {opacity: 1}}, {cssRule: {scaleX: 0, opacity: 1}, duration: 2,  ease: 'bounce.out'}, 0);
+gsap.fromTo('.noah', {opacity:0, x:'-=600'}, {x:'0', stagger: 0.5, duration: 1.5, opacity: 1, ease: Power2.easeOut}, 0.2);
+
+// Breen Heading
+var rule = CSSRulePlugin.getRule(".breen:after");
+gsap.fromTo(rule, {cssRule: {opacity: 1}}, {cssRule: {scaleX: 0, opacity: 1},  duration: 2,  ease: 'bounce.out'});
+gsap.fromTo('.breen', {opacity:0, x:'+=1800'}, {x:'0', duration: 1.5, opacity: 1, delay: 0.7, ease: Power2.easeOut});
+
+
+// Header Tag-Line & Intro Text
+var tl = gsap.timeline({defaults:{ease: "power4.inOut", duration: 1}})
+
+tl.to('.header__tag-line', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2})
+tl.to('.anime-1', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: 0.5, opacity: 1, y: 0, duration: 2.2})
+
+
+
+
+// H2 Headings
+
+gsap.registerPlugin(ScrollTrigger);
+console.clear();
+
+let targets = gsap.utils.toArray("article");
+
+targets.forEach((target) => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: target,
+      scaleX: 0,
+      start: "0% 45%",
+      markers: {
+        startColor: "white",
+        endColor: "yellow",
+        fontSize: "18px",
+        indent: 10
+      }
+    },
+    defaults: {
+      duration: 2,
+    }
+  });
+  
+  tl.fromTo(
+    target.querySelector(".block-01"),
+    { "--scaleX": 1, "--tx": "-104vmin" },
+    { "--scaleX": 0, "--tx": 0, ease: "bounce.out"}
+  );
+  
+    tl.fromTo(
+    target.querySelector(".block-02"),
+      { autoAlpha: 0, "--tx": "-60vmin" },
+      { autoAlpha: 1, "--tx": 0, duration: 1.9, delay: 0.5, ease: "bounce.out" }, "<"
+  );
+ 
 });
+
+
+
+
+
+

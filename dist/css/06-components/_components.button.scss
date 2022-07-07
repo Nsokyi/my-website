@@ -10,37 +10,37 @@
 	z-index: 100;
 
 	@include lg {
-	// position: absolute;
-	position: fixed;
-	top: 2.7em;
+		// position: absolute;
+		position: fixed;
+		top: 2.7em;
 
-	@include lg {
-		transform: translateX(85.9vw);	
-	}
+		@include lg {
+			transform: translateX(85.9vw);
+		}
 
-	// 1066
-	@media screen and (min-width: 1066px) {
-		transform: translateX(86.6vw);
-	}
+		// 1066
+		@media screen and (min-width: 1066px) {
+			transform: translateX(86.6vw);
+		}
 
-	// 1170
-	@media screen and (min-width: 1170px) {
-		transform: translateX(86.7vw);
-	}
+		// 1170
+		@media screen and (min-width: 1170px) {
+			transform: translateX(86.7vw);
+		}
 
-	// 1250
-	@media screen and (min-width: 1250px) {
-		transform: translateX(87.1vw);
-	}
+		// 1250
+		@media screen and (min-width: 1250px) {
+			transform: translateX(87.1vw);
+		}
 
-	@include xxl {
-		transform: translateX(56.6em);
-	}
+		@include xxl {
+			transform: translateX(56.6em);
+		}
 
-	@include xxxl {
-		transform: translateX(57em);
+		@include xxxl {
+			transform: translateX(57em);
+		}
 	}
-}
 }
 
 .bttn_container {
@@ -51,7 +51,7 @@
 	justify-content: end;
 
 	@include md {
-		transition: ease all .8s;
+		transition: ease all 0.8s;
 		justify-content: end;
 		display: flex;
 		margin-left: auto;
@@ -64,19 +64,19 @@
 
 	&.active {
 		.top {
-			background: rgba($color-grey-2000, .8);
+			background: rgba($color-grey-2000, 0.8);
 			transform: translateY(5px) translateX(0) rotate(45deg);
 			@include xxl {
 				transform: translateY(9px) translateX(0) rotate(45deg);
 			}
 		}
 		.middle {
-			background: rgba($color-grey-2000, .8);
+			background: rgba($color-grey-2000, 0.8);
 			opacity: 0;
 		}
 
 		.bottom {
-			background: rgba($color-grey-2000, .8);
+			background: rgba($color-grey-2000, 0.8);
 			transform: translateY(-11px) translateX(0) rotate(-45deg);
 		}
 	}
@@ -256,6 +256,9 @@ a.bttn-dark {
 }
 
 // Intro
+.anime-btn {
+	opacity: 0;
+}
 .intro {
 	&__bttn {
 		margin: 1.88em 0 0 0;
@@ -478,15 +481,13 @@ a.bttn-dark {
 	}
 
 	@include xl {
-			height: 17vw;
-			max-height: 13.59em;
-			max-width: 13.59em;
-			right: 1%;
-			top: -3em;
-			width: 17vw;
+		height: 17vw;
+		max-height: 13.59em;
+		max-width: 13.59em;
+		right: 1%;
+		top: -3em;
+		width: 17vw;
 	}
-
-
 
 	&__icon {
 		position: absolute;
@@ -529,10 +530,10 @@ a.bttn-dark {
 		white-space: nowrap;
 
 		@include xl {
-				--font-size: var(--small__heading);
-		font-size: 1.2rem;
-		font-size: var(--font-size);
-		} 
+			--font-size: var(--small__heading);
+			font-size: 1.2rem;
+			font-size: var(--font-size);
+		}
 	}
 
 	&:hover &__text {
@@ -553,8 +554,7 @@ a.bttn-dark {
 // --------------------------------------------- */
 
 .burger.burger--highlight > {
-
-	.bttn_container	span {
+	.bttn_container span {
 		background: $color-grey-2000;
 	}
 

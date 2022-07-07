@@ -23,6 +23,7 @@
 		font-family: quote($name);
 		font-style: $style;
 		font-weight: $weight;
+		font-display: swap;
 		src: $src;
 	}
 }
@@ -74,7 +75,7 @@ $letter-spacing: 0.098rem;
 	--global-tag-line: clamp(0.01em, calc(2 / 19 * 100vw), 0.14em);
 	--global-accordian-size: clamp(0.5em, calc(3 / 119.875 * 100vw), 2.6em);
 	--global-social-size: clamp(0.00099em, calc(2 / 108 * 100vw), 1.1em);
-	--global-porfolio-btn-size: clamp(.04em, calc(2 / 119.875 * 100vw), 1.1em);
+	--global-porfolio-btn-size: clamp(0.04em, calc(2 / 119.875 * 100vw), 1.1em);
 }
 
 /* 
@@ -116,32 +117,32 @@ h1 {
 		position: relative;
 
 		&::after {
-			content: '';
-			position: absolute;
-			top: 0.28em;
-			right: -0.52em;
-			height: 0.71em;
-			width: 1px;
-			background-color: $color-grey-000-4;
+			// content: '';
+			// position: absolute;
+			// top: 0.28em;
+			// right: -0.52em;
+			// height: 0.71em;
+			// width: 1px;
+			// background-color: $color-grey-000-4;
 
 			@include md {
-				height: 1.03em;
-				right: -0.344em;
-				top: 0.04em;
+				// height: 1.03em;
+				// right: -0.344em;
+				// top: 0.04em;
 			}
 
 			@include lg {
 				// height: 1.42em;
-				overflow: visible;
-				right: -40px;
-				z-index: 1;
+				// overflow: visible;
+				// right: -40px;
+				// z-index: 1;
 			}
 
 			@include xl {
 				// height: 100%;
 				// max-height: 280px;
 				// background-color: $color-grey-000-2;
-				display: none;
+				// display: none;
 			}
 		}
 	}
@@ -154,11 +155,8 @@ h2 {
 	line-height: 0.9;
 }
 
-
-h2:not(.intro h2, .about h2)
- {
+h2:not(.intro h2, .about h2) {
 	@include lg {
-		
 		margin-left: -5px;
 	}
 
@@ -170,14 +168,12 @@ h2:not(.intro h2, .about h2)
 .intro h2,
 .about h2 {
 	@include lg {
-		
 		margin-left: 2px;
 	}
 }
 
 article {
 	&:first-of-type {
-		
 	}
 }
 
@@ -336,7 +332,7 @@ ul > {
 			}
 
 			@include xl {
-				left: .49em;
+				left: 0.49em;
 			}
 		}
 	}
