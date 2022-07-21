@@ -106,7 +106,7 @@ switchAccordion = function(e) {
 // Main Slider Animation
 function initSliders() {
   gsap.set(".blog__inner", { autoAlpha: 1 });
-  gsap.set(".blog__slide", { opacity: 0, display: "flex" });
+  gsap.set(".blog__slide", { autoAlpha: 0, display: "flex" });
 
   let currentStep = 1;
   const totalSlides = document.querySelectorAll(".blog__slide").length;
@@ -123,7 +123,7 @@ function initSliders() {
 
     const tlIn = gsap.timeline({ id: "tlIn", defaults: { duration: 1.34, ease: "myEaseSmooth" } });
 
-    tlIn.fromTo(element, { xPercent: 101, autoAlpha: 0, opacity: 0 }, { xPercent: 0, autoAlpha: 1, opacity: 1, ease: Expo.easeInOut }, "<");
+    tlIn.fromTo(element, { xPercent: 101, autoAlpha: 0, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, autoAlpha: 1, ease: Expo.easeInOut }, "<");
 
     return tlIn;
   }
@@ -211,17 +211,19 @@ window.addEventListener("load", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 // Portfolio Item One
-gsap.set(".portfolio--01", { yPercent: 15});
+gsap.set(".portfolio--01", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--01", { yPercent: -6});
 gsap.set(".img--01", { yPercent: -15});
 gsap.set(".meta--01", { yPercent: -60});
 
 gsap.to(".portfolio--01", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--01",
-    end: "bottom center",
+    start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -257,17 +259,19 @@ gsap.to(".meta--01", {
 
 
 // Start Portfolio Item Two
-gsap.set(".portfolio--02", { yPercent: 15});
+gsap.set(".portfolio--02", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--02", { yPercent: -6});
 gsap.set(".img--02", { yPercent: -15});
 gsap.set(".meta--02", { yPercent: -60});
 
 gsap.to(".portfolio--02", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--02",
-    end: "bottom center",
+       start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -301,17 +305,19 @@ gsap.to(".meta--02", {
 // End Portfolio Item Two
 
 // Start Portfolio Item Three
-gsap.set(".portfolio--03", { yPercent: 15});
+gsap.set(".portfolio--03", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--03", { yPercent: -6});
 gsap.set(".img--03", { yPercent: -15});
 gsap.set(".meta--03", { yPercent: -60});
 
 gsap.to(".portfolio--03", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--03",
-    end: "bottom center",
+       start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -345,17 +351,19 @@ gsap.to(".meta--03", {
 // End Portfolio Item Three
 
 // Start Portfolio Item Four
-gsap.set(".portfolio--04", { yPercent: 15});
+gsap.set(".portfolio--04", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--04", { yPercent: -6});
 gsap.set(".img--04", { yPercent: -15});
 gsap.set(".meta--04", { yPercent: -60});
 
 gsap.to(".portfolio--04", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--04",
-    end: "bottom center",
+       start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -389,17 +397,19 @@ gsap.to(".meta--04", {
 // End Portfolio Item Four
 
 // Start Portfolio Item Five
-gsap.set(".portfolio--05", { yPercent: 15});
+gsap.set(".portfolio--05", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--05", { yPercent: -6});
 gsap.set(".img--05", { yPercent: -15});
 gsap.set(".meta--05", { yPercent: -60});
 
 gsap.to(".portfolio--05", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--05",
-    end: "bottom center",
+       start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -433,17 +443,19 @@ gsap.to(".meta--05", {
 // End Portfolio Item Five
 
 // Start Portfolio Item Six
-gsap.set(".portfolio--06", { yPercent: 15});
+gsap.set(".portfolio--06", { yPercent: 15, autoAlpha: 0 });
 gsap.set(".number--06", { yPercent: -6});
 gsap.set(".img--06", { yPercent: -15});
 gsap.set(".meta--06", { yPercent: -60});
 
 gsap.to(".portfolio--06", {
   yPercent: -5,
+  autoAlpha: 1,
   ease: "none",
   scrollTrigger: {
     trigger: ".portfolio--06",
-    end: "bottom center",
+       start: "22% 85%",
+    end: "0 55%",
     scrub: 1
   }, 
 });
@@ -475,7 +487,6 @@ gsap.to(".meta--06", {
   }, 
 });
 // End Portfolio Item Six
-
 
 
 
@@ -573,7 +584,26 @@ gsap.to(".anime-btn", {
     end: "bottom -300%",
     ease:Power1. easeInOut
   },
- opacity: 1
+ autoAlpha: 1
+});
+
+
+
+// About section text
+
+var actionAboot = gsap.to('.anime-2', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: 0.5, delay: 0.25, autoAlpha: 1, y: 0, duration: 2.2, ease: "power4.inOut" , paused:true });
+
+ScrollTrigger.create({
+  trigger: ".about",
+  start: "-20% top",
+  onEnter: () => actionAboot.play(),
+  onLeaveBack: () => actionAboot.reverse(),
+        markers: {
+        startColor: "white",
+        endColor: "yellow",
+        fontSize: "18px",
+        indent: 10
+      }
 });
 
 
@@ -616,7 +646,6 @@ ScrollTrigger.matchMedia({
 const btt = document.querySelector(".arrow-down");
 
 btt.addEventListener("click", () => gsap.to(window, {scrollTo:"#portfolio",}));
-gsap.set(btt, {y: 50});
 gsap.to(btt, {  ease:Power1. easeInOut }
 );
 
@@ -626,67 +655,72 @@ gsap.to(btt, {  ease:Power1. easeInOut }
 /* ## Start animation for the header intro.
 --------------------------------------------- */
 
-// Noah Heading
-var rule = CSSRulePlugin.getRule(".noah:after");
-gsap.fromTo(rule, {cssRule: {opacity: 1}}, {cssRule: {scaleX: 0, opacity: 1}, duration: 2,  ease: 'bounce.out'}, 0);
-gsap.fromTo('.noah', {opacity:0, x:'-=600'}, {x:'0', stagger: 0.5, duration: 1.5, opacity: 1, ease: Power2.easeOut}, 0.2);
-
-// Breen Heading
-var rule = CSSRulePlugin.getRule(".breen:after");
-gsap.fromTo(rule, {cssRule: {opacity: 1}}, {cssRule: {scaleX: 0, opacity: 1},  duration: 2,  ease: 'bounce.out'});
-gsap.fromTo('.breen', {opacity:0, x:'+=1800'}, {x:'0', duration: 1.5, opacity: 1, delay: 0.7, ease: Power2.easeOut});
+// Main Heading - Noah Breen Animation in 
 
 
-// Header Tag-Line & Intro Text
-var tl = gsap.timeline({defaults:{ease: "power4.inOut", duration: 1}})
+gsap.fromTo('h1 .block-01',{ "--scaleX": 1, "--tx": "150vw" }, { "--scaleX": 0, "--tx": 0, stagger: 1, duration: 3, ease: "bounce.out"});
+gsap.to('h1 .block-02',{ autoAlpha: 1, duration: 2.5, delay: 1, ease: "power1.out" }, "<");
 
-tl.to('.header__tag-line', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2})
-tl.to('.anime-1', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: 0.5, opacity: 1, y: 0, duration: 2.2})
 
+gsap.fromTo('h1 .block-03',{ "--scaleX": 1, "--tx": "-150vw" }, { "--scaleX": 0, "--tx": 0, stagger: 1, duration: 3, delay: 0.25, ease: "bounce.out"});
+gsap.fromTo('h1 .block-04', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2.5, delay: 1, ease: "power1.out" }, "<");
+
+gsap.fromTo('.ball', { autoAlpha: 0  }, { autoAlpha: 1, duration: 4, delay: 2, ease: "power1.out"});
+
+// // Header Tag-Line & Intro Text
+gsap.to('.header__tag-line', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', delay: 1, autoAlpha: 1, y: 0, duration: 2.2, ease: "power4.inOut" });
+gsap.to('.anime-1', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: 0.5, delay: 1, autoAlpha: 1, y: 0, duration: 2.2, ease: "power4.inOut" });
 
 
 
-// H2 Headings
 
-gsap.registerPlugin(ScrollTrigger);
-console.clear();
+// All H2 Headings
 
+gsap.config({
+  nullTargetWarn: false,
+});
 let targets = gsap.utils.toArray("article");
 
 targets.forEach((target) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: target,
-      scaleX: 0,
-      start: "0% 45%",
-      markers: {
-        startColor: "white",
-        endColor: "yellow",
-        fontSize: "18px",
-        indent: 10
-      }
+      start: "0% 55%",
+      // markers: {
+      //   startColor: "white",
+      //   endColor: "yellow",
+      //   fontSize: "18px",
+      //   indent: 10
+      // }
     },
-    defaults: {
-      duration: 2,
-    }
+    defaults: { ease: "none" },
   });
   
   tl.fromTo(
-    target.querySelector(".block-01"),
-    { "--scaleX": 1, "--tx": "-104vmin" },
-    { "--scaleX": 0, "--tx": 0, ease: "bounce.out"}
-  );
+    target.querySelector(".block-05"),
+    { "--scaleX": 1, "--tx": "-150vw" },
+    { "--scaleX": 0, "--tx": 0, duration: 3, ease: "bounce.out"}
+  )
+
+  tl.fromTo(
+    target.querySelector(".alpha-block-05"),
+    { "--scaleX": 1, "--tx": "-150vw" },
+    { "--scaleX": 0, "--tx": 0, duration: 3, ease: "bounce.out"}, "<=-0.15"
+  )
   
     tl.fromTo(
-    target.querySelector(".block-02"),
-      { autoAlpha: 0, "--tx": "-60vmin" },
-      { autoAlpha: 1, "--tx": 0, duration: 1.9, delay: 0.5, ease: "bounce.out" }, "<"
-  );
+    target.querySelector(".block-06"),
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 2.5, delay: 1, ease: "power1.out" }, "<"
+  )
+
+  // Small Headings
+  tl.fromTo(
+    target.querySelector(".small-fade"),
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 1.9, delay: 1, ease: "power1.out" }, "<"
+  )
  
 });
-
-
-
-
 
 
