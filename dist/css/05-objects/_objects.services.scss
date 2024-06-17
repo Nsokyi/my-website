@@ -42,41 +42,41 @@
 	}
 }
 
-.services {
-	&__accordian {
-		@include lg {
-			max-width: 38em;
-		}
+// .services {
+// 	&__accordian {
+// 		@include lg {
+// 			max-width: 38em;
+// 		}
 
-		@include xl {
-			max-width: 44em;
-		}
+// 		@include xl {
+// 			max-width: 44em;
+// 		}
 
-		@include xxl {
-			max-width: 50em;
-		}
+// 		@include xxl {
+// 			max-width: 50em;
+// 		}
 
-		@include xxxl {
-			max-width: 58em;
-		}
+// 		@include xxxl {
+// 			max-width: 58em;
+// 		}
 
-		.accordion--title,
-		.accordion--heading {
-			@include lg {
-				display: flex;
+// 		.accordion--title,
+// 		.accordion--heading {
+// 			@include lg {
+// 				display: flex;
 
-				&:before {
-					display: flex;
-					justify-content: end;
-					align-self: center;
-					margin-left: auto;
-					order: 2;
-					font-size: 1.33em;
-				}
-			}
-		}
-	}
-}
+// 				&:before {
+// 					display: flex;
+// 					justify-content: end;
+// 					align-self: center;
+// 					margin-left: auto;
+// 					order: 2;
+// 					font-size: 1.33em;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 .accordion--title,
 .accordion--heading {
@@ -167,5 +167,36 @@
 		.accordion--heading {
 			color: $color-grey-2000-9;
 		}
+	}
+}
+// Additional SCSS for Description List Layout
+
+.services__accordian dl {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); // Two columns
+	gap: 8rem;
+}
+
+.services__accordian dt,
+.services__accordian dd {
+	width: 100%;
+}
+
+.services__accordian dt {
+	grid-column: 1 / 3; // Span both columns
+}
+
+.services__accordian dd {
+	grid-column: 1 / 3; // Span both columns
+}
+
+@media screen and (max-width: 768px) {
+	.services__accordian dl {
+			grid-template-columns: 1fr; // One column for mobile
+	}
+
+	.services__accordian dt,
+	.services__accordian dd {
+			grid-column: auto; // Reset to default
 	}
 }

@@ -48,12 +48,10 @@
 	cursor: pointer;
 	display: flex;
 	height: 54px;
-	justify-content: end;
+	justify-content: flex-end;
 
 	@include md {
-		transition: ease all 0.8s;
-		justify-content: end;
-		display: flex;
+		transition: all 0.8s ease;
 		margin-left: auto;
 		top: -0.22em;
 	}
@@ -63,21 +61,20 @@
 	}
 
 	&.active {
-		.top {
+		span {
 			background: rgba($color-grey-2000, 0.8);
-			transform: translateY(5px) translateX(0) rotate(45deg);
-			@include xxl {
-				transform: translateY(9px) translateX(0) rotate(45deg);
+			&.top {
+				transform: translateY(5px) rotate(45deg);
+				@include xxl {
+					transform: translateY(9px) rotate(45deg);
+				}
 			}
-		}
-		.middle {
-			background: rgba($color-grey-2000, 0.8);
-			opacity: 0;
-		}
-
-		.bottom {
-			background: rgba($color-grey-2000, 0.8);
-			transform: translateY(-11px) translateX(0) rotate(-45deg);
+			&.middle {
+				opacity: 0;
+			}
+			&.bottom {
+				transform: translateY(-11px) rotate(-45deg);
+			}
 		}
 	}
 
@@ -113,6 +110,7 @@
 	}
 }
 
+
 // Ghost Btn
 
 .bttn {
@@ -121,7 +119,7 @@
 	transition: 0.3s ease all;
 
 	&:hover {
-		color: #fff;
+		color: $color-primary-000-9;
 	}
 	&:focus {
 		color: #fff;
@@ -151,6 +149,7 @@ a.bttn-dark {
 	padding: 0.68em 0;
 	position: relative;
 	text-align: center;
+	transition: 0.5s all ease;
 	text-transform: uppercase;
 	width: 100%;
 
@@ -178,6 +177,7 @@ a.bttn-dark {
 		z-index: -2;
 	}
 	&:hover {
+		border: 1px solid $color-primary-000-5;
 		&:before {
 			-webkit-transition: 0.5s all ease;
 			left: 0;

@@ -1,0 +1,9 @@
+{
+  "tabWidth": 2,
+  "prettier.trailingComma": "es5",
+	"prettier.singleQuote": true,
+	"prettier.bracketSpacing": true,
+	"prettier.useTabs": true,
+	"prettier.printWidth": 3000,
+	"prettier.htmlWhitespaceSensitivity": "strict"
+}
