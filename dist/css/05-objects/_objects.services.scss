@@ -42,42 +42,6 @@
 	}
 }
 
-// .services {
-// 	&__accordian {
-// 		@include lg {
-// 			max-width: 38em;
-// 		}
-
-// 		@include xl {
-// 			max-width: 44em;
-// 		}
-
-// 		@include xxl {
-// 			max-width: 50em;
-// 		}
-
-// 		@include xxxl {
-// 			max-width: 58em;
-// 		}
-
-// 		.accordion--title,
-// 		.accordion--heading {
-// 			@include lg {
-// 				display: flex;
-
-// 				&:before {
-// 					display: flex;
-// 					justify-content: end;
-// 					align-self: center;
-// 					margin-left: auto;
-// 					order: 2;
-// 					font-size: 1.33em;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
 .accordion--title,
 .accordion--heading {
 	background-color: none;
