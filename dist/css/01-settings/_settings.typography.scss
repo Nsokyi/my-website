@@ -102,7 +102,7 @@ h1 {
   }
 
   @include lg {
-    margin-left: -0.054em;
+    margin: 8rem 0 0 -0.054em;
   }
 
   .noah {
@@ -315,44 +315,67 @@ p.portfolio__item--subtitle {
 }
 
 article cite {
-  position: relative;
-  font-style: italic;
+  line-height: 1;
+
   text-transform: initial;
   letter-spacing: 0.088rem;
-  margin-right: 2em;
   --font-size: var(--global-small__cite);
   font-size: var(--font-size);
-  line-height: 1;
   text-align: left;
 
   &::before,
   &::after {
     color: $color-primary;
-    content: '‘';
-    font: 700 3em/2em $font-subheadings;
-    left: -0.11em;
-    opacity: 20%;
-    position: absolute;
-    right: unset;
-    top: -0.69em;
+    font: 700 2em/1 $font-subheadings;
+    opacity: 0.5;
+    position: absolute; 
     z-index: -1;
   }
 
-  &::after {
-    opacity: 50%;
-    left: -0.29em;
-
-    @include lg {
-      left: -0.41em;
-    }
+  &::before {
+    content: '‘‘';
+    top: -0.19em;
+    letter-spacing: -0.028em;
   }
 
   @include lg {
     &::before {
-      left: -0.22em;
+      left: -0.40em;
     }
   }
 }
+
+.author {
+  display: block;
+  margin: 0.5em -1em 0 4em;
+}
+
+
+.small__heading.small-fade.cite {
+
+  margin: 4rem 0 6.8rem 0;
+
+  cite {
+    display: inline-block;
+    position: relative;
+    padding-right: 0.5em;
+
+    &::after {
+      content: '‚‚';
+      letter-spacing: -0.088em;
+      position: absolute;
+      right: -0.2em;
+      bottom: -0.1em;
+      color: $color-primary;
+      opacity: 0.5;
+    }
+  }
+
+}
+
+
+
+
 
 .cite {
   align-items: self-end;
